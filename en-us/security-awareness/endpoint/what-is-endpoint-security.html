@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<!-- Mirrored from www.trellix.com/en-us/security-awareness/endpoint/what-is-endpoint-security.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Mar 2023 05:10:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+  <title>What Is Endpoint Security? How It Works &amp; Its Importance | Trellix</title> 
+  <link rel="shortcut icon" href="../../../favicon5e1f.ico?v=2"> 
+  <link rel="canonical" href="what-is-endpoint-security.html"> 
+  <meta name="keywords"> 
+  <meta name="description" content="Learn how endpoint security has evolved from traditional antivirus software to provide comprehensive endpoint protection against cybersecurity threats."> 
+  <meta property="og:title" content="What Is Endpoint Security? How It Works &amp; Its Importance | Trellix"> 
+  <meta property="og:description" content="Learn how endpoint security has evolved from traditional antivirus software to provide comprehensive endpoint protection against cybersecurity threats."> 
+  <meta property="og:image" content="../../img/open-graphs/security-awareness/what-is-endpoint-security.jpg"> 
+  <meta name="twitter:title" content="What Is Endpoint Security? How It Works &amp; Its Importance | Trellix"> 
+  <meta name="twitter:description" content="Learn how endpoint security has evolved from traditional antivirus software to provide comprehensive endpoint protection against cybersecurity threats."> 
+  <meta name="twitter:image" content="../../img/open-graphs/security-awareness/what-is-endpoint-security.jpg"> 
+  <meta name="robots"> 
+  <meta name="content-type"> 
+  <meta name="page-name" content="what-is-endpoint-security"> 
+  <meta name="p:domain_verify" content="b7e159231749a2568a55ea5222f94627"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="lastmodified" content="2022-10-31T08:12:33.231Z"> 
+  <script type="text/javascript">
+	var digitalData = {
+		"page":{ 
+			"pageInfo": {
+				"pageName" :  "en-us:security-awareness:endpoint:what-is-endpoint-security",
+				"pageNameGlobal" : "security-awareness:endpoint:what-is-endpoint-security",
+				"pageLanguage" : "English",
+				"pageType" : "",
+				"country" : "us",
+				"geo" : "NA",
+				"onsiteSearchTerm" : "",
+		        "onsiteSearchType" : "",
+			    "searchSubType" : "", 
+				"metaData" : {
+					"contentType": "",
+					"englishName": "",
+					"onDate":  "",
+					"siteSection": "",
+					"productCategory": "",
+					"product": "",
+					"customerNarrative": "",
+					"campaignTheme": "",
+					"solution": "",
+					"industry": "",
+					"contentTopics": "",
+					"audienceSegments": "",
+					"buyingStages": "",
+					"personas": ""
+				},
+				"category": {
+					"category": "security-awareness",
+					"subCategory1":"endpoint"
+				}
+			}
+		},
+		"user": { 
+			"userInfo": {
+				"ip":"106.51.89.49"
+			}
+		}
+	}	
+</script> 
+  <!--<link data-sly-test="" rel="icon" href=""/>--> 
+  <!-- Meta Tags --> 
+  <meta name="google-site-verification" content="Tu8iwfQYjzlJ-y71GRhVppj7r-3T519yGdLFKFgauL0"> 
+  <meta name="msvalidate.01" content="560987DD190D7F9CFDA6E1181FA10A4A"> 
+  <meta name="ahrefs-site-verification" content="25c26e6513f7902c846e2fbcf5e75e88a3235e87a02aba987602ec71ccb9a356"> 
+  <meta name="theme-color" content="#FDFDFD" media="(prefers-color-scheme: light)"> 
+  <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)"> 
+  <!-- Preloads --> 
+  <link rel="preload" as="font" href="../../../www/fonts/AventaVF.woff2" type="font/woff2" crossorigin="anonymous"> 
+  <!-- Stylesheets --> 
+  <link rel="stylesheet" href="../../../www/css/fancybox.min.css" type="text/css"> 
+  <link rel="stylesheet" href="../../../www/css/newco.min3661.css?v=2.0" type="text/css"> 
+  <link rel="stylesheet" href="../../../www/css/common.min3661.css?v=2.0" type="text/css"> 
+  <link rel="stylesheet" href="../../../www/css/icons.min.css" type="text/css"> 
+  <link rel="stylesheet" href="../../../www/css/tables-charts.min.css" type="text/css"> 
+  <!-- 3rd Party JS Libraries --> 
+  <script type="text/javascript" src="../../../www/js/newco.min.js" async></script> 
+  <script type="text/javascript" src="../../../../assets.adobedtm.com/f0febc6281f5/daaefd9d8423/launch-675ffef2af24.min.js" async></script> 
+  <script type="text/javascript" src="../../../www/js/fancybox.js" defer></script> 
+  <script type="text/javascript" src="../../../www/js/popper-v2.11.5.js" defer></script> 
+  <script type="text/javascript" src="../../../../platform-api.sharethis.com/js/sharethis.js#property=62d02fdf987470001990b50c&amp;product=inline-share-buttons" async></script> 
+  <!-- JS Functionality --> 
+  <script type="text/javascript" src="../../../www/js/header-footer-control.min.js" defer></script> 
+  <script type="text/javascript" src="../../../www/js/form-control.min.js" defer></script> 
+  <script type="module" src="../../../www/js/fancyapps-control.min.js" defer></script> 
+  <!-- Global Schema Tag --> 
+  <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Corporation",
+        "name": "Trellix",
+        "url": "https://www.trellix.com",
+        "logo": "https://www.trellix.com/en-us/assets/logos/trellix-logo-black.svg",
+        "sameAs": [
+            "https://twitter.com/Trellix",
+            "https://www.linkedin.com/company/trellixsecurity",
+            "https://www.youtube.com/trellixsecurity"
+        ]
+    }
+</script> 
+  <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+            "@type": "Question",
+            "name": "What is Endpoint Security?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Endpoint security is the practice of securing endpoints or entry points of end-user devices such as desktops, laptops, and mobile devices from being exploited by malicious actors and campaigns."
+            }
+        }, {
+			"@type": "Question",
+            "name": "How does endpoint protection work?",
+            "acceptedAnswer": {
+				"@type": "Answer",
+                "text": "Endpoint security is the practice of safeguarding the data and workflows associated with the individual devices that connect to your network. Endpoint protection platforms (EPP) work by examining files as they enter the network. <a href='https://www.trellix.com/en-us/security-awareness/endpoint/what-is-endpoint-security.html#how-it-works'>Read More.</a>"
+            }
+        }, {
+            "@type": "Question",
+            "name": "What's considered an endpoint?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "<ul>Endpoints can range from the more commonly thought of devices such as:<li>Tablets</li><li>Mobile devices</li><li>Smart watches</li><li>Printers</li><li>Servers</li><li>ATM machines</li><li>Medical devices</li></ul>"
+            }
+        }]
+    }
+</script> 
+ </head> 
+ <body> 
+  <!-- site container --> 
+  <div id="__next"> 
+   <div class="custom-content-wrap"> 
+    <header class="custom-header bg-white custom-thin-shadow"> 
+     <!-- Blue Nav Bar --> 
+     <div class="d-none d-lg-block" id="topNav"> 
+      <nav class="container-xl px-md-6"> 
+       <a class="btn btn-primary bi bi-newspaper d-flex gap-2 align-items-center px-3" href="../../about/newsroom.html" datalink-id="newco:en-us:about:newsroom" datalink-type="internal">News</a> 
+       <a class="btn btn-primary bi bi-envelope d-flex gap-2 align-items-center px-3" href="../../contact-us.html" datalink-id="newco:en-us:contact-us" datalink-type="internal">Contact</a> 
+       <button class="btn btn-primary btn-mobile-search bi bi-search d-flex align-items-center px-3" type="button" id="desktopSearchButton" aria-controls="mobileSearchMenu"><span class="hide-text" style="width:0">Search</span></button> 
+       <div class="bi bi-globe2 d-flex gap-2 align-items-center" id="langCont"> 
+        <select id="lang-sel" class="btn btn-primary text-white"> <option value="de-de">Deutsch (Deutschland)</option> <option value="en-au">English (Australia)</option> <option value="en-ca">English (Canada)</option> <option value="en-gb">English (United Kingdom)</option> <option value="en-hk">English (Hong Kong SAR China)</option> <option value="en-in">English (India)</option> <option value="en-sg">English (Singapore)</option> <option value="en-us">English (United States)</option> <option value="es-es">español (España)</option> <option value="es-mx">español (México)</option> <option value="fr-ca">français (Canada)</option> <option value="fr-fr">français (France)</option> <option value="it-it">italiano (Italia)</option> <option value="ja-jp">日本語 (日本)</option> <option value="ko-kr">한국어(대한민국)</option> <option value="pt-br">português (Brasil)</option> <option value="ru-ru">русский (Россия)</option> <option value="zh-cn">中文 (简体，中国)</option> <option value="zh-tw">中文 (繁體，台灣)</option> </select> 
+       </div> 
+      </nav> 
+     </div> 
+     <!-- Search Bar --> 
+     <div class="custom-search-bar bg-gray-light custom-thin-shadow" style="display: none"> 
+      <form class="container-xl px-md-6 d-flex py-2 gap-3" id="searchForm"> 
+       <input class="flex-grow-1 form-control custom-mobile-search-field p-2 border-1 rounded-0" placeholder="Search" aria-label="Search" id="msearch" data-result-path="../../search.html"> 
+       <button class="btn btn-primary" type="submit">Submit</button> 
+       <div class="d-none d-lg-flex gap-2 align-items-center"> 
+        <a href="#" onclick="document.getElementById('msearch').value = ''" datalink-type="internal" datalink-id="newco:#">Clear</a> 
+        <span>|</span> 
+        <a id="searchTip" class="no-break" href="#" data-bs-toggle="modal" data-bs-target="#searchTipModal" datalink-type="internal" datalink-id="newco:#">Search Tips</a> 
+       </div> 
+      </form> 
+     </div> 
+     <!-- Main Nav Bar --> 
+     <div class="bg-white container-xl px-md-6 custom-header-nav-container d-flex justify-content-between align-items-center"> 
+      <!-- Trellix Logo --> 
+      <a href="../../index.html" datalink-id="newco:en-us:index" datalink-type="internal"> <img id="trellix-logo-desktop" src="../../assets/logos/Trellix-Logo-Black.svg" title="Trellix Logo" alt="Trellix Logo"> </a> 
+      <!-- Desktop Items --> 
+      <div class="d-none d-lg-flex flex-wrap align-items-center justify-content-end flex-wrap-reverse links gap-2"> 
+       <span data-container-name="content-1" aria-controls="desktopMenu" class="navigation-link">Why Trellix?</span> 
+       <span data-container-name="content-2" aria-controls="desktopMenu" class="navigation-link">Products</span> 
+       <span data-container-name="content-3" aria-controls="desktopMenu" class="navigation-link">Research</span> 
+       <span data-container-name="content-4" aria-controls="desktopMenu" class="navigation-link">Support</span> 
+       <span data-container-name="content-5" aria-controls="desktopMenu" class="navigation-link">Partners</span> 
+       <span data-container-name="content-6" aria-controls="desktopMenu" class="navigation-link">Resources</span> 
+      </div> 
+      <!-- Mobile Items --> 
+      <div class="d-flex d-lg-none justify-content-end flex-wrap gap-x-3 gap-y-1"> 
+       <button class="btn btn-mobile-search custom-search-icon hide-text p-0 shadow-none" type="button" id="mobileSearchButton" aria-controls="mobileSearchMenu">Search</button> 
+       <button class="btn btn-mobile-hamburger custom-hamburger-icon hide-text p-0 shadow-none" type="button" data-bs-target="#mobileMenu" aria-controls="mobileMenu">Menu</button> 
+      </div> 
+     </div> 
+     <!-- Mobile Navigation Dropdown Menu --> 
+     <div class="custom-mobile-menu-wrapper"> 
+      <div class="custom-mobile-menu offcanvas offcanvas-end d-lg-none bg-gray-light position-relative" tabindex="-1" id="mobileMenu" aria-label="Navigation Menu" data-bs-scroll="true" data-bs-backdrop="false"> 
+       <div id="mobile-main-menu" class="offcanvas-body px-6 pb-6"> 
+        <div class="custom-mobile-subnav-link d-flex justify-content-between custom-border-bottom custom-right-arrow" data-target="#mobile-content-1"> 
+         <div class="align-self-center">
+          Why Trellix?
+         </div> 
+        </div> 
+        <div class="custom-mobile-subnav-link d-flex justify-content-between custom-border-bottom custom-right-arrow" data-target="#mobile-content-2"> 
+         <div class="align-self-center">
+          Products
+         </div> 
+        </div> 
+        <div class="custom-mobile-subnav-link d-flex justify-content-between custom-border-bottom custom-right-arrow" data-target="#mobile-content-3"> 
+         <div class="align-self-center">
+          Research
+         </div> 
+        </div> 
+        <div class="custom-mobile-subnav-link d-flex justify-content-between custom-border-bottom custom-right-arrow" data-target="#mobile-content-4"> 
+         <div class="align-self-center">
+          Support
+         </div> 
+        </div> 
+        <div class="custom-mobile-subnav-link d-flex justify-content-between custom-border-bottom custom-right-arrow" data-target="#mobile-content-5"> 
+         <div class="align-self-center">
+          Partners
+         </div> 
+        </div> 
+        <div class="custom-mobile-subnav-link d-flex justify-content-between custom-border-bottom custom-right-arrow" data-target="#mobile-content-6"> 
+         <div class="align-self-center">
+          Resources
+         </div> 
+        </div> 
+        <div class="d-flex justify-content-between custom-border-bottom custom-right-arrow"> 
+         <div class="align-self-center"> 
+          <a href="../../about/newsroom/stories.html" datalink-id="newco:en-us:about:newsroom:stories" datalink-type="internal">Stories</a> 
+         </div> 
+        </div> 
+        <div class="d-flex justify-content-between custom-right-arrow"> 
+         <div class="align-self-center"> 
+          <a href="../../contact-us.html" datalink-id="newco:en-us:contact-us" datalink-type="internal">Contact Us</a> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="mobileSubMenu" id="mobile-content-1"> 
+        <div class="offcanvas-header p-0"> 
+         <div class="custom-mobile-subnav-link mobile-subnav-back-button d-flex justify-content-between custom-left-arrow w-100 bg-gray-light"> 
+          <div class="offcanvas-title align-self-center custom-weight">
+           Main menu
+          </div> 
+         </div> 
+        </div> 
+        <div class="offcanvas-body pb-6 pt-0 px-6"> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title"> 
+          <div>
+           COMPANY
+          </div> 
+         </div> 
+         <a href="../../about/why-trellix.html" class="d-block mt-3" datalink-id="newco:en-us:about:why-trellix" datalink-type="internal">Why Trellix?</a> 
+         <a href="../../about.html" class="d-block mt-3" datalink-id="newco:en-us:about" datalink-type="internal">About Us</a> 
+         <a href="../../about/why-trellix/industry-recognitions.html" class="d-block mt-3" datalink-id="newco:en-us:about:why-trellix:industry-recognitions" datalink-type="internal">Industry Recognitions</a> 
+         <a href="../../about/leadership.html" class="d-block mt-3" datalink-id="newco:en-us:about:leadership" datalink-type="internal">Leadership</a> 
+         <a href="../../about/csr-sustainability.html" class="d-block mt-3" datalink-id="newco:en-us:about:csr-sustainability" datalink-type="internal">Corporate Social Responsibility</a> 
+         <a href="https://careers.trellix.com/" target="_blank" class="d-block mt-3" datalink-type="external" datalink-id="newco:careers.trellix.com:">Careers</a> 
+         <a href="../../contact-us.html" class="d-block mt-3" datalink-id="newco:en-us:contact-us" datalink-type="internal">Contact Us</a> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title mt-4"> 
+          <div class="links-header d-block">
+           COMPETITION
+          </div> 
+         </div> 
+         <a href="../../about/why-trellix/vscrowdstrike.html" class="d-block mt-3" datalink-id="newco:en-us:about:why-trellix:vscrowdstrike" datalink-type="internal">vs Crowdstrike</a> 
+         <a href="../../about/why-trellix/vssentinelone.html" class="d-block mt-3" datalink-id="newco:en-us:about:why-trellix:vssentinelone" datalink-type="internal">vs SentinelOne</a> 
+        </div> 
+       </div> 
+       <div class="mobileSubMenu" id="mobile-content-2"> 
+        <div class="offcanvas-header p-0"> 
+         <div class="custom-mobile-subnav-link mobile-subnav-back-button d-flex justify-content-between custom-left-arrow w-100 bg-gray-light"> 
+          <div class="offcanvas-title align-self-center custom-weight">
+           Main menu
+          </div> 
+         </div> 
+        </div> 
+        <div class="offcanvas-body pb-6 pt-0 px-6"> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title"> 
+          <div class="d-block">
+           PRODUCTS
+          </div> 
+         </div> 
+         <a href="../../platform/xdr.html" class="d-block mt-3" datalink-id="newco:en-us:platform:xdr" datalink-type="internal">Trellix XDR</a> 
+         <a href="../../platform/endpoint-security.html" class="d-block mt-3" datalink-id="newco:en-us:platform:endpoint-security" datalink-type="internal">Endpoint Security</a> 
+         <a href="../../platform/secops-analytics.html" class="d-block mt-3" datalink-id="newco:en-us:platform:secops-analytics" datalink-type="internal">SecOps and Analytics</a> 
+         <a href="../../platform/data-security.html" class="d-block mt-3" datalink-id="newco:en-us:platform:data-security" datalink-type="internal">Data Security</a> 
+         <a href="../../platform/network-detection-and-response.html" class="d-block mt-3" datalink-id="newco:en-us:platform:network-detection-and-response" datalink-type="internal">Network Detection and Response</a> 
+         <a href="../../platform/threat-intelligence.html" class="d-block mt-3" datalink-id="newco:en-us:platform:threat-intelligence" datalink-type="internal">Threat Intelligence</a> 
+         <a href="../../platform/email-security.html" class="d-block mt-3" datalink-id="newco:en-us:platform:email-security" datalink-type="internal">Email Security</a> 
+         <a href="../../platform/cloud-security.html" class="d-block mt-3" datalink-id="newco:en-us:platform:cloud-security" datalink-type="internal">Cloud Security</a> 
+         <a href="../../products.html" class="d-block mt-3" datalink-id="newco:en-us:products" datalink-type="internal"><b>View All Products</b></a> 
+        </div> 
+       </div> 
+       <div class="mobileSubMenu" id="mobile-content-3"> 
+        <div class="offcanvas-header p-0"> 
+         <div class="custom-mobile-subnav-link mobile-subnav-back-button d-flex justify-content-between custom-left-arrow w-100 bg-gray-light"> 
+          <div class="offcanvas-title align-self-center custom-weight">
+           Main menu
+          </div> 
+         </div> 
+        </div> 
+        <div class="offcanvas-body pb-6 pt-0 px-6"> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title"> 
+          <div>
+           RESEARCH
+          </div> 
+         </div> 
+         <a href="../../advanced-research-center.html" class="d-block mt-3" datalink-id="newco:en-us:advanced-research-center" datalink-type="internal">Advanced Research Center</a> 
+         <a href="../../advanced-research-center/adversarial-vulnerability-research.html" class="d-block mt-3" datalink-id="newco:en-us:advanced-research-center:adversarial-vulnerability-research" datalink-type="internal">Adversarial &amp; Vulnerability Research</a> 
+         <a href="../../advanced-research-center/threat-reports.html" class="d-block mt-3" datalink-id="newco:en-us:advanced-research-center:threat-reports" datalink-type="internal">Reports</a> 
+        </div> 
+       </div> 
+       <div class="mobileSubMenu" id="mobile-content-4"> 
+        <div class="offcanvas-header p-0"> 
+         <div class="custom-mobile-subnav-link mobile-subnav-back-button d-flex justify-content-between custom-left-arrow w-100 bg-gray-light"> 
+          <div class="offcanvas-title align-self-center custom-weight">
+           Main menu
+          </div> 
+         </div> 
+        </div> 
+        <div class="offcanvas-body pb-6 pt-0 px-6"> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title"> 
+          <div>
+           SUPPORT
+          </div> 
+         </div> 
+         <a href="../../support.html" class="d-block mt-3" datalink-id="newco:en-us:support" datalink-type="internal">Product Support</a> 
+         <a href="../../downloads.html" class="d-block mt-3" datalink-id="newco:en-us:downloads" datalink-type="internal">Downloads</a> 
+         <a href="https://docs.trellix.com/" target="_blank" class="d-block mt-3" datalink-type="external" datalink-id="newco:docs.trellix.com:">Product Documentation</a> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title mt-4"> 
+          <div>
+           CONTACT US
+          </div> 
+         </div> 
+         <a href="https://www.mcafee.com/en-us/consumer-support/dispute-detection-allowlisting.html" class="d-block mt-3" target="_blank" datalink-type="external" datalink-id="newco:www.mcafee.com:en-us:consumer-support:dispute-detection-allowlisting">Detection Dispute Form</a> 
+         <a href="https://supportm.trellix.com/webcenter/portal/supportportal/pages_serviceRequests/submitSample" class="d-block mt-3" target="_blank" datalink-type="external" datalink-id="newco:supportm.trellix.com:webcenter:portal:supportportal:pages_servicerequests:submitsample">Submit a Sample</a> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title mt-4"> 
+          <div>
+           MCAFEE ENTERPRISE
+          </div> 
+         </div> 
+         <a href="https://supportm.trellix.com/webcenter/portal/supportportal/pages_home" class="d-block mt-3 no-modal" target="_blank" datalink-type="external" datalink-id="newco:supportm.trellix.com:webcenter:portal:supportportal:pages_home">Support Portal</a> 
+         <a href="../../support/customer-success-plans.html" class="d-block mt-3" datalink-id="newco:en-us:support:customer-success-plans" datalink-type="internal">Customer Success Plans</a> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title mt-4"> 
+          <div>
+           FIREEYE
+          </div> 
+         </div> 
+         <a href="../../support/fe-support.html" class="d-block mt-3 no-modal" datalink-id="newco:en-us:support:fe-support" datalink-type="internal">Get Support</a> 
+        </div> 
+       </div> 
+       <div class="mobileSubMenu" id="mobile-content-5"> 
+        <div class="offcanvas-header p-0"> 
+         <div class="custom-mobile-subnav-link mobile-subnav-back-button d-flex justify-content-between custom-left-arrow w-100 bg-gray-light"> 
+          <div class="offcanvas-title align-self-center custom-weight">
+           Main menu
+          </div> 
+         </div> 
+        </div> 
+        <div class="offcanvas-body pb-6 pt-0 px-6"> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title"> 
+          <div>
+           PARTNERS
+          </div> 
+         </div> 
+         <a href="../../partners.html" class="d-block mt-3" datalink-id="newco:en-us:partners" datalink-type="internal">Partners Overview</a> 
+         <a href="../../partners/solution-providers.html" class="d-block mt-3" datalink-id="newco:en-us:partners:solution-providers" datalink-type="internal">Solution Providers</a> 
+         <a href="../../partners/security-innovation-alliance.html" class="d-block mt-3" datalink-id="newco:en-us:partners:security-innovation-alliance" datalink-type="internal">Security Innovation Alliance</a> 
+         <a href="../../partners/oem-alliances.html" class="d-block mt-3" datalink-id="newco:en-us:partners:oem-alliances" datalink-type="internal">OEM &amp; Embedded Alliances</a> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title mt-4"> 
+          <div>
+           PARTNER PORTAL
+          </div> 
+         </div> 
+         <a href="https://partners.trellix.com/" target="_blank" class="d-block mt-3" datalink-type="external" datalink-id="newco:partners.trellix.com:">Trellix Partner Portal Login</a> 
+        </div> 
+       </div> 
+       <div class="mobileSubMenu" id="mobile-content-6"> 
+        <div class="offcanvas-header p-0"> 
+         <div class="custom-mobile-subnav-link mobile-subnav-back-button d-flex justify-content-between custom-left-arrow w-100 bg-gray-light"> 
+          <div class="offcanvas-title align-self-center custom-weight">
+           Main menu
+          </div> 
+         </div> 
+        </div> 
+        <div class="offcanvas-body pb-6 pt-0 px-6"> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title"> 
+          <div>
+           RESOURCES
+          </div> 
+         </div> 
+         <a href="../../services/education-services.html" class="d-block mt-3" datalink-id="newco:en-us:services:education-services" datalink-type="internal">Training and Education</a> 
+         <a href="../../services.html" class="d-block mt-3" datalink-id="newco:en-us:services" datalink-type="internal">Consulting Services</a> 
+         <a href="../../about/webinars.html" class="d-block mt-3" datalink-id="newco:en-us:about:webinars" datalink-type="internal">Webinars</a> 
+         <a href="../../about/events.html" class="d-block mt-3" datalink-id="newco:en-us:about:events" datalink-type="internal">Events</a> 
+         <a href="../../resource-library/case-studies.html" class="d-block mt-3" datalink-id="newco:en-us:resource-library:case-studies" datalink-type="internal">Case Studies</a> 
+         <a href="../../resource-library.html" class="d-block mt-3" datalink-id="newco:en-us:resource-library" datalink-type="internal">Resource Library</a> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title mt-4"> 
+          <div>
+           MEDIA
+          </div> 
+         </div> 
+         <a href="../../about/newsroom/press-releases.html" class="d-block mt-3" datalink-id="newco:en-us:about:newsroom:press-releases" datalink-type="internal">Press Releases</a> 
+         <!--a href="/en-us/about/newsroom/news.html" class="d-block mt-3">News</a--> 
+         <a href="../../about/newsroom/stories.html" class="d-block mt-3" datalink-id="newco:en-us:about:newsroom:stories" datalink-type="internal">Stories</a> 
+         <a href="../../about/newsroom.html" class="d-block mt-3" datalink-id="newco:en-us:about:newsroom" datalink-type="internal"><b>View Newsroom</b></a> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title mt-4"> 
+          <div>
+           INTEGRATIONS
+          </div> 
+         </div> 
+         <a href="https://marketplace.manage.trellix.com/" class="d-block mt-3" target="_blank" datalink-type="external" datalink-id="newco:marketplace.manage.trellix.com:">Marketplace</a> 
+         <a href="https://developer.manage.trellix.com/" class="d-block mt-3" target="_blank" datalink-type="external" datalink-id="newco:developer.manage.trellix.com:">Developer Portal</a> 
+         <a href="https://auth.ui.trellix.com/" class="d-block mt-3" target="_blank" datalink-type="external" datalink-id="newco:auth.ui.trellix.com:">Trellix Login</a> 
+         <a href="https://login.manage.trellix.com/v1/SignUp/en-us/MVISION/MVISIONEPO" class="d-block mt-3" target="_blank" datalink-type="external" datalink-id="newco:login.manage.trellix.com:v1:signup:en-us:mvision:mvisionepo">Trellix Free Trial</a> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title mt-4"> 
+          <div>
+           SECURITY AWARENESS
+          </div> 
+         </div> 
+         <a href="what-is-xdr.html" class="d-block mt-3" datalink-id="newco:en-us:security-awareness:endpoint:what-is-xdr" datalink-type="internal">What is XDR?</a> 
+         <a href="what-is-endpoint-security.html" class="d-block mt-3" datalink-id="newco:en-us:security-awareness:endpoint:what-is-endpoint-security" datalink-type="internal">What is Endpoint Security?</a> 
+         <a href="what-is-endpoint-detection-and-response.html" class="d-block mt-3" datalink-id="newco:en-us:security-awareness:endpoint:what-is-endpoint-detection-and-response" datalink-type="internal">What is EDR?</a> 
+         <a href="../cybersecurity/what-is-mitre-attack-framework.html" class="d-block mt-3" datalink-id="newco:en-us:security-awareness:cybersecurity:what-is-mitre-attack-framework" datalink-type="internal">What is MITRE?</a> 
+         <a href="../ransomware/what-is-ransomware.html" class="d-block mt-3" datalink-id="newco:en-us:security-awareness:ransomware:what-is-ransomware" datalink-type="internal">What is Ransomware?</a> 
+         <a href="../../security-awareness.html" class="d-block mt-3" datalink-id="newco:en-us:security-awareness" datalink-type="internal"><b>View All Topics</b></a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <!-- Desktop Navigation Dropdown Menu --> 
+     <div class="custom-desktop-menu offcanvas offcanvas-top d-none d-lg-block bg-transparent position-absolute" tabindex="-1" id="desktopMenu" aria-label="Navigation Menu" data-bs-scroll="true" data-bs-backdrop="false"> 
+      <div class="content-1 position-relative p-0 mega-menu container-xl px-md-4"> 
+       <div class="p-6 bg-gray-light d-flex gap-6 m-0 position-relative"> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          COMPANY
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="../../about/why-trellix.html" class="megamenu-link" datalink-id="newco:en-us:about:why-trellix" datalink-type="internal">Why Trellix?</a> 
+          <a href="../../about.html" class="megamenu-link" datalink-id="newco:en-us:about" datalink-type="internal">About Us</a> 
+          <a href="../../about/why-trellix/industry-recognitions.html" class="megamenu-link" datalink-id="newco:en-us:about:why-trellix:industry-recognitions" datalink-type="internal">Industry Recognitions</a> 
+          <a href="../../about/leadership.html" class="megamenu-link" datalink-id="newco:en-us:about:leadership" datalink-type="internal">Leadership</a> 
+          <a href="../../about/csr-sustainability.html" class="megamenu-link" datalink-id="newco:en-us:about:csr-sustainability" datalink-type="internal">Corporate Social Responsibility</a> 
+          <a href="https://careers.trellix.com/" target="_blank" class="megamenu-link" datalink-type="external" datalink-id="newco:careers.trellix.com:">Careers</a> 
+          <a href="../../contact-us.html" class="megamenu-link" datalink-id="newco:en-us:contact-us" datalink-type="internal">Contact Us</a> 
+         </div> 
+        </div> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          COMPETITION
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="../../about/why-trellix/vscrowdstrike.html" class="megamenu-link" datalink-id="newco:en-us:about:why-trellix:vscrowdstrike" datalink-type="internal">vs Crowdstrike</a> 
+          <a href="../../about/why-trellix/vssentinelone.html" class="megamenu-link" datalink-id="newco:en-us:about:why-trellix:vssentinelone" datalink-type="internal">vs SentinelOne</a> 
+         </div> 
+        </div> 
+        <div class="custom-card border-0"> 
+         <a href="../../about/events/2022/trellix-xpand-recap.html" class="" datalink-id="newco:en-us:about:events:2022:trellix-xpand-recap" datalink-type="internal"> <img src="../../img/cards/xpand-recap-menu-card.jpg" alt="Trellix Xpand Recap" title="Trellix Xpand Recap"> </a> 
+         <div class="card-body"> 
+          <a href="../../about/events/2022/trellix-xpand-recap.html" class="h6 card-title megamenu-link link-internal" datalink-id="newco:en-us:about:events:2022:trellix-xpand-recap" datalink-type="internal">Trellix Xpand Recap</a> 
+          <p class="card-text"> 
+           <!--Coming Soon.--> </p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="content-2 position-relative p-0 mega-menu container-xl px-md-4"> 
+       <div class="p-6 bg-gray-light d-flex gap-6 m-0 position-relative"> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          PRODUCTS
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="../../platform/xdr.html" class="megamenu-link" datalink-id="newco:en-us:platform:xdr" datalink-type="internal">Trellix XDR</a> 
+          <a href="../../platform/endpoint-security.html" class="megamenu-link" datalink-id="newco:en-us:platform:endpoint-security" datalink-type="internal">Endpoint Security</a> 
+          <a href="../../platform/secops-analytics.html" class="megamenu-link" datalink-id="newco:en-us:platform:secops-analytics" datalink-type="internal">SecOps and Analytics</a> 
+          <a href="../../platform/data-security.html" class="megamenu-link" datalink-id="newco:en-us:platform:data-security" datalink-type="internal">Data Security</a> 
+          <a href="../../platform/network-detection-and-response.html" class="megamenu-link" datalink-id="newco:en-us:platform:network-detection-and-response" datalink-type="internal">Network Detection and Response</a> 
+          <a href="../../platform/threat-intelligence.html" class="megamenu-link" datalink-id="newco:en-us:platform:threat-intelligence" datalink-type="internal">Threat Intelligence</a> 
+          <a href="../../platform/email-security.html" class="megamenu-link" datalink-id="newco:en-us:platform:email-security" datalink-type="internal">Email Security</a> 
+          <a href="../../platform/cloud-security.html" class="megamenu-link" datalink-id="newco:en-us:platform:cloud-security" datalink-type="internal">Cloud Security</a> 
+          <a href="../../products.html" class="megamenu-overview-link megamenu-link" datalink-id="newco:en-us:products" datalink-type="internal">View All Products</a> 
+         </div> 
+        </div> 
+        <div class="custom-card border-0"> 
+         <a href="../../about/newsroom/stories/perspectives/our-ceo-on-living-security.html" datalink-id="newco:en-us:about:newsroom:stories:perspectives:our-ceo-on-living-security" datalink-type="internal"> <img src="../../img/v1/trellix-ceo-threat-center.jpg" alt="Trellix CEO" title="Trellix CEO"> </a> 
+         <div class="card-body"> 
+          <a class="h6 card-title" href="../../about/newsroom/stories/perspectives/our-ceo-on-living-security.html" datalink-id="newco:en-us:about:newsroom:stories:perspectives:our-ceo-on-living-security" datalink-type="internal">Our CEO on Living Security</a> 
+          <p class="card-text">Trellix CEO, Bryan Palma, explains the critical need for security that’s always learning.</p> 
+         </div> 
+        </div> 
+        <div class="custom-card border-0"> 
+         <a href="../../solutions/gartner-report-market-guide-xdr.html" datalink-id="newco:en-us:solutions:gartner-report-market-guide-xdr" datalink-type="internal"> <img src="../../img/v1/gartner-xdr-mm.png" alt="Gartner Marketplace Guide (XDR)" title="Gartner Marketplace Guide (XDR)"> </a> 
+         <div class="card-body"> 
+          <a class="h6 card-title" href="../../solutions/gartner-report-market-guide-xdr.html" datalink-id="newco:en-us:solutions:gartner-report-market-guide-xdr" datalink-type="internal">Gartner® Report: Market Guide for XDR</a> 
+          <p class="card-text">As per Gartner, "XDR is an emerging technology that can offer improved threat prevention, detection and response."</p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="content-3 position-relative p-0 mega-menu container-xl px-md-4"> 
+       <div class="p-6 bg-gray-light d-flex gap-6 m-0 position-relative"> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          RESEARCH
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="../../advanced-research-center.html" class="megamenu-link" datalink-id="newco:en-us:advanced-research-center" datalink-type="internal">Advanced Research Center</a> 
+          <a href="../../advanced-research-center/adversarial-vulnerability-research.html" class="megamenu-link" datalink-id="newco:en-us:advanced-research-center:adversarial-vulnerability-research" datalink-type="internal">Adversarial &amp; Vulnerability Research</a> 
+          <a href="../../advanced-research-center/threat-reports.html" class="megamenu-link" datalink-id="newco:en-us:advanced-research-center:threat-reports" datalink-type="internal">Reports</a> 
+         </div> 
+        </div> 
+        <div class="custom-card border-0"> 
+         <a href="https://www.businesswire.com/news/home/52921713/en" target="_blank" datalink-type="external" datalink-id="newco:www.businesswire.com:news:home:52921713:en"> <img src="../../img/cards/trellix-arc-card.jpg" alt="Trellix Launches Advanced Threat Research Center" title="Trellix Launches Advanced Threat Research Center"> </a> 
+         <div class="card-body"> 
+          <a href="../../about/newsroom/press-releases/press-detail16cc.html?pr_id=10cb07fa-6837-48b8-8e99-d58a7526eff3" class="card-title h6 condensed-text" target="_blank" datalink-id="newco:en-us:about:newsroom:press-releases:press-detail?pr_id=10cb07fa-6837-48b8-8e99-d58a7526eff3" datalink-type="internal">Trellix Launches <span class="no-break">Advanced Research Center</span></a> 
+          <p class="card-text">Trellix announced the establishment of the Trellix Advanced Research Center to advance global threat intelligence.</p> 
+         </div> 
+        </div> 
+        <div class="custom-card border-0"> 
+         <a href="../../advanced-research-center/threat-reports/feb-2023.html" datalink-id="newco:en-us:advanced-research-center:threat-reports:feb-2023" datalink-type="internal"> <img src="../../img/cards/threat-report-feb-2023-card.jpg" alt="The Threat Report - February 2023" title="The Threat Report - February 2023"> </a> 
+         <div class="card-body"> 
+          <a href="../../advanced-research-center/threat-reports/feb-2023.html" class="card-title h6 condensed-text" datalink-id="newco:en-us:advanced-research-center:threat-reports:feb-2023" datalink-type="internal">Latest Report</a> 
+          <p class="card-text">Trellix Advanced Research Center analyzes Q4 2022 threat data on ransomware, nation-states, sectors, vectors, LotL, MITRE ATT&amp;CK techniques, and emails.</p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="content-4 position-relative p-0 mega-menu container-xl px-md-4"> 
+       <div class="p-6 bg-gray-light d-flex gap-6 m-0 position-relative"> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          SUPPORT
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="../../support.html" class="megamenu-link" datalink-id="newco:en-us:support" datalink-type="internal">Product Support</a> 
+          <a href="../../downloads.html" class="megamenu-link" datalink-id="newco:en-us:downloads" datalink-type="internal">Downloads</a> 
+          <a href="https://docs.trellix.com/" target="_blank" class="megamenu-link" datalink-type="external" datalink-id="newco:docs.trellix.com:">Product Documentation</a> 
+         </div> 
+        </div> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          CONTACT US
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="https://www.mcafee.com/en-us/consumer-support/dispute-detection-allowlisting.html" class="megamenu-link" target="_blank" datalink-type="external" datalink-id="newco:www.mcafee.com:en-us:consumer-support:dispute-detection-allowlisting">Detection Dispute Form</a> 
+          <a href="https://supportm.trellix.com/webcenter/portal/supportportal/pages_serviceRequests/submitSample" class="megamenu-link" target="_blank" datalink-type="external" datalink-id="newco:supportm.trellix.com:webcenter:portal:supportportal:pages_servicerequests:submitsample">Submit a Sample</a> 
+         </div> 
+        </div> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          MCAFEE ENTERPRISE
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="https://supportm.trellix.com/webcenter/portal/supportportal/pages_home" class="megamenu-link no-modal" target="_blank" datalink-type="external" datalink-id="newco:supportm.trellix.com:webcenter:portal:supportportal:pages_home">Support Portal</a> 
+          <a href="../../support/customer-success-plans.html" class="megamenu-link" datalink-id="newco:en-us:support:customer-success-plans" datalink-type="internal">Customer Success Plans</a> 
+         </div> 
+        </div> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          FIREEYE
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="../../support/fe-support.html" class="megamenu-link" datalink-id="newco:en-us:support:fe-support" datalink-type="internal">Get Support</a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="content-5 position-relative p-0 mega-menu container-xl px-md-4"> 
+       <div class="p-6 bg-gray-light d-flex gap-6 m-0 position-relative"> 
+        <div class="links-wrapper"> 
+         <a class="links-header d-block">PARTNERS</a> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="../../partners.html" class="megamenu-link" datalink-id="newco:en-us:partners" datalink-type="internal">Partners Overview</a> 
+          <a href="../../partners/solution-providers.html" class="megamenu-link" datalink-id="newco:en-us:partners:solution-providers" datalink-type="internal">Solution Providers</a> 
+          <a href="../../partners/security-innovation-alliance.html" class="megamenu-link" datalink-id="newco:en-us:partners:security-innovation-alliance" datalink-type="internal">Security Innovation Alliance</a> 
+          <a href="../../partners/oem-alliances.html" class="megamenu-link" datalink-id="newco:en-us:partners:oem-alliances" datalink-type="internal">OEM &amp; Embedded Alliances</a> 
+         </div> 
+        </div> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          PARTNER PORTAL
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="https://partners.trellix.com/" target="_blank" class="megamenu-link no-modal" datalink-type="external" datalink-id="newco:partners.trellix.com:"> Trellix Hive Login</a> 
+          <a href="https://trellixpartners.trellix.com/english/register_email.aspx" target="_blank" class="megamenu-link no-modal" datalink-type="external" datalink-id="newco:trellixpartners.trellix.com:english:register_email.aspx"> Become a Partner </a> 
+         </div> 
+        </div> 
+        <div class="custom-card border-0"> 
+         <a href="https://players.brightcove.net/21712694001/OsCjrUQjY_default/index.html?videoId=6319886576112" class="" target="_blank" data-fancybox="" data-type="iframe" datalink-type="external" datalink-id="newco:players.brightcove.net:21712694001:oscjruqjy_default:index?videoid=6319886576112"> <img src="../../img/cards/trellix-hive-menu-card.png" alt="Trellix HIVE" title="Trellix HIVE"> </a> 
+         <div class="card-body"> 
+          <a href="https://players.brightcove.net/21712694001/OsCjrUQjY_default/index.html?videoId=6319886576112" class="h6 card-title megamenu-link link-internal" target="_blank" data-fancybox="" data-type="iframe" datalink-type="external" datalink-id="newco:players.brightcove.net:21712694001:oscjruqjy_default:index?videoid=6319886576112">Welcome Trellix Partners</a> 
+          <p class="card-text"> 
+           <!--Coming Soon.--> </p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="content-6 position-relative p-0 mega-menu container-xl px-md-4"> 
+       <div class="p-6 bg-gray-light d-flex gap-6 m-0 position-relative"> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          RESOURCES
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="../../services/education-services.html" class="megamenu-link" datalink-id="newco:en-us:services:education-services" datalink-type="internal">Training and Education</a> 
+          <a href="../../services.html" class="megamenu-link" datalink-id="newco:en-us:services" datalink-type="internal">Consulting Services</a> 
+          <a href="../../about/webinars.html" class="megamenu-link" datalink-id="newco:en-us:about:webinars" datalink-type="internal">Webinars</a> 
+          <a href="../../about/events.html" class="megamenu-link" datalink-id="newco:en-us:about:events" datalink-type="internal">Events</a> 
+          <a href="../../resource-library/case-studies.html" class="megamenu-link" datalink-id="newco:en-us:resource-library:case-studies" datalink-type="internal">Case Studies</a> 
+          <a href="../../resource-library.html" class="megamenu-link" datalink-id="newco:en-us:resource-library" datalink-type="internal">Resource Library</a> 
+         </div> 
+        </div> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          MEDIA
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="../../about/newsroom/press-releases.html" class="megamenu-link" datalink-id="newco:en-us:about:newsroom:press-releases" datalink-type="internal">Press Releases</a> 
+          <!--a href="/en-us/about/newsroom/news.html" class="megamenu-link">News</a--> 
+          <a href="../../about/newsroom/stories.html" class="megamenu-link" datalink-id="newco:en-us:about:newsroom:stories" datalink-type="internal">Stories</a> 
+          <a href="../../about/newsroom.html" class="megamenu-overview-link megamenu-link" datalink-id="newco:en-us:about:newsroom" datalink-type="internal">View Newsroom</a> 
+         </div> 
+        </div> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          INTEGRATIONS
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="https://marketplace.manage.trellix.com/" class="megamenu-link" target="_blank" datalink-type="external" datalink-id="newco:marketplace.manage.trellix.com:">Marketplace</a> 
+          <a href="https://developer.manage.trellix.com/" class="megamenu-link" target="_blank" datalink-type="external" datalink-id="newco:developer.manage.trellix.com:">Developer Portal</a> 
+          <a href="https://auth.ui.trellix.com/" class="megamenu-link" target="_blank" datalink-type="internal" datalink-id="newco: https:::auth.ui.trellix.com:">Trellix Login</a> 
+          <a href="https://login.manage.trellix.com/v1/SignUp/en-us/MVISION/MVISIONEPO" class="megamenu-link" target="_blank" datalink-type="external" datalink-id="newco:login.manage.trellix.com:v1:signup:en-us:mvision:mvisionepo">Trellix Free Trial</a> 
+         </div> 
+        </div> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          SECURITY AWARENESS
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="what-is-xdr.html" class="megamenu-link" datalink-id="newco:en-us:security-awareness:endpoint:what-is-xdr" datalink-type="internal">What is XDR?</a> 
+          <a href="what-is-endpoint-security.html" class="megamenu-link" datalink-id="newco:en-us:security-awareness:endpoint:what-is-endpoint-security" datalink-type="internal">What is Endpoint Security?</a> 
+          <a href="what-is-endpoint-detection-and-response.html" class="megamenu-link" datalink-id="newco:en-us:security-awareness:endpoint:what-is-endpoint-detection-and-response" datalink-type="internal">What is EDR?</a> 
+          <a href="../cybersecurity/what-is-mitre-attack-framework.html" class="megamenu-link" datalink-id="newco:en-us:security-awareness:cybersecurity:what-is-mitre-attack-framework" datalink-type="internal">What is MITRE?</a> 
+          <a href="../ransomware/what-is-ransomware.html" class="megamenu-link" datalink-id="newco:en-us:security-awareness:ransomware:what-is-ransomware" datalink-type="internal">What is Ransomware?</a> 
+          <a href="../../security-awareness.html" class="megamenu-overview-link megamenu-link" datalink-id="newco:en-us:security-awareness" datalink-type="internal">View All Topics</a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </header> 
+    <!-- Nav JS loads here to avoid waiting on newco,js for nav items to work --> 
+    <script type="text/javascript" src="../../../www/js/nav-control.min.js"></script> 
+    <div style="background: center 75% / cover url('../../img/hero/what-is-stuxnet-hero.jpg')" class="hero small-hero"> 
+     <div class="container-xl"> 
+      <div class="hero-cont text-white"> 
+       <h1>What Is Endpoint Security?</h1> 
+       <p class="text-white hidden">I'm some more info, if necessary.</p> 
+       <div class="hero-btns hidden"> 
+        <a href="#" class="btn btn-primary" datalink-type="internal" datalink-id="newco:#">I'm A Button</a> 
+        <a href="#" class="btn btn-outline-primary" datalink-type="internal" datalink-id="newco:#">I'm Another Button</a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="testxf"></div> 
+    <div class="toc article-toc"> 
+     <div class="toc-grid container-xl px-md-6"> 
+      <div></div> 
+      <div class="toc-link-cont d-flex flex-column sticky-top"> 
+       <a href="#definition" class="toc-link" datalink-type="internal" datalink-id="newco:#definition">Definition</a> 
+       <a href="#importance" class="toc-link" datalink-type="internal" datalink-id="newco:#importance">Importance</a> 
+       <a href="#how-it-works" class="toc-link" datalink-type="internal" datalink-id="newco:#how-it-works">How it Works</a> 
+       <a href="#whats-endpoint" class="toc-link" datalink-type="internal" datalink-id="newco:#whats-endpoint">What's Endpoint</a> 
+       <a href="#components" class="toc-link" datalink-type="internal" datalink-id="newco:#components">Components</a> 
+       <a href="#epp-vs-antivirus" class="toc-link" datalink-type="internal" datalink-id="newco:#epp-vs-antivirus">EPP vs. Antivirus</a> 
+       <a href="#enterprise-vs-consumer" class="toc-link" datalink-type="internal" datalink-id="newco:#enterprise-vs-consumer">Enterprise vs. Consumer</a> 
+       <a href="#endpoint-security" class="toc-link" datalink-type="internal" datalink-id="newco:#endpoint-security">Endpoint Security</a> 
+       <hr class="gradient-rule mx-0 w-100"> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="toc-contents"> 
+     <!-- TOP DIV WILL APPEAR WHEN VALUE FOR TOP CLASS IS PROVIDED --> 
+     <div class="py-32 py-md-48 py-lg-72 bg-gray-light px-md-6" data-wow-duration="0.5s" style="transition-delay:0s;;background-color:;"> 
+      <div class="toc-grid container-xl px-md-6"> 
+       <div class="toc-anchor" id="definition">
+        <p>Endpoint security is the practice of securing endpoints or entry points of end-user devices such as desktops, laptops, and mobile devices from being exploited by malicious actors and campaigns. Endpoint security systems protect these endpoints on a network or in the cloud from cybersecurity threats. Endpoint security has evolved from traditional antivirus software to providing comprehensive protection from sophisticated malware and evolving zero-day threats.</p> 
+        <p>Organizations of all sizes are at risk from nation-states, hacktivists, organized crime, and malicious and accidental insider threats. Endpoint security is often seen as cybersecurity's frontline, and represents one of the first places organizations look to secure their enterprise networks.</p> 
+        <p>As the volume and sophistication of cybersecurity threats have steadily grown, so has the need for more advanced endpoint security solutions. Today’s endpoint protection systems are designed to quickly detect, analyze, block, and contain attacks in progress. To do this, they need to collaborate with each other and with other security technologies to give administrators visibility into advanced threats to speed detection and remediation response times.</p> 
+       </div> 
+      </div> 
+     </div> 
+     <!-- TOP DIV WILL APPEAR WHEN VALUE FOR TOP CLASS IS PROVIDED --> 
+     <div class="pt-32 pt-md-48 py-lg-72 px-md-6" data-wow-duration="0.5s" style="transition-delay:0s;;background-color:;"> 
+      <div class="toc-grid container-xl px-md-6"> 
+       <div class="toc-anchor" id="importance">
+        <h2>Why endpoint security is important</h2> 
+        <br> 
+        <p>An endpoint protection platform is a vital part of enterprise cybersecurity for &nbsp;several reasons. First of all, in today’s business world, data is&nbsp; the most valuable asset of a company —and to lose that data, or access to that data, could put the entire business at risk of insolvency. Businesses have also had to contend with not only a growing number of endpoints, but also a rise in the number of types of endpoints. These factors make enterprise endpoint security more difficult on their own, but they’re compounded by remote work and BYOD policies—which make perimeter security increasingly insufficient and create vulnerabilities. The threat landscape is becoming more complicated, as well: Hackers are always coming up with new ways to gain access, steal information or manipulate employees into giving out sensitive information. Add in the opportunity, cost of reallocating resources from business goals to addressing threats, the reputational cost of a large-scale breach, and the actual financial cost of compliance violations, and it’s easy to see why endpoint protection platforms have become regarded as must-haves in terms of securing modern enterprises.</p> 
+       </div> 
+      </div> 
+     </div> 
+     <!-- TOP DIV WILL APPEAR WHEN VALUE FOR TOP CLASS IS PROVIDED --> 
+     <div class="py-32 py-md-48 py-lg-72 bg-gray-light px-md-6" data-wow-duration="0.5s" style="transition-delay:0s;;background-color:;"> 
+      <div class="toc-grid container-xl px-md-6"> 
+       <div class="toc-anchor" id="how-it-works">
+        <h2>How endpoint protection works</h2> 
+        <br> 
+        <p>Endpoint security is the practice of safeguarding the data and workflows associated with the individual devices that connect to your network. <a href="what-is-an-endpoint-protection-platform.html" datalink-id="newco:en-us:security-awareness:endpoint:what-is-an-endpoint-protection-platform" datalink-type="internal">Endpoint protection platforms</a> (EPP) work by examining files as they enter the network. Modern EPPs harness the power of the cloud to hold an ever-growing database of threat information, freeing endpoints of the bloat associated with storing all this information locally and the maintenance required to keep these databases up to date. Accessing this data in the cloud also allows for greater speed and scalability.</p> 
+        <p>The EPP provides system administrators a centralized console, which is installed on a network gateway or server and allows cybersecurity professionals to control security for each device remotely. The client software is then assigned to each endpoint—it can either be delivered as a SaaS and managed remotely, or it can be installed directly on the device. Once the endpoint has been set up, the client software can push updates to the endpoints when necessary, authenticate log-in attempts from each device, and administer corporate policies from one location. EPPs secure endpoints through application control—which blocks the use of applications that are unsafe or unauthorized—and through encryption, which helps prevent data loss.</p> 
+        <p>When the EPP is set up, it can quickly detect malware and other threats. Some solutions also include an <a href="what-is-endpoint-detection-and-response.html" datalink-id="newco:en-us:security-awareness:endpoint:what-is-endpoint-detection-and-response" datalink-type="internal">Endpoint Detection and Response</a> (EDR) component. EDR capabilities allow for the detection of more advanced threats, such as polymorphic attacks, fileless malware, and zero-day attacks. By employing continuous monitoring, the EDR solution can offer better visibility and a variety of response options.</p> 
+        <p>EPP solutions are available in on-premises or cloud based models. While cloud- based products are more scalable and can more easily integrate with your current architecture, certain regulatory/compliance rules may require on-premises security.</p> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="toc-grid container-xl py-48 py-md-60 py-lg-72 px-md-6"> 
+      <div> 
+       <div class="header-gradient-container container-xl px-md-6 d-flex align-items-center"> 
+        <div class="col-8 py-4"> 
+         <h3>2021 Gartner® Magic Quadrant for Endpoint Protection Platforms</h3> 
+         <a href="../../solutions/gartner-magic-quadrant-for-endpoint-security.html" class="btn btn-inverted" datalink-id="newco:en-us:solutions:gartner-magic-quadrant-for-endpoint-security" datalink-type="internal">Download Report</a> 
+        </div> 
+        <div class="d-none d-xmd-block col-3 py-4"> 
+         <img src="../../img/v1/gartner-magic-quadrant-for-endpoint-security.png" class="ms-2" style="transform:scale(1.33);transform-origin: left 45%;box-shadow: 0 0 0 4px var(--bs-primary);" alt=""> 
+        </div> 
+       </div> 
+      </div>
+     </div> 
+     <!-- TOP DIV WILL APPEAR WHEN VALUE FOR TOP CLASS IS PROVIDED --> 
+     <div class="bg-gray-light px-md-6" data-wow-duration="0.5s" style="transition-delay:0s;;background-color:;"> 
+      <div class="pt-32 pt-md-48 pt-lg-72  toc-grid container-xl px-md-6"> 
+       <h2 id="whats-endpoint">What’s considered an endpoint?</h2> 
+      </div> 
+     </div> 
+     <div class="pb-32 pb-md-48 pb-lg-72 pt-24 bg-gray-light px-md-6"> 
+      <div class="container-xl px-md-6"> 
+       <div class="toc-grid"> 
+        <div class="row"> 
+         <div class="col-12 col-md-6"> 
+          <!-- TOP DIV WILL APPEAR WHEN VALUE FOR TOP CLASS IS PROVIDED --> 
+          <div class="d-flex flex-column gap-3 "> 
+           <p>Endpoints can range from the more commonly thought of devices such as:</p> 
+           <ul> 
+            <li>Tablets</li> 
+            <li>Mobile devices</li> 
+            <li>Smart watches</li> 
+            <li>Printers</li> 
+            <li>Servers</li> 
+            <li>ATM machines</li> 
+            <li>Medical devices</li> 
+           </ul> 
+           <p>If a device is connected to a network, it is considered an endpoint. With the growing popularity of BYOD (bring your own device) and IoT (Internet of Things), the number of individual devices connected to an organization's network can quickly reach into the tens (and hundreds) of thousands.</p> 
+           <p>Because they are entry points for threats and malware, endpoints (especially mobile and remote devices) are a favorite target of adversaries. Mobile endpoint devices have become much more than just Android devices and iPhones—think of the latest wearable watches, smart devices, voice-controlled digital assistants, and other IoT-enabled smart devices. We now have network-connected sensors in our cars, airplanes, hospitals, and even on the drills of oil rigs. As the different types of endpoints have evolved and expanded, the security solutions that protect them have also had to adapt.</p> 
+          </div> 
+         </div> 
+         <div class="col-12 col-md-6"> 
+          <!-- TOP DIV WILL APPEAR WHEN VALUE FOR TOP CLASS IS PROVIDED --> 
+          <div class="d-flex flex-column gap-3 "> 
+           <p><img alt="Endpoint Everywhere Infographic" src="../../img/security-awareness/endpoints.png"></p> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <!-- TOP DIV WILL APPEAR WHEN VALUE FOR TOP CLASS IS PROVIDED --> 
+     <div class="py-32 py-md-48 py-lg-72 px-md-6" data-wow-duration="0.5s" style="transition-delay:0s;;background-color:;"> 
+      <div class="toc-grid container-xl px-md-6"> 
+       <div class="toc-anchor" id="components">
+        <h2>Endpoint security components</h2> 
+        <br> 
+        <p>Typically, endpoint security software will include these key components:</p> 
+        <ul> 
+         <li>Machine-learning classification to detect zero-day threats in near real time</li> 
+         <li>Advanced antimalware and antivirus protection to protect, detect, and correct malware across multiple endpoint devices and operating systems</li> 
+         <li>Proactive web security to ensure safe browsing on the web</li> 
+         <li>Data classification and data loss prevention to prevent data loss and exfiltration</li> 
+         <li>Integrated firewall to block hostile network attacks</li> 
+         <li>Email gateway to block phishing and social engineering attempts targeting your employees</li> 
+         <li>Actionable threat forensics to allow administrators to quickly isolate infections</li> 
+         <li>Insider threat protection to safeguard against unintentional and malicious actions</li> 
+         <li>Centralized endpoint management platform to improve visibility and simplify operations</li> 
+         <li>Endpoint, email and disk encryption to prevent data exfiltration</li> 
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+     <!-- TOP DIV WILL APPEAR WHEN VALUE FOR TOP CLASS IS PROVIDED --> 
+     <div class="py-32 py-md-48 py-lg-72 bg-gray-light px-md-6" data-wow-duration="0.5s" style="transition-delay:0s;;background-color:;"> 
+      <div class="toc-grid container-xl px-md-6"> 
+       <div class="toc-anchor" id="epp-vs-antivirus">
+        <h2>Endpoint protection platforms vs. traditional antivirus</h2> 
+        <br> 
+        <p>Endpoint protection platforms (EPP) and traditional antivirus solutions differ in some key ways.</p> 
+        <ul> 
+         <li><b>Endpoint Security vs. Network Security:&nbsp;</b>Antivirus programs are designed to safeguard a single endpoint, offering visibility into only that endpoint, in many cases only from that endpoint. Endpoint security software, however, looks at the enterprise network as a whole and can offer visibility of all connected endpoints from a single location.</li> 
+        </ul> 
+        <ul> 
+         <li><b>Administration:&nbsp;</b>Legacy antivirus solutions relied on the user to manually update the databases or to allow updates at pre-set time. EPPs offer interconnected security that moves administration responsibilities to enterprise IT or cybersecurity team.<br> <br> </li> 
+         <li><b style="background-color: transparent;">Protection:&nbsp;</b>Traditional antivirus solutions used signature-based detection to find viruses. This meant that if your business was Patient Zero, or if your users hadn’t updated their antivirus program recently, you could still be at risk. By harnessing the cloud, today’s EPP solutions are kept up to date automatically. And with the use of technologies such as behavioral analysis, previously unidentified threats can be uncovered based suspicious behavior.</li> 
+        </ul> 
+        <p><a href="what-is-endpoint-antivirus.html" datalink-id="newco:en-us:security-awareness:endpoint:what-is-endpoint-antivirus" datalink-type="internal">Learn more</a> about the differences between legacy antivirus solutions and modern Endpoint Protection Platforms.</p> 
+       </div> 
+      </div> 
+     </div> 
+     <!-- TOP DIV WILL APPEAR WHEN VALUE FOR TOP CLASS IS PROVIDED --> 
+     <div class="py-32 py-md-48 py-lg-72 px-md-6" data-wow-duration="0.5s" style="transition-delay:0s;;background-color:;"> 
+      <div class="toc-grid container-xl px-md-6"> 
+       <div class="toc-anchor" id="enterprise-vs-consumer">
+        <h2>How enterprise endpoint protection differs from consumer endpoint protection</h2> 
+        <br> 
+        <p>&nbsp;</p> 
+        <div class="data-table mb-5">
+         <div class="gt-head">
+          <h5>Enterprise Endpoint Security Protection</h5> 
+          <h5>Consumer Endpoint Security Protection</h5> 
+         </div> 
+         <div class="gt-row">
+          <p>Consumer Endpoint Security Protection</p> 
+          <p>Required to manage just a small number of single-user endpoints</p> 
+         </div> 
+         <div class="gt-row">
+          <p>Better at managing diverse collections of endpoints</p> 
+          <p>Required to manage just a small number of single-user endpoints</p> 
+         </div> 
+         <div class="gt-row">
+          <p>Central management hub software</p> 
+          <p>Endpoints individually set up and configured</p> 
+         </div> 
+         <div class="gt-row">
+          <p>Remote administration capabilities</p> 
+          <p>Rarely requires remote management</p> 
+         </div> 
+         <div class="gt-row">
+          <p>Configures endpoint protection on devices remotely</p> 
+          <p>Configures endpoint protection directly to device</p> 
+         </div> 
+         <div class="gt-row">
+          <p>Deploys patches to all relevant endpoints</p> 
+          <p>User enables automatic updates for each device</p> 
+         </div> 
+         <div class="gt-row">
+          <p>Requires modified permissions</p> 
+          <p>Uses administrative permissions</p> 
+         </div> 
+         <div class="gt-row">
+          <p>Ability to monitor employee devices, activity, and behavior</p> 
+          <p>Activity and behavior limited to sole user</p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <!-- TOP DIV WILL APPEAR WHEN VALUE FOR TOP CLASS IS PROVIDED --> 
+     <div class="py-32 py-md-48 py-lg-72 bg-gray-light px-md-6" data-wow-duration="0.5s" style="transition-delay:0s;;background-color:;"> 
+      <div class="toc-grid container-xl px-md-6"> 
+       <div class="toc-anchor" id="endpoint-security">
+        <h2>Advanced endpoint security solutions</h2> 
+        <br> 
+        <p>Trellix offers a full range of enterprise solutions that combine powerful endpoint protection with efficient endpoint management. &nbsp;<a href="../../platform/endpoint-security.html" datalink-id="newco:en-us:platform:endpoint-security" datalink-type="internal">Trellix Endpoint Security</a> combines established capabilities such as firewall, reputation, and heuristics with cutting-edge machine learning and containment, along with endpoint detection and response (EDR) into a single platform agent, with a single management console. The resulting integrated endpoint protection platform keeps users productive and connected while stopping zero-day malware, like <a href="../ransomware/what-is-ransomware.html" datalink-id="newco:en-us:security-awareness:ransomware:what-is-ransomware" datalink-type="internal">ransomware</a>, before it can infect the first endpoint.</p> 
+       </div> 
+      </div> 
+     </div> 
+     <!-- TOP DIV WILL APPEAR WHEN VALUE FOR TOP CLASS IS PROVIDED --> 
+     <div class="pt-32 pt-md-48 pt-lg-72 blue-rule-top toc-grid container-xl px-md-6"> 
+      <h2 id="moreArticles">More Endpoint Security Articles</h2> 
+     </div> 
+     <div class="pb-32 pb-md-48 pb-lg-72 pt-24 px-md-6"> 
+      <div class="container-xl px-md-6"> 
+       <div class="toc-grid"> 
+        <div class="row"> 
+         <div class="col-12 col-md-6"> 
+          <hr class="gradient-rule mx-0"> 
+          <!-- TOP DIV WILL APPEAR WHEN VALUE FOR TOP CLASS IS PROVIDED --> 
+          <div class="d-flex flex-column gap-3 "> 
+           <a href="what-is-managed-detection-response.html" class="text-decoration-none link-arrow text-black" target="_blank" title="" datalink-id="newco:en-us:security-awareness:endpoint:what-is-managed-detection-response" datalink-type="internal">What Is Managed Detection and Response (MDR)? </a>
+           <a href="mobile-device-management.html" class="text-decoration-none link-arrow text-black" target="_blank" title="" datalink-id="newco:en-us:security-awareness:endpoint:mobile-device-management" datalink-type="internal">What Is Mobile Device Management?</a>
+           <a href="what-is-next-gen-endpoint-protection.html" class="text-decoration-none link-arrow text-black" target="_blank" title="" datalink-id="newco:en-us:security-awareness:endpoint:what-is-next-gen-endpoint-protection" datalink-type="internal">What Is Next-Generation Endpoint Security? </a>
+           <a href="what-is-advanced-endpoint-protection.html" class="text-decoration-none link-arrow text-black" target="_blank" title="" datalink-id="newco:en-us:security-awareness:endpoint:what-is-advanced-endpoint-protection" datalink-type="internal">What Is Advanced Endpoint Protection? </a>
+           <a href="what-is-endpoint-security-management.html" class="text-decoration-none link-arrow text-black" target="_blank" title="" datalink-id="newco:en-us:security-awareness:endpoint:what-is-endpoint-security-management" datalink-type="internal">What Is Endpoint Management?</a>
+           <a href="what-is-xdr.html" class="text-decoration-none link-arrow text-black" target="_blank" title="" datalink-id="newco:en-us:security-awareness:endpoint:what-is-xdr" datalink-type="internal">What Is Extended Detection and Response (XDR)?</a> 
+          </div> 
+         </div> 
+         <div class="col-12 col-md-6"> 
+          <hr class="gradient-rule mx-0"> 
+          <!-- TOP DIV WILL APPEAR WHEN VALUE FOR TOP CLASS IS PROVIDED --> 
+          <div class="d-flex flex-column gap-3 "> 
+           <a href="what-is-endpoint-encryption.html" class="text-decoration-none link-arrow text-black" target="_blank" title="" datalink-id="newco:en-us:security-awareness:endpoint:what-is-endpoint-encryption" datalink-type="internal">What Is Endpoint Encryption? </a>
+           <a href="what-is-endpoint-antivirus.html" class="text-decoration-none link-arrow text-black" target="_blank" title="" datalink-id="newco:en-us:security-awareness:endpoint:what-is-endpoint-antivirus" datalink-type="internal">What Is Endpoint Antivirus?</a>
+           <a href="what-is-endpoint-detection-and-response.html" class="text-decoration-none link-arrow text-black" target="_blank" title="" datalink-id="newco:en-us:security-awareness:endpoint:what-is-endpoint-detection-and-response" datalink-type="internal">What Is Endpoint Detection and Response? </a>
+           <a href="what-is-an-endpoint-protection-platform.html" class="text-decoration-none link-arrow text-black" target="_blank" title="" datalink-id="newco:en-us:security-awareness:endpoint:what-is-an-endpoint-protection-platform" datalink-type="internal">What Is an Endpoint Protection Platform?</a>
+           <a href="what-is-endpoint-protection-software.html" class="text-decoration-none link-arrow text-black" target="_blank" title="" datalink-id="newco:en-us:security-awareness:endpoint:what-is-endpoint-protection-software" datalink-type="internal">What Is Endpoint Protection Software? </a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="screenSpacer"></div> 
+    <footer> 
+     <hr class="gradient-rule m-0 w-100"> 
+     <div class="container-xl px-md-6"> 
+      <div class="links cols"> 
+       <div class="link-group"> 
+        <b class="mb-1">About</b> 
+        <a href="../../about/why-trellix.html" datalink-id="newco:en-us:about:why-trellix" datalink-type="internal">Why Trellix?</a> 
+        <a href="../../about.html" datalink-id="newco:en-us:about" datalink-type="internal">About Us</a> 
+        <a href="../../products.html" datalink-id="newco:en-us:products" datalink-type="internal">Explore Products</a> 
+        <a href="../../about/leadership.html" datalink-id="newco:en-us:about:leadership" datalink-type="internal">Leadership</a> 
+        <a href="https://careers.trellix.com/" target="_blank" class="link-external" datalink-type="external" datalink-id="newco:careers.trellix.com:">Careers</a> 
+       </div> 
+       <div class="link-group"> 
+        <b class="mb-1">News and Events</b> 
+        <a href="../../about/newsroom.html" datalink-id="newco:en-us:about:newsroom" datalink-type="internal">Newsroom</a> 
+        <a href="../../about/newsroom/press-releases.html" datalink-id="newco:en-us:about:newsroom:press-releases" datalink-type="internal">Press Releases</a> 
+        <a href="../../about/newsroom/stories.html" datalink-id="newco:en-us:about:newsroom:stories" datalink-type="internal">Blogs</a> 
+        <a href="../../about/webinars.html" datalink-id="newco:en-us:about:webinars" datalink-type="internal">Webinars</a> 
+        <a href="../../about/events.html" datalink-id="newco:en-us:about:events" datalink-type="internal">Events</a> 
+       </div> 
+       <div class="link-group"> 
+        <b class="mb-1">Resources</b> 
+        <a href="../../security-awareness.html" datalink-id="newco:en-us:security-awareness" datalink-type="internal">Security Awareness</a> 
+        <a href="../../resource-library.html" datalink-id="newco:en-us:resource-library" datalink-type="internal">Resource Library</a> 
+        <a href="../../services/education-services.html" datalink-id="newco:en-us:services:education-services" datalink-type="internal">Training and Education</a> 
+        <a href="../../contact-us/communication-preferences.html" datalink-id="newco:en-us:contact-us:communication-preferences" datalink-type="internal">Communication Preferences</a> 
+        <a href="https://shop.trellix.com/1320/purl-cataloghome" target="_blank" class="link-external" datalink-type="external" datalink-id="newco:shop.trellix.com:1320:purl-cataloghome">Shop Online</a> 
+        <!-- <a href="https://teamtrellixstore.com/pages/store" class="link-external" target="_blank">Trellix Store</a> --> 
+       </div> 
+       <div class="link-group"> 
+        <b class="mb-1">Support</b> 
+        <a href="https://supportm.trellix.com/webcenter/portal/supportportal/pages_home" target="_blank" class="link-external" datalink-type="external" datalink-id="newco:supportm.trellix.com:webcenter:portal:supportportal:pages_home">Support</a> 
+        <a href="../../support/customer-success-plans.html" datalink-id="newco:en-us:support:customer-success-plans" datalink-type="internal">Customer Success Plans</a> 
+        <a href="../../downloads.html" datalink-id="newco:en-us:downloads" datalink-type="internal">Downloads</a> 
+        <a href="https://docs.trellix.com/" target="_blank" class="link-external" datalink-type="external" datalink-id="newco:docs.trellix.com:">Product Documentation</a> 
+       </div> 
+       <div class="link-group"> 
+        <b class="mb-1">Trellix</b> 
+        <a href="../../contact-us.html" datalink-id="newco:en-us:contact-us" datalink-type="internal">Contact Us</a> 
+       </div> 
+      </div> 
+      <div class="more-info d-flex flex-column flex-xmd-row gap-y-4 align-items-center"> 
+       <div class="d-flex col-auto col-xmd-2"> 
+        <a href="../../../index.html" style="margin-top: -8px;" title="Trellix" datalink-id="newco:" datalink-type="internal"> <img src="../../assets/logos/Trellix-x-white.svg" alt="Trellix" height="32" width="auto"> </a> 
+       </div> 
+       <div class="more-links d-flex flex-wrap col-auto col-xmd-8 gap-x-2 align-items-center justify-content-center"> 
+        <span class="col-12 col-lg-auto text-center">Copyright © <span id="cYear"></span> Musarubra US LLC</span> 
+        <script async>
+                    document.getElementById('cYear').textContent += `${/\d{4}/.exec(Date())[0]} `;
+                </script> 
+        <span class="d-none d-lg-inline">|</span> 
+        <a href="../../about/legal/privacy.html" datalink-id="newco:en-us:about:legal:privacy" datalink-type="internal">Privacy</a> 
+        <span>|</span> 
+        <a href="../../about/legal.html" datalink-id="newco:en-us:about:legal" datalink-type="internal">Legal</a> 
+        <span>|</span> 
+        <a href="../../about/legal/website-terms-of-service.html" datalink-id="newco:en-us:about:legal:website-terms-of-service" datalink-type="internal">Terms of Service</a> 
+       </div> 
+       <div class="social-links pb-4 pb-xmd-0 d-flex col-auto col-xmd-2 gap-2 justify-content-end align-items-center"> 
+        <a href="https://www.linkedin.com/company/trellixsecurity" id="linkedIn" target="_blank" class="social-link" title="Trellix LinkedIn" datalink-type="external" datalink-id="newco:www.linkedin.com:company:trellixsecurity"> 
+         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 16 16"> 
+          <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" /> 
+         </svg> </a> 
+        <a href="https://twitter.com/Trellix" id="twitter" target="_blank" class="social-link" title="Trellix Twitter" datalink-type="external" datalink-id="newco:twitter.com:trellix"> 
+         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24"> 
+          <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" /> 
+         </svg> </a> 
+        <a href="https://www.youtube.com/trellixsecurity" id="youtube" target="_blank" class="social-link" title="Trellix YouTube" datalink-type="external" datalink-id="newco:www.youtube.com:trellixsecurity"> 
+         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 16 16"> 
+          <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" /> 
+         </svg> </a> 
+       </div> 
+      </div> 
+     </div> 
+    </footer> 
+    <div class="modal fade" id="searchTipModal" style="z-index: 99999"> 
+     <div class="modal-dialog gradient-rule-bottom modal-lg"> 
+      <div class="modal-content"> 
+       <div class="modal-header" style="border-bottom:0px;"> 
+        <h2 class="modal-title"></h2> 
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button> 
+       </div> 
+       <div class="modal-body p-5 pt-0"> 
+        <h4 class="modal-title">Search Tips</h4>
+        <br> 
+        <div class="container small"> 
+         <p><b>Be concise and specific:</b></p> 
+         <p>Wrong:&nbsp;<i>I want to learn how to migrate to Trellix Endpoint Security</i></p> 
+         <p>Right:&nbsp;<i>Trellix Endpoint Security migration</i></p> 
+         <p><b>Use quotation marks to find a specific phrase:</b></p> 
+         <p><i>“migrate to Trellix Endpoint security”</i></p> 
+         <p><b>Use sets of quotation marks to search for multiple queries:</b></p> 
+         <p><i>“endpoint security” “Windows”</i></p> 
+         <p><b>Punctuation and special characters are ignored:</b></p> 
+         <p>Avoid these characters: `, ~, :, @, #, $, %, ^, &amp;, =, +, &lt;, &gt;, (, )</p> 
+         <p><b>The search engine is not case sensitive:</b></p> 
+         <p><i>Endpoint security</i>,&nbsp;<i>endpoint security</i>, and&nbsp;<i>ENDPOINT SECURITY</i>&nbsp;will all yield the same results.</p> 
+        </div> 
+       </div> 
+       <div class="modal-footer"> 
+        <button type="button" class="btn btn-outline-primaryy" data-bs-dismiss="modal">Close</button> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- site container --> 
+  <link rel="stylesheet" href="../../../etc.clientlibs/corpcom/clientlibs/clientlib-jquery.min.css" type="text/css"> 
+  <link rel="stylesheet" href="../../../etc.clientlibs/corpcom/clientlibs/clientlib-base.min.css" type="text/css"> 
+  <script src="../../../etc.clientlibs/corpcom/clientlibs/clientlib-jquery.min.js"></script> 
+  <script src="../../../etc.clientlibs/corpcom/clientlibs/clientlib-base.min.js"></script> 
+  <script src="../../../etc.clientlibs/corpcom/clientlibs/csrf.min.js"></script> 
+  <script src="../../../www/js/toc-control.js"></script>   
+ </body>
+
+<!-- Mirrored from www.trellix.com/en-us/security-awareness/endpoint/what-is-endpoint-security.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Mar 2023 05:10:15 GMT -->
+</html>

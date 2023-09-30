@@ -1,0 +1,228 @@
+#searchTipOverlayLink {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.searchTipOverlayContainer {
+    position: fixed;
+    top: 5%;
+    left: 0px;
+    z-index: 999999;
+    width: 100%;
+    height: 100%;
+    background: url(clientlibs/css/clientlib-site/css/images/fancybox_overlay.html);
+}
+
+.Tabfade {
+    display: none;
+    margin: 0px 0px 0px 0px;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #ababab;
+    z-index: 999;
+    -moz-opacity: 0.8;
+    opacity: .70;
+    filter: alpha(opacity=80);
+}
+
+.Tabmodal {
+    display: none;
+    margin: 0px 0px 0px 0px;
+    position: fixed;
+    top: 10%;
+    left: 45%;
+    width: 84px;
+    height: 84px;
+    padding: 25px 15px 0px;
+    border: 3px solid #ababab;
+    box-shadow: 1px 1px 10px #ababab;
+    border-radius: 20px;
+    background-color: white;
+    z-index: 1002;
+    text-align: center;
+    overflow: auto;
+}
+
+.grant-popup.containing-block {
+    max-width: 959px!important;
+    width: 90%!important;
+    background: #fff
+}
+
+.videoOverlayContainerClose,.popUpOverlayContainerClose,.searchTipOverlayContainerClose{
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+	z-index: 200;
+	float: right;
+	margin-right: -22px;
+	margin-top: -17px;
+	margin-left: 0px;
+	top: 0px;
+	position: relative;
+	background-image: url('../../../../../etc/designs/enterprise/clientLibs/images/fancybox_sprite.png');
+}
+
+.inner-container {
+    height: -webkit-fill-available;
+    height: 100%;
+    overflow-y: auto
+}
+
+    .panel-group {
+        margin-bottom: 20px;
+    }
+
+    .panel-group .panel {
+        border-top: 1px solid #e6e7e8;
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+a#searchTipOverlayLink {
+    color: #2814ff;
+    text-decoration: none;
+}
+
+a#searchTipOverlayLink:hover {
+    text-decoration: underline
+}
+    .panel-group .panel:last-child {
+        margin-bottom: -1px;
+        border-bottom: 1px solid #e6e7e8;
+    }
+
+    .panel-group .panel+.panel {
+        margin-top: 0;
+    }
+
+    .panel-group .panel-heading {
+        padding: 0;
+        color: #5a5a5a;
+        font-weight: 500;
+    }
+
+    .panel-group .opener {
+        display: block;
+        position: relative;
+        font-size: 16px;
+        padding: 0.5rem .75rem 0.4rem .75rem;
+        color: inherit;
+        font-weight: normal;
+        cursor: pointer;
+
+        transition: background .3s;
+    }
+
+    .panel-group .opener:after {
+        content: '';
+        position: absolute;
+        width: 9px;
+        background: #53565a;
+        height: 1px;
+        right: .75rem;
+        top: 19px;
+    }
+
+    .panel-group .opener:before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        background: #53565a;
+        height: 9px;
+        right: calc(.75rem + 4px);
+        top: 15px;
+    }
+
+    .panel-group .opener:focus,
+    .panel-group .opener:hover {
+        text-decoration: none;
+        background: var(--bs-gray-light-50);
+    }
+
+    .panel-group .accordion-active .opener:before {
+        display: none;
+    }
+
+    .panel-group .panel-collapse {
+        padding: .33rem .75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25em;
+        overflow-y: scroll;
+    }
+
+    .panel-group .checkbox {
+        padding: .15rem .75rem 0;
+        border-left: 0px solid var(--bs-primary);
+        background-color: var(--bs-white);
+        transition: background-color .3s;
+    }
+
+    .panel-group .checkbox:hover {
+        background-color: var(--bs-gray-light-50);
+        border-left-width: 2px;
+        padding-left: calc(.75rem - 2px);
+    }
+
+    .panel-group .checkbox input,
+    .panel-group .checkbox label {
+        cursor: pointer;
+    }
+
+    .panel-group .checkbox label {
+        display: inline;
+        position: relative;
+        top: -1px;
+        padding-left: 3px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        user-select: none;
+
+        transition: font-weight .15s;
+    }
+
+    .panel-group .checkbox :checked+label {
+        font-weight: 700;
+    }
+
+    .small-post .text-block {
+        position: relative;
+        background-color: var(--bs-white);
+        transition: background .3s;
+        overflow: visible;
+        cursor: pointer;
+    }
+
+    .small-post .text-block:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        height: 7px;
+        background: linear-gradient(270deg, #00cd00 7.7%, #00a5ff 52.3%, #2814ff 97.5%);
+
+        pointer-events: none;
+
+        opacity: 0;
+        transition: opacity .3s;
+    }
+
+    .small-post .text-block:hover {
+        background-color: var(--bs-gray-light-50);
+    }
+
+    .small-post .text-block:hover:after {
+        opacity: 1;
+    }
+    .dropdown-toggle:after{
+        border-right: 0px !important;
+        border-left: 0px !important;
+    }

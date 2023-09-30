@@ -1,0 +1,1716 @@
+<!DOCTYPE html>
+<html lang="ja">
+ 
+<!-- Mirrored from www.trellix.com/ja-jp/advanced-research-center/threat-reports/jan-2022.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Mar 2023 06:11:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+  <title>Trellix ATR Threats Report | January 2022</title> 
+  <link rel="shortcut icon" href="https://www.trellix.com/favicon.ico?v=2"> 
+  <link rel="canonical" href="https://www.trellix.com/ja-jp/advanced-research-center/threat-reports/jan-2022.html"> 
+  <meta name="keywords"> 
+  <meta name="description" content="Trellix's advanced threat research report for January 2022 providing insignt into Log4j, ransomeware and other top threats."> 
+  <meta property="og:title" content="Trellix ATR Threats Report | January 2022"> 
+  <meta property="og:description" content="Trellix's advanced threat research report for January 2022 providing insignt into Log4j, ransomeware and other top threats."> 
+  <meta name="twitter:title" content="Trellix ATR Threats Report | January 2022"> 
+  <meta name="twitter:description" content="Trellix's advanced threat research report for January 2022 providing insignt into Log4j, ransomeware and other top threats."> 
+  <meta name="robots"> 
+  <meta name="content-type"> 
+  <meta name="page-name" content="jan-2022"> 
+  <meta name="p:domain_verify" content="b7e159231749a2568a55ea5222f94627"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="lastmodified" content="2022-09-23T02:14:15.874Z"> 
+  <script type="text/javascript">
+	var digitalData = {
+		"page":{ 
+			"pageInfo": {
+				"pageName" :  "ja-jp:advanced-research-center:threat-reports:jan-2022",
+				"pageNameGlobal" : "advanced-research-center:threat-reports:jan-2022",
+				"pageLanguage" : "Japanese",
+				"pageType" : "",
+				"country" : "jp",
+				"geo" : "JPN",
+				"onsiteSearchTerm" : "",
+		        "onsiteSearchType" : "",
+			    "searchSubType" : "", 
+				"metaData" : {
+					"contentType": "",
+					"englishName": "",
+					"onDate":  "",
+					"siteSection": "",
+					"productCategory": "",
+					"product": "",
+					"customerNarrative": "",
+					"campaignTheme": "",
+					"solution": "",
+					"industry": "",
+					"contentTopics": "",
+					"audienceSegments": "",
+					"buyingStages": "",
+					"personas": ""
+				},
+				"category": {
+					"category": "advanced-research-center",
+					"subCategory1":"threat-reports"
+				}
+			}
+		},
+		"user": { 
+			"userInfo": {
+				"ip":"182.69.177.65"
+			}
+		}
+	}	
+</script> 
+  <!--<link data-sly-test="" rel="icon" href=""/>--> 
+  <meta name="google-site-verification" content="Tu8iwfQYjzlJ-y71GRhVppj7r-3T519yGdLFKFgauL0"> 
+  <meta name="msvalidate.01" content="560987DD190D7F9CFDA6E1181FA10A4A"> 
+  <meta name="ahrefs-site-verification" content="25c26e6513f7902c846e2fbcf5e75e88a3235e87a02aba987602ec71ccb9a356"> 
+  <link rel="preload" as="font" href="https://www.trellix.com/www/fonts/AventaVF.woff2" type="font/woff2" crossorigin="anonymous"> 
+  <link rel="stylesheet" href="https://www.trellix.com/www/css/fancybox.css" type="text/css"> 
+  <link rel="stylesheet" href="https://www.trellix.com/www/css/newco.min.css" type="text/css"> 
+  <link rel="stylesheet" href="https://www.trellix.com/www/css/common.min.css" type="text/css"> 
+  <link rel="stylesheet" href="https://www.trellix.com/www/css/icons.min.css" type="text/css"> 
+  <link rel="stylesheet" href="https://www.trellix.com/www/css/tables-charts.min.css" type="text/css"> 
+  <script type="text/javascript" src="https://www.trellix.com/www/js/newco.min.js" async></script> 
+  <script type="text/javascript" src="https://assets.adobedtm.com/f0febc6281f5/daaefd9d8423/launch-675ffef2af24.min.js" async></script> 
+  <script type="text/javascript" src="https://www.trellix.com/www/js/carousel.autoplay.umd.js"></script> 
+  <script type="text/javascript" src="https://www.trellix.com/www/js/fancybox.umd.js"></script> 
+  <script type="text/javascript" src="https://www.trellix.com/www/js/fancybox.js" defer></script> 
+  <script type="text/javascript" src="https://www.trellix.com/www/js/popper-v2.11.5.js" defer></script> 
+  <script type="text/javascript" src="https://www.trellix.com/www/js/header-footer-control.min.js" defer></script> 
+  <script type="text/javascript" src="https://www.trellix.com/www/js/form-control.min.js" defer></script> 
+  <script type="text/javascript" src="https://www.trellix.com/www/js/carousel-control.min.js" defer></script> 
+  <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=62d02fdf987470001990b50c&amp;product=inline-share-buttons" async></script> 
+  <script type="text/javascript"> (function(j,u,k,e,b,o,x){j["pfObject"]=b;j[b]=j[b]||function(){ (j[b].q=j[b].q||[]).push(arguments)},j[b].l=1*new
+Date();o=u.createElement(k), x=u.getElementsByTagName(k)[0];o.async=1;o.src=e;x.parentNode.insertBefore(o,x) })(window,document,'script', 'https://cdn-app.pathfactory.com/production/jukebox/current/jukebox.js'
+,"pf"); pf('create', 'LB-DB204D98-10993'); </script> 
+  <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Corporation",
+        "name": "Trellix",
+        "url": "https://www.trellix.com",
+        "logo": "https://www.trellix.com/en-us/assets/logos/trellix-logo-black.svg",
+        "sameAs": [
+            "https://twitter.com/Trellix",
+            "https://www.linkedin.com/company/trellixsecurity"
+        ]
+    }
+</script> 
+  <link rel="stylesheet" href="https://www.trellix.com/www/css/threat-reports.css" type="text/css"> 
+  <meta property="og:image" content="https://www.trellix.com/en-us/img/open-graphs/defaults/og-thumbnail-default.jpg">
+  <meta name="twitter:image" content="https://www.trellix.com/en-us/img/open-graphs/defaults/og-thumbnail-default.jpg">
+ </head> 
+ <body> 
+  <!-- site container --> 
+  <div id="__next"> 
+   <div class="custom-content-wrap"> 
+    <header class="custom-header bg-white custom-thin-shadow"> 
+     <div class="container-xl px-md-6 custom-header-nav-container position-relative bg-white d-lg-none d-block"> 
+      <div class="justify-content-between align-items-center custom-height d-flex"> 
+       <a href="https://www.trellix.com/ja-jp/index.html" datalink-id="newco:ja-jp:index" datalink-type="internal"><img id="trellix-logo-mobile" src="https://www.trellix.com/en-us/assets/logos/Trellix-Logo-Black.svg" alt="Trellix のロゴ" title="Trellix のロゴ" width="157" height="57"> </a> 
+       <div class="d-flex justify-content-end flex-wrap gap-x gap-y-1"> 
+        <button class="btn btn-mobile-search custom-search-icon hide-text p-0 shadow-none" type="button" id="mobileSearchButton" aria-controls="mobileSearchMenu">検索</button> 
+        <button class="btn btn-mobile-hamburger custom-hamburger-icon hide-text p-0 shadow-none" type="button" data-bs-target="#mobileMenu" aria-controls="mobileMenu">メニュー</button> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="custom-search position-relative d-none d-lg-block bg-primary"> 
+      <nav class="navbar navbar-expand-md"> 
+       <div class="container-xl px-md-6"> 
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent"> 
+         <a class="btn btn-primary bi bi-newspaper d-flex gap-2 align-items-center px-3" href="https://www.trellix.com/ja-jp/about/newsroom.html" datalink-id="newco:ja-jp:about:newsroom" datalink-type="internal">ニュース</a> 
+         <a class="btn btn-primary bi bi-envelope d-flex gap-2 align-items-center px-3" href="https://www.trellix.com/ja-jp/contact-us.html" datalink-id="newco:ja-jp:contact-us" datalink-type="internal">お問い合わせ</a> 
+         <button class="btn btn-primary btn-mobile-search bi bi-search d-flex align-items-center px-3" type="button" id="desktopSearchButton" aria-controls="mobileSearchMenu"><span class="hide-text" style="width:0">検索</span></button> 
+         <div class="bi bi-globe2 d-flex gap-2 align-items-center" id="langCont"> 
+          <select id="lang-sel" class="btn btn-primary text-white"> <option value="de-de">Deutsch (Deutschland)</option> <option value="en-au">English (Australia)</option> <option value="en-ca">English (Canada)</option> <option value="en-gb">English (United Kingdom)</option> <option value="en-hk">English (Hong Kong SAR China)</option> <option value="en-in">English (India)</option> <option value="en-sg">English (Singapore)</option> <option value="en-us">English (United States)</option> <option value="es-es">español (España)</option> <option value="es-mx">español (México)</option> <option value="fr-ca">français (Canada)</option> <option value="fr-fr">français (France)</option> <option value="it-it">italiano (Italia)</option> <option value="ja-jp">日本語 (日本)</option> <option value="ko-kr">한국어(대한민국)</option> <option value="pt-br">português (Brasil)</option> <option value="ru-ru">русский (Россия)</option> <option value="zh-cn">中文 (简体，中国)</option> <option value="zh-tw">中文 (繁體、台灣)</option> </select> 
+         </div> 
+        </div> 
+       </div> 
+      </nav> 
+     </div> 
+     <div class="custom-search-bar bg-gray-light custom-thin-shadow" style="display: none"> 
+      <div class="container-xl px-md-6"> 
+       <form class="d-flex py-2 gap-3" id="searchForm"> 
+        <input class="flex-grow-1 form-control custom-mobile-search-field p-2 border-1 rounded-0" placeholder="Search" aria-label="Search" id="msearch" data-result-path="https://www.trellix.com/en-us/search.html"> 
+        <button class="btn btn-primary" type="submit">送信</button> 
+        <div class="d-none d-lg-flex gap-2 align-items-center"> 
+         <a href="#" onclick="document.getElementById('msearch').value = ''" datalink-type="internal" datalink-id="newco:#">クリア</a> 
+         <span>|</span> 
+         <a id="searchTip" class="no-break" href="#" data-bs-toggle="modal" data-bs-target="#searchTipModal" datalink-type="internal" datalink-id="newco:#">検索のヒント</a> 
+        </div> 
+       </form> 
+      </div> 
+     </div> 
+     <div class="container-xl px-md-6 custom-header-nav-container position-relative bg-white d-none d-lg-flex d-flex justify-content-between align-items-center"> 
+      <a href="https://www.trellix.com/ja-jp/index.html" datalink-id="newco:ja-jp:index" datalink-type="internal"><img id="trellix-logo-desktop" src="https://www.trellix.com/en-us/assets/logos/Trellix-Logo-Black.svg" title="Trellix のロゴ" alt="Trellix のロゴ" width="157" height="57"> </a> 
+      <div class="d-flex flex-wrap align-items-center justify-content-end flex-wrap-reverse links gap-2"> 
+       <span data-container-name="content-1" aria-controls="desktopMenu" class="navigation-link">Trellix を選ぶ理由</span> 
+       <span data-container-name="content-2" aria-controls="desktopMenu" class="navigation-link">Products</span> 
+       <span data-container-name="content-3" aria-controls="desktopMenu" class="navigation-link">Research</span> 
+       <span data-container-name="content-4" aria-controls="desktopMenu" class="navigation-link">Support</span> 
+       <span data-container-name="content-5" aria-controls="desktopMenu" class="navigation-link">Partners</span> 
+       <span data-container-name="content-6" aria-controls="desktopMenu" class="navigation-link">Resources</span> 
+      </div> 
+     </div> 
+     <!-- Mobile Navigation Dropdown Menu --> 
+     <div class="custom-mobile-menu-wrapper"> 
+      <div class="custom-mobile-menu offcanvas offcanvas-end d-lg-none bg-gray-light position-relative" tabindex="-1" id="mobileMenu" aria-label="Navigation Menu" data-bs-scroll="true" data-bs-backdrop="false"> 
+       <div id="mobile-main-menu" class="offcanvas-body px-6 pb-6"> 
+        <div class="custom-mobile-subnav-link d-flex justify-content-between custom-border-bottom custom-right-arrow" data-target="#mobile-content-1"> 
+         <div class="align-self-center">
+          Trellix を選ぶ理由
+         </div> 
+        </div> 
+        <div class="custom-mobile-subnav-link d-flex justify-content-between custom-border-bottom custom-right-arrow" data-target="#mobile-content-2"> 
+         <div class="align-self-center">
+          製品
+         </div> 
+        </div> 
+        <div class="custom-mobile-subnav-link d-flex justify-content-between custom-border-bottom custom-right-arrow" data-target="#mobile-content-3"> 
+         <div class="align-self-center">
+          研究調査
+         </div> 
+        </div> 
+        <div class="custom-mobile-subnav-link d-flex justify-content-between custom-border-bottom custom-right-arrow" data-target="#mobile-content-4"> 
+         <div class="align-self-center">
+          サポート
+         </div> 
+        </div> 
+        <div class="custom-mobile-subnav-link d-flex justify-content-between custom-border-bottom custom-right-arrow" data-target="#mobile-content-5"> 
+         <div class="align-self-center">
+          パートナー
+         </div> 
+        </div> 
+        <div class="custom-mobile-subnav-link d-flex justify-content-between custom-border-bottom custom-right-arrow" data-target="#mobile-content-6"> 
+         <div class="align-self-center">
+          リソース ライブラリ
+         </div> 
+        </div> 
+        <div class="d-flex justify-content-between custom-border-bottom custom-right-arrow"> 
+         <div class="align-self-center"> 
+          <a href="https://www.trellix.com/ja-jp/about/newsroom/stories.html" datalink-id="newco:ja-jp:about:newsroom:stories" datalink-type="internal">ストーリー</a> 
+         </div> 
+        </div> 
+        <div class="d-flex justify-content-between custom-right-arrow"> 
+         <div class="align-self-center"> 
+          <a href="https://www.trellix.com/ja-jp/contact-us.html" datalink-id="newco:ja-jp:contact-us" datalink-type="internal">お問い合わせ</a> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="mobileSubMenu" id="mobile-content-1"> 
+        <div class="offcanvas-header p-0"> 
+         <div class="custom-mobile-subnav-link mobile-subnav-back-button d-flex justify-content-between custom-left-arrow w-100 bg-gray-light"> 
+          <div class="offcanvas-title align-self-center custom-weight">
+           メイン メニュー
+          </div> 
+         </div> 
+        </div> 
+        <div class="offcanvas-body pb-6 pt-0 px-6"> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title"> 
+          <div>
+           COMPANY
+          </div> 
+         </div> 
+         <a href="https://www.trellix.com/ja-jp/about/why-trellix.html" class="d-block mt-3" datalink-id="newco:ja-jp:about:why-trellix" datalink-type="internal">Trellix を選ぶ理由</a> 
+         <a href="https://www.trellix.com/ja-jp/about.html" datalink-id="newco:ja-jp:about" datalink-type="internal">About Us</a> 
+         <a href="https://www.trellix.com/en-us/about/why-trellix/industry-recognitions.html" class="d-block mt-3" datalink-id="newco:en-us:about:why-trellix:industry-recognitions" datalink-type="internal">Industry Recognitions</a> 
+         <a href="https://www.trellix.com/ja-jp/about/leadership.html" class="d-block mt-3" datalink-id="newco:ja-jp:about:leadership" datalink-type="internal">Leadership</a> 
+         <a href="https://www.trellix.com/en-us/about/csr-sustainability.html" class="d-block mt-3" datalink-id="newco:en-us:about:csr-sustainability" datalink-type="internal">Corporate Social Responsibility</a> 
+         <a href="https://careers.trellix.com/" target="_blank" class="d-block mt-3" datalink-type="external" datalink-id="newco:careers.trellix.com:">Careers</a> 
+         <a href="https://www.trellix.com/ja-jp/contact-us.html" class="d-block mt-3" datalink-id="newco:ja-jp:contact-us" datalink-type="internal">Contact Us</a> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title mt-4"> 
+          <div class="links-header d-block">
+           COMPETITION
+          </div> 
+         </div> 
+         <a href="https://www.trellix.com/ja-jp/about/why-trellix/vscrowdstrike.html" class="d-block mt-3" datalink-id="newco:ja-jp:about:why-trellix:vscrowdstrike" datalink-type="internal">Crowdstrike との比較</a> 
+         <a href="https://www.trellix.com/ja-jp/about/why-trellix/vssentinelone.html" class="d-block mt-3" datalink-id="newco:ja-jp:about:why-trellix:vssentinelone" datalink-type="internal">SentinelOne との比較</a> 
+        </div> 
+       </div> 
+       <div class="mobileSubMenu" id="mobile-content-2"> 
+        <div class="offcanvas-header p-0"> 
+         <div class="custom-mobile-subnav-link mobile-subnav-back-button d-flex justify-content-between custom-left-arrow w-100 bg-gray-light"> 
+          <div class="offcanvas-title align-self-center custom-weight">
+           メイン メニュー
+          </div> 
+         </div> 
+        </div> 
+        <div class="offcanvas-body pb-6 pt-0 px-6"> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title"> 
+          <div class="d-block">
+           PRODUCTS
+          </div> 
+         </div> 
+         <a href="https://www.trellix.com/en-us/platform/xdr.html" class="d-block mt-3" datalink-id="newco:en-us:platform:xdr" datalink-type="internal">Trellix XDR</a> 
+         <a href="https://www.trellix.com/en-us/platform/endpoint-security.html" class="d-block mt-3" datalink-id="newco:en-us:platform:endpoint-security" datalink-type="internal">Endpoint Security</a> 
+         <a href="https://www.trellix.com/en-us/platform/secops-analytics.html" class="d-block mt-3" datalink-id="newco:en-us:platform:secops-analytics" datalink-type="internal">SecOps and Analytics</a> 
+         <a href="https://www.trellix.com/en-us/platform/data-security.html" class="d-block mt-3" datalink-id="newco:en-us:platform:data-security" datalink-type="internal">Data Security</a> 
+         <a href="https://www.trellix.com/en-us/platform/network-detection-and-response.html" class="d-block mt-3" datalink-id="newco:en-us:platform:network-detection-and-response" datalink-type="internal">Network Detection and Response</a> 
+         <a href="https://www.trellix.com/en-us/platform/threat-intelligence.html" class="d-block mt-3" datalink-id="newco:en-us:platform:threat-intelligence" datalink-type="internal">Threat Intelligence</a> 
+         <a href="https://www.trellix.com/en-us/platform/email-security.html" class="d-block mt-3" datalink-id="newco:en-us:platform:email-security" datalink-type="internal">Email Security</a> 
+         <a href="https://www.trellix.com/en-us/platform/cloud-security.html" class="d-block mt-3" datalink-id="newco:en-us:platform:cloud-security" datalink-type="internal">Cloud Security</a> 
+         <a href="https://www.trellix.com/ja-jp/products.html" class="d-block mt-3" datalink-id="newco:ja-jp:products" datalink-type="internal"><b>View All Products</b></a> 
+        </div> 
+       </div> 
+       <div class="mobileSubMenu" id="mobile-content-3"> 
+        <div class="offcanvas-header p-0"> 
+         <div class="custom-mobile-subnav-link mobile-subnav-back-button d-flex justify-content-between custom-left-arrow w-100 bg-gray-light"> 
+          <div class="offcanvas-title align-self-center custom-weight">
+           メイン メニュー
+          </div> 
+         </div> 
+        </div> 
+        <div class="offcanvas-body pb-6 pt-0 px-6"> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title"> 
+          <div>
+           RESEARCH
+          </div> 
+         </div> 
+         <a href="https://www.trellix.com/ja-jp/advanced-research-center.html" class="d-block mt-3" datalink-id="newco:ja-jp:advanced-research-center" datalink-type="internal">Advanced Research Center</a> 
+         <a href="https://www.trellix.com/en-us/advanced-research-center/adversarial-vulnerability-research.html" class="d-block mt-3" datalink-id="newco:en-us:advanced-research-center:adversarial-vulnerability-research" datalink-type="internal">Adversarial &amp; Vulnerability Research</a> 
+         <a href="https://www.trellix.com/ja-jp/advanced-research-center/threat-reports.html" class="d-block mt-3" datalink-id="newco:ja-jp:advanced-research-center:threat-reports" datalink-type="internal">Reports</a> 
+        </div> 
+       </div> 
+       <div class="mobileSubMenu" id="mobile-content-4"> 
+        <div class="offcanvas-header p-0"> 
+         <div class="custom-mobile-subnav-link mobile-subnav-back-button d-flex justify-content-between custom-left-arrow w-100 bg-gray-light"> 
+          <div class="offcanvas-title align-self-center custom-weight">
+           メイン メニュー
+          </div> 
+         </div> 
+        </div> 
+        <div class="offcanvas-body pb-6 pt-0 px-6"> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title"> 
+          <div>
+           SUPPORT
+          </div> 
+         </div> 
+         <a href="https://www.trellix.com/ja-jp/support.html" class="d-block mt-3" datalink-id="newco:ja-jp:support" datalink-type="internal">Product Support</a> 
+         <a href="https://www.trellix.com/ja-jp/downloads.html" target="_blank" class="d-block mt-3" datalink-id="newco:ja-jp:downloads" datalink-type="internal">Downloads</a> 
+         <a href="https://docs.trellix.com/" target="_blank" class="d-block mt-3" datalink-type="external" datalink-id="newco:docs.trellix.com:">Product Documentation</a> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title mt-4"> 
+          <div>
+           お問い合わせ
+          </div> 
+         </div> 
+         <a href="https://www.mcafee.com/en-us/consumer-support/dispute-detection-allowlisting.html" class="d-block mt-3" target="_blank" datalink-type="external" datalink-id="newco:www.mcafee.com:en-us:consumer-support:dispute-detection-allowlisting">検出に関する異議提出フォーム</a> 
+         <a href="https://supportm.trellix.com/webcenter/portal/supportportal/pages_serviceRequests/submitSample" class="d-block mt-3" target="_blank" datalink-type="external" datalink-id="newco:supportm.trellix.com:webcenter:portal:supportportal:pages_servicerequests:submitsample">サンプルの送信</a> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title mt-4"> 
+          <div>
+           MCAFEE ENTERPRISE
+          </div> 
+         </div> 
+         <a href="https://supportm.trellix.com/webcenter/portal/supportportal/pages_home" class="d-block mt-3 no-modal" target="_blank" datalink-type="external" datalink-id="newco:supportm.trellix.com:webcenter:portal:supportportal:pages_home">サポート ポータル</a> 
+         <a href="https://www.trellix.com/en-us/support/customer-success-plans.html" class="d-block mt-3" datalink-id="newco:en-us:support:customer-success-plans" datalink-type="internal">カスタマー成功プラン</a> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title mt-4"> 
+          <div>
+           FIREEYE
+          </div> 
+         </div> 
+         <a href="https://www.fireeye.com/support.html" class="d-block mt-3 no-modal" target="_blank" datalink-type="external" datalink-id="newco:www.fireeye.com:support">サポート ポータル</a> 
+        </div> 
+       </div> 
+       <div class="mobileSubMenu" id="mobile-content-5"> 
+        <div class="offcanvas-header p-0"> 
+         <div class="custom-mobile-subnav-link mobile-subnav-back-button d-flex justify-content-between custom-left-arrow w-100 bg-gray-light"> 
+          <div class="offcanvas-title align-self-center custom-weight">
+           メイン メニュー
+          </div> 
+         </div> 
+        </div> 
+        <div class="offcanvas-body pb-6 pt-0 px-6"> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title"> 
+          <div>
+           PARTNERS
+          </div> 
+         </div> 
+         <a href="https://www.trellix.com/en-us/partners.html" class="d-block mt-3" datalink-id="newco:en-us:partners" datalink-type="internal">Partners Overview</a> 
+         <a href="https://www.trellix.com/en-us/partners/solution-providers.html" class="d-block mt-3" datalink-id="newco:en-us:partners:solution-providers" datalink-type="internal">Solution Providers</a> 
+         <a href="https://www.trellix.com/en-us/partners/security-innovation-alliance.html" class="d-block mt-3" datalink-id="newco:en-us:partners:security-innovation-alliance" datalink-type="internal">Security Innovation Alliance</a> 
+         <a href="https://www.trellix.com/en-us/partners/oem-alliances.html" class="d-block mt-3" datalink-id="newco:en-us:partners:oem-alliances" datalink-type="internal">OEM &amp; Embedded Alliances</a> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title mt-4"> 
+          <div>
+           MCAFEE ENTERPRISE
+          </div> 
+         </div> 
+         <a href="https://partners.trellix.com/" target="_blank" class="d-block mt-3" datalink-type="external" datalink-id="newco:partners.trellix.com:">パートナー ポータル</a> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title mt-4"> 
+          <div>
+           FIREEYE
+          </div> 
+         </div> 
+         <a href="https://partners.fireeye.com/English/?ReturnUrl=%2fEnglish%2fReseller%2fhome.aspx" target="_blank" class="d-block mt-3" datalink-type="external" datalink-id="newco:partners.fireeye.com:english:?returnurl=%2fenglish%2freseller%2fhome.aspx">パートナー ポータル</a> 
+        </div> 
+       </div> 
+       <div class="mobileSubMenu" id="mobile-content-6"> 
+        <div class="offcanvas-header p-0"> 
+         <div class="custom-mobile-subnav-link mobile-subnav-back-button d-flex justify-content-between custom-left-arrow w-100 bg-gray-light"> 
+          <div class="offcanvas-title align-self-center custom-weight">
+           メイン メニュー
+          </div> 
+         </div> 
+        </div> 
+        <div class="offcanvas-body pb-6 pt-0 px-6"> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title"> 
+          <div>
+           RESOURCES
+          </div> 
+         </div> 
+         <a href="https://www.trellix.com/en-us/services/education-services.html" class="d-block mt-3" datalink-id="newco:en-us:services:education-services" datalink-type="internal">トレーニングおよび教育</a> 
+         <a href="https://www.trellix.com/en-us/services.html" class="d-block mt-3" datalink-id="newco:en-us:services" datalink-type="internal">コンサルティング サービス</a> 
+         <a href="https://www.trellix.com/en-us/about/webinars.html" class="d-block mt-3" datalink-id="newco:en-us:about:webinars" datalink-type="internal">ウェビナー</a> 
+         <a href="https://www.trellix.com/ja-jp/about/events.html" class="d-block mt-3" datalink-id="newco:ja-jp:about:events" datalink-type="internal">イベント</a> 
+         <a href="https://www.trellix.com/en-us/resource-library.html" class="d-block mt-3" datalink-id="newco:en-us:resource-library" datalink-type="internal">リソース ライブラリ</a> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title mt-4"> 
+          <div>
+           MEDIA
+          </div> 
+         </div> 
+         <a href="https://www.trellix.com/en-us/about/newsroom/press-releases.html" class="d-block mt-3" datalink-id="newco:en-us:about:newsroom:press-releases" datalink-type="internal">Press Releases</a> 
+         <!--a href="/en-us/about/newsroom/news.html" class="d-block mt-3">News</a--> 
+         <a href="https://www.trellix.com/ja-jp/about/newsroom/stories.html" class="d-block mt-3" datalink-id="newco:ja-jp:about:newsroom:stories" datalink-type="internal">Stories</a> 
+         <a href="https://www.trellix.com/ja-jp/about/newsroom.html" datalink-id="newco:ja-jp:about:newsroom" datalink-type="internal"><b>View Newsroom</b></a> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title mt-4"> 
+          <div>
+           INTEGRATIONS
+          </div> 
+         </div> 
+         <a href="https://marketplace.mcafee.com/" class="d-block mt-3" target="_blank" datalink-type="external" datalink-id="newco:marketplace.mcafee.com:">マーケット</a> 
+         <a href="https://developer.mcafee.com/" class="d-block mt-3" target="_blank" datalink-type="external" datalink-id="newco:developer.mcafee.com:">開発者ポータル</a> 
+         <a href="https://auth.ui.mcafee.com/" class="d-block mt-3" target="_blank" datalink-type="external" datalink-id="newco:auth.ui.mcafee.com:">MVISION ログイン</a> 
+         <a href="https://login.mcafee.com/v1/SignUp/en-US/MVISION/MVISIONEPO" class="d-block mt-3" target="_blank" datalink-type="external" datalink-id="newco:login.mcafee.com:v1:signup:en-us:mvision:mvisionepo">MVISION 試用版</a> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title mt-4"> 
+          <div>
+           SECURITY AWARENESS
+          </div> 
+         </div> 
+         <a href="https://www.trellix.com/en-us/security-awareness/endpoint/what-is-xdr.html" class="d-block mt-3" datalink-id="newco:en-us:security-awareness:endpoint:what-is-xdr" datalink-type="internal">XDR とは</a> 
+         <a href="https://www.trellix.com/en-us/security-awareness/endpoint/what-is-endpoint-security.html" class="d-block mt-3" datalink-id="newco:en-us:security-awareness:endpoint:what-is-endpoint-security" datalink-type="internal">Endpoint Security とは</a> 
+         <a href="https://www.trellix.com/en-us/security-awareness/endpoint/what-is-endpoint-detection-and-response.html" class="d-block mt-3" datalink-id="newco:en-us:security-awareness:endpoint:what-is-endpoint-detection-and-response" datalink-type="internal">EDR とは</a> 
+         <a href="https://www.trellix.com/en-us/security-awareness/cybersecurity/what-is-mitre-attack-framework.html" class="d-block mt-3" datalink-id="newco:en-us:security-awareness:cybersecurity:what-is-mitre-attack-framework" datalink-type="internal">MITRE とは</a> 
+         <a href="https://www.trellix.com/en-us/security-awareness/ransomware/what-is-ransomware.html" class="d-block mt-3 mb-64" datalink-id="newco:en-us:security-awareness:ransomware:what-is-ransomware" datalink-type="internal">ランサムウェアとは</a> 
+         <a href="https://www.trellix.com/en-us/security-awareness.html" datalink-id="newco:en-us:security-awareness" datalink-type="internal"><b>View All Topics</b></a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <!--Desktop Navigation Dropdown Menu --> 
+     <div class="custom-desktop-menu offcanvas offcanvas-top d-none d-lg-block bg-transparent position-absolute" tabindex="-1" id="desktopMenu" aria-label="Navigation Menu" data-bs-scroll="true" data-bs-backdrop="false"> 
+      <div class="content-1 position-relative p-0 mega-menu container-xl px-md-4"> 
+       <div class="p-6 bg-gray-light d-flex gap-6 m-0 position-relative"> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          COMPANY
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="https://www.trellix.com/ja-jp/about/why-trellix.html" class="megamenu-link" datalink-id="newco:ja-jp:about:why-trellix" datalink-type="internal">Trellix を選ぶ理由</a> 
+          <a href="https://www.trellix.com/ja-jp/about.html" class="megamenu-link" datalink-id="newco:ja-jp:about" datalink-type="internal">About Us</a> 
+          <a href="https://www.trellix.com/en-us/about/why-trellix/industry-recognitions.html" class="megamenu-link" datalink-id="newco:en-us:about:why-trellix:industry-recognitions" datalink-type="internal">Industry Recognitions</a> 
+          <a href="https://www.trellix.com/ja-jp/about/leadership.html" class="megamenu-link" datalink-id="newco:ja-jp:about:leadership" datalink-type="internal">Leadership</a> 
+          <a href="https://www.trellix.com/en-us/about/csr-sustainability.html" class="megamenu-link" datalink-id="newco:en-us:about:csr-sustainability" datalink-type="internal">Corporate Social Responsibility</a> 
+          <a href="https://careers.trellix.com/" target="_blank" class="megamenu-link" datalink-type="external" datalink-id="newco:careers.trellix.com:">Careers</a> 
+          <a href="https://www.trellix.com/ja-jp/contact-us.html" class="megamenu-link" datalink-id="newco:ja-jp:contact-us" datalink-type="internal">Contact Us</a> 
+         </div> 
+        </div> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          COMPETITION
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="https://www.trellix.com/ja-jp/about/why-trellix/vscrowdstrike.html" class="megamenu-link" datalink-id="newco:ja-jp:about:why-trellix:vscrowdstrike" datalink-type="internal">Crowdstrike との比較</a> 
+          <a href="https://www.trellix.com/ja-jp/about/why-trellix/vssentinelone.html" class="megamenu-link" datalink-id="newco:ja-jp:about:why-trellix:vssentinelone" datalink-type="internal">SentinelOne との比較</a> 
+         </div> 
+        </div> 
+        <div class="custom-card border-0"> 
+         <a href="https://www.trellix.com/en-us/about/events/2022/trellix-xpand-recap.html" class="" datalink-id="newco:en-us:about:events:2022:trellix-xpand-recap" datalink-type="internal"> <img src="https://www.trellix.com/en-us/img/cards/xpand-recap-menu-card.jpg" alt="Trellix Xpand のまとめ" title="Trellix Xpand のまとめ"> </a> 
+         <div class="card-body"> 
+          <a href="https://www.trellix.com/en-us/about/events/2022/trellix-xpand-recap.html" class="h6 card-title megamenu-link link-internal" datalink-id="newco:en-us:about:events:2022:trellix-xpand-recap" datalink-type="internal">Trellix Xpand のまとめ</a> 
+          <p class="card-text"> 
+           <!--Coming Soon.--> </p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="content-2 position-relative p-0 mega-menu container-xl px-md-4"> 
+       <div class="p-6 bg-gray-light d-flex gap-6 m-0 position-relative"> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          PRODUCTS
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="https://www.trellix.com/en-us/platform/xdr.html" class="megamenu-link" datalink-id="newco:en-us:platform:xdr" datalink-type="internal">Trellix XDR</a> 
+          <a href="https://www.trellix.com/en-us/platform/endpoint-security.html" class="megamenu-link" datalink-id="newco:en-us:platform:endpoint-security" datalink-type="internal">Endpoint Security</a> 
+          <a href="https://www.trellix.com/en-us/platform/secops-analytics.html" class="megamenu-link" datalink-id="newco:en-us:platform:secops-analytics" datalink-type="internal">SecOps and Analytics</a> 
+          <a href="https://www.trellix.com/en-us/platform/data-security.html" class="megamenu-link" datalink-id="newco:en-us:platform:data-security" datalink-type="internal">Data Security</a> 
+          <a href="https://www.trellix.com/en-us/platform/network-detection-and-response.html" class="megamenu-link" datalink-id="newco:en-us:platform:network-detection-and-response" datalink-type="internal">Network Detection and Response</a> 
+          <a href="https://www.trellix.com/en-us/platform/threat-intelligence.html" class="megamenu-link" datalink-id="newco:en-us:platform:threat-intelligence" datalink-type="internal">Threat Intelligence</a> 
+          <a href="https://www.trellix.com/en-us/platform/email-security.html" class="megamenu-link" datalink-id="newco:en-us:platform:email-security" datalink-type="internal">Email Security</a> 
+          <a href="https://www.trellix.com/en-us/platform/cloud-security.html" class="megamenu-link" datalink-id="newco:en-us:platform:cloud-security" datalink-type="internal">Cloud Security</a> 
+          <a href="https://www.trellix.com/ja-jp/products.html" class="megamenu-overview-link megamenu-link" datalink-id="newco:ja-jp:products" datalink-type="internal">View All Products</a> 
+         </div> 
+        </div> 
+        <div class="custom-card border-0"> 
+         <a href="https://www.trellix.com/ja-jp/about/newsroom/stories/perspectives/our-ceo-on-living-security.html" datalink-id="newco:ja-jp:about:newsroom:stories:perspectives:our-ceo-on-living-security" datalink-type="internal"><img src="https://www.trellix.com/en-us/img/v1/trellix-ceo-threat-center.jpg" alt="Trellix CEO" title="Trellix CEO"> </a> 
+         <div class="card-body"> 
+          <a class="h6 card-title" href="https://www.trellix.com/ja-jp/about/newsroom/stories/perspectives/our-ceo-on-living-security.html" datalink-id="newco:ja-jp:about:newsroom:stories:perspectives:our-ceo-on-living-security" datalink-type="internal">生きたセキュリティについて語る最高経営責任者 (CEO)</a> 
+          <p class="card-text">Trellix の最高経営責任者 (CEO) を務める Bryan Palma が、常に学習するセキュリティが決定的に必要であることを力説します。</p> 
+         </div> 
+        </div> 
+        <div class="custom-card border-0"> 
+         <a href="https://www.trellix.com/ja-jp/solutions/gartner-report-market-guide-xdr.html" datalink-id="newco:ja-jp:solutions:gartner-report-market-guide-xdr" datalink-type="internal"><img src="https://www.trellix.com/en-us/img/v1/gartner-xdr-mm.png" alt="Gartner マーケット ガイド (XDR)" title="Gartner マーケット ガイド (XDR)"> </a> 
+         <div class="card-body"> 
+          <a class="h6 card-title" href="https://www.trellix.com/ja-jp/solutions/gartner-report-market-guide-xdr.html" datalink-id="newco:ja-jp:solutions:gartner-report-market-guide-xdr" datalink-type="internal">Gartner® レポート: XDR のマーケット ガイド</a> 
+          <p class="card-text">Gartner は XDR をこう評価しています。「XDR (Extended Detection and Response) は脅威の防止、検出、応答の機能を改善できる新しい技術です。」</p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="content-3 position-relative p-0 mega-menu container-xl px-md-4"> 
+       <div class="p-6 bg-gray-light d-flex gap-6 m-0 position-relative"> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          RESEARCH
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="https://www.trellix.com/ja-jp/advanced-research-center.html" class="megamenu-link" datalink-id="newco:ja-jp:advanced-research-center" datalink-type="internal">Advanced Research Center</a> 
+          <a href="https://www.trellix.com/en-us/advanced-research-center/adversarial-vulnerability-research.html" class="megamenu-link" datalink-id="newco:en-us:advanced-research-center:adversarial-vulnerability-research" datalink-type="internal">Adversarial &amp; Vulnerability Research</a> 
+          <a href="https://www.trellix.com/ja-jp/advanced-research-center/threat-reports.html" class="megamenu-link" datalink-id="newco:ja-jp:advanced-research-center:threat-reports" datalink-type="internal">Reports</a> 
+         </div> 
+        </div> 
+        <div class="custom-card border-0"> 
+         <a href="https://www.businesswire.com/news/home/52921713/en" target="_blank" datalink-type="external" datalink-id="newco:www.businesswire.com:news:home:52921713:en"><img src="https://www.trellix.com/en-us/img/cards/trellix-arc-card.jpg" alt="Trellix が Advanced Threat Research Center を設立" title="Trellix が Advanced Threat Research Center を設立"> </a> 
+         <div class="card-body"> 
+          <a href="https://www.trellix.com/en-us/about/newsroom/press-releases/press-detail.html?pr_id=10cb07fa-6837-48b8-8e99-d58a7526eff3" class="card-title h6 condensed-text" target="_blank" datalink-id="newcohttps:::www.trellix.com:en-us:about:newsroom:press-releases:press-detail?pr_id=10cb07fa-6837-48b8-8e99-d58a7526eff3" datalink-type="internal">Trellix Launches <span class="no-break">Advanced Research Center</span></a> 
+          <p class="card-text">Trellix は、グローバルな脅威インテリジェンスを推進するため、Trellix Advanced Research Center の設立を発表しました。</p> 
+         </div> 
+        </div> 
+        <div class="custom-card border-0"> 
+         <a href="https://www.trellix.com/en-us/advanced-research-center/threat-reports/nov-2022.html" datalink-id="newco:en-us:advanced-research-center:threat-reports:nov-2022" datalink-type="internal"> <img src="https://www.trellix.com/en-us/img/cards/threat-report-nov-2022-card.jpg" alt="脅威レポート - 2022 年秋" title="脅威レポート - 2022 年秋"> </a> 
+         <div class="card-body"> 
+          <a href="https://www.trellix.com/en-us/advanced-research-center/threat-reports/nov-2022.html" class="card-title h6 condensed-text" datalink-id="newco:en-us:advanced-research-center:threat-reports:nov-2022" datalink-type="internal">最新レポート</a> 
+          <p class="card-text">Trellix Advanced Research Center では、2022 年第 3 四半期のランサムウェア、国家、セクター、ベクトル、LotL、MITRE ATT&amp;CK 手法、メールに関する脅威データを分析しています。</p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="content-4 position-relative p-0 mega-menu container-xl px-md-4"> 
+       <div class="p-6 bg-gray-light d-flex gap-6 m-0 position-relative"> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          SUPPORT
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="https://www.trellix.com/ja-jp/support.html" class="megamenu-link" datalink-id="newco:ja-jp:support" datalink-type="internal">Product Support</a> 
+          <a href="https://www.trellix.com/ja-jp/downloads.html" target="_blank" class="megamenu-link" datalink-id="newco:ja-jp:downloads" datalink-type="internal">Downloads</a> 
+          <a href="https://docs.trellix.com/" target="_blank" class="megamenu-link" datalink-type="external" datalink-id="newco:docs.trellix.com:">Product Documentation</a> 
+         </div> 
+        </div> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          お問い合わせ
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="https://www.mcafee.com/en-us/consumer-support/dispute-detection-allowlisting.html" class="megamenu-link" target="_blank" datalink-type="external" datalink-id="newco:www.mcafee.com:en-us:consumer-support:dispute-detection-allowlisting">検出に関する異議提出フォーム</a> 
+          <a href="https://supportm.trellix.com/webcenter/portal/supportportal/pages_serviceRequests/submitSample" class="megamenu-link" target="_blank" datalink-type="external" datalink-id="newco:supportm.trellix.com:webcenter:portal:supportportal:pages_servicerequests:submitsample">サンプルの送信</a> 
+         </div> 
+        </div> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          MCAFEE ENTERPRISE
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="https://supportm.trellix.com/webcenter/portal/supportportal/pages_home" class="megamenu-link no-modal" target="_blank" datalink-type="external" datalink-id="newco:supportm.trellix.com:webcenter:portal:supportportal:pages_home">サポート ポータル</a> 
+          <a href="https://www.trellix.com/en-us/support/customer-success-plans.html" class="megamenu-link" datalink-id="newco:en-us:support:customer-success-plans" datalink-type="internal">カスタマー成功プラン</a> 
+         </div> 
+        </div> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          FIREEYE
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="https://www.fireeye.com/support.html" class="megamenu-link" target="_blank" datalink-type="external" datalink-id="newco:www.fireeye.com:support">サポート ポータル</a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="content-5 position-relative p-0 mega-menu container-xl px-md-4"> 
+       <div class="p-6 bg-gray-light d-flex gap-6 m-0 position-relative"> 
+        <div class="links-wrapper"> 
+         <a class="links-header d-block">PARTNERS</a> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="https://www.trellix.com/en-us/partners.html" class="megamenu-link" datalink-id="newco:en-us:partners" datalink-type="internal">Partners Overview</a> 
+          <a href="https://www.trellix.com/en-us/partners/solution-providers.html" class="megamenu-link" datalink-id="newco:en-us:partners:solution-providers" datalink-type="internal">Solution Providers</a> 
+          <a href="https://www.trellix.com/en-us/partners/security-innovation-alliance.html" class="megamenu-link" datalink-id="newco:en-us:partners:security-innovation-alliance" datalink-type="internal">Security Innovation Alliance</a> 
+          <a href="https://www.trellix.com/en-us/partners/oem-alliances.html" class="megamenu-link" datalink-id="newco:en-us:partners:oem-alliances" datalink-type="internal">OEM &amp; Embedded Alliances</a> 
+         </div> 
+        </div> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          MCAFEE ENTERPRISE
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="https://partners.trellix.com/" target="_blank" class="megamenu-link no-modal" datalink-type="external" datalink-id="newco:partners.trellix.com:">パートナー ポータル</a> 
+         </div> 
+        </div> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          FIREEYE
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="https://partners.fireeye.com/English/?ReturnUrl=%2fEnglish%2fReseller%2fhome.aspx" target="_blank" class="megamenu-link" datalink-type="external" datalink-id="newco:partners.fireeye.com:english:?returnurl=%2fenglish%2freseller%2fhome.aspx">パートナー ポータル</a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="content-6 position-relative p-0 mega-menu container-xl px-md-4"> 
+       <div class="p-6 bg-gray-light d-flex gap-6 m-0 position-relative"> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          RESOURCES
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="https://www.trellix.com/en-us/services/education-services.html" class="megamenu-link" datalink-id="newco:en-us:services:education-services" datalink-type="internal">トレーニングおよび教育</a> 
+          <a href="https://www.trellix.com/en-us/services.html" class="megamenu-link" datalink-id="newco:en-us:services" datalink-type="internal">コンサルティング サービス</a> 
+          <a href="https://www.trellix.com/en-us/about/webinars.html" class="megamenu-link" datalink-id="newco:en-us:about:webinars" datalink-type="internal">ウェビナー</a> 
+          <a href="https://www.trellix.com/ja-jp/about/events.html" class="megamenu-link" datalink-id="newco:ja-jp:about:events" datalink-type="internal">イベント</a> 
+          <a href="https://www.trellix.com/en-us/resource-library.html" class="megamenu-link" datalink-id="newco:en-us:resource-library" datalink-type="internal">リソース ライブラリ</a> 
+         </div> 
+        </div> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          MEDIA
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="https://www.trellix.com/en-us/about/newsroom/press-releases.html" class="megamenu-link" datalink-id="newco:en-us:about:newsroom:press-releases" datalink-type="internal">Press Releases</a> 
+          <!--a href="/en-us/about/newsroom/news.html" class="megamenu-link">News</a--> 
+          <a href="https://www.trellix.com/ja-jp/about/newsroom/stories.html" class="megamenu-link" datalink-id="newco:ja-jp:about:newsroom:stories" datalink-type="internal">Stories</a> 
+          <a href="https://www.trellix.com/ja-jp/about/newsroom.html" class="megamenu-overview-link megamenu-link" datalink-id="newco:ja-jp:about:newsroom" datalink-type="internal">View Newsroom</a> 
+         </div> 
+        </div> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          INTEGRATIONS
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="https://marketplace.mcafee.com/" class="megamenu-link" target="_blank" datalink-type="external" datalink-id="newco:marketplace.mcafee.com:">マーケット</a> 
+          <a href="https://developer.mcafee.com/" class="megamenu-link" target="_blank" datalink-type="external" datalink-id="newco:developer.mcafee.com:">開発者ポータル</a> 
+          <a href="https://auth.ui.mcafee.com/" class="megamenu-link" target="_blank" datalink-type="external" datalink-id="newco:auth.ui.mcafee.com:">MVISION ログイン</a> 
+          <a href="https://login.mcafee.com/v1/SignUp/en-US/MVISION/MVISIONEPO" class="megamenu-link" target="_blank" datalink-type="external" datalink-id="newco:login.mcafee.com:v1:signup:en-us:mvision:mvisionepo">MVISION 試用版</a> 
+         </div> 
+        </div> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          SECURITY AWARENESS
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="https://www.trellix.com/en-us/security-awareness/endpoint/what-is-xdr.html" class="megamenu-link" datalink-id="newco:en-us:security-awareness:endpoint:what-is-xdr" datalink-type="internal">XDR とは</a> 
+          <a href="https://www.trellix.com/en-us/security-awareness/endpoint/what-is-endpoint-security.html" class="megamenu-link" datalink-id="newco:en-us:security-awareness:endpoint:what-is-endpoint-security" datalink-type="internal">Endpoint Security とは</a> 
+          <a href="https://www.trellix.com/en-us/security-awareness/endpoint/what-is-endpoint-detection-and-response.html" class="megamenu-link" datalink-id="newco:en-us:security-awareness:endpoint:what-is-endpoint-detection-and-response" datalink-type="internal">EDR とは</a> 
+          <a href="https://www.trellix.com/en-us/security-awareness/cybersecurity/what-is-mitre-attack-framework.html" class="megamenu-link" datalink-id="newco:en-us:security-awareness:cybersecurity:what-is-mitre-attack-framework" datalink-type="internal">MITRE とは</a> 
+          <a href="https://www.trellix.com/en-us/security-awareness/ransomware/what-is-ransomware.html" class="megamenu-link" datalink-id="newco:en-us:security-awareness:ransomware:what-is-ransomware" datalink-type="internal">ランサムウェアとは</a> 
+          <a href="https://www.trellix.com/en-us/security-awareness.html" class="megamenu-overview-link megamenu-link" datalink-id="newco:en-us:security-awareness" datalink-type="internal">View All Topics</a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </header> 
+    <script type="text/javascript" src="https://www.trellix.com/www/js/nav-control.min.js"></script> 
+    <div class="cta" style="background: left bottom / cover url('https://www.trellix.com/en-us/img/tr/jan-threat-report-BG.jpg') no-repeat;"> 
+     <div class="bg-transparent"> 
+      <div class="container-xl px-md-6 py-48 py-md-104 py-lg-128 bg-transparent"> 
+       <div class="row"> 
+        <div class="col col-sm-8 col-xmd-8 me-auto text-start text-white"> 
+         <h1 class="mb-lg-5 mb-3">Trellix Advanced Threat Research レポート: <span class="no-break">2022 年 1 月</span></h1> 
+         <p class="body-intro text-white">Log4j、2021 年第 3 四半期のランサムウェア、APT、および上位セクターのターゲットに関するインサイト</p> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- Threat Report Styling found in /www/css/threat-reports.css --> 
+    <div class="threat-report container-xl container-xl pe-lg-0 py-48 py-md-96"> 
+     <div class="report-content"> 
+      <section> 
+       <h4>新会社として初となる脅威レポートでは、メディアのみならず、セキュリティ企業や一般企業のセキュリティ チームからも大きな注目を集めた Log4j の問題を取り上げています。</h4> 
+      </section> 
+      <hr class="blue-fade-rule"> 
+      <section> 
+       <h3 id="letter">弊社チーフ サイエンティストからのご挨拶</h3> 
+       <p>新しい脅威レポート、そして新しい会社へようこそ。</p> 
+       <p>この新しい年を前にして、私たちは、2021 年の特に困難な年末から私たちすべてを疲労困憊させている脅威の状況を認識しなければなりません。新会社として初となる脅威レポートでは、メディアのみならず、セキュリティ企業や一般企業のセキュリティ チームからも大きな注目を集めた問題を取り上げています。2021 年の第 3 四半期と第 4 四半期についても振り返りますが、まずは Log4j の対策に利用できる豊富なリソースを詳しくご紹介します。</p> 
+       <p>基本的に、Log4j の脅威の詳細が明らかになるにつれて、私たちの研究と最新のリソースにアクセスして助けを得ることが不可欠になります。本レポートでは、製品の状況だけでなく、この脆弱性を利用したキャンペーンを継続的に監視し、新しいペイロードの保護対応状況を詳しく説明しています。</p> 
+       <p>Log4j の脆弱性の詳細が明らかになったとき、私たちは非常に迅速にネットワークベースの署名を提供し、脆弱性に関する記事を発表して対応しました。本レポートで詳述している追加資産を速やかに追跡調査しました。</p> 
+       <p>現在の Log4j の脅威活動や、その他の拡散している脅威についてさらに理解するには、弊社の貴重な<a href="https://www.trellix.com/en-us/threat-center.html" datalink-id="newco:en-us:threat-center" datalink-type="internal">脅威ダッシュボード</a>をご覧ください。</p> 
+       <p>さらに、最新の脅威に関するコンテンツやビデオ、セキュリティ情報へのリンクが掲載された<a href="https://www.trellix.com/en-us/about/newsroom/stories/threat-labs.html" datalink-id="newco:en-us:about:newsroom:stories:threat-labs" datalink-type="internal">Trellix 脅威ラボのブログ</a>も確認してください。</p> 
+       <p>もちろん、企業のセキュリティに対する脅威は、Log4j だけではありません。本レポートでは、ランサムウェアの迫り来る影と混乱や、その他の流行している一般的な脅威や攻撃についても取り上げています。</p> 
+       <p>2022 年を迎えましたが、新しく生まれ変わった弊社をどうぞよろしくお願いします。</p> 
+       <div class="col-12 col-xmd-6 col-lg-4 mb-3 mb-md-4 mb-lg-5 d-flex flex-nowrap align-items-center"> 
+        <a href="https://twitter.com/Raj_Samani" target="_blank" class="pe-2" datalink-type="external" datalink-id="newco:twitter.com:raj_samani"> <img class="border border-secondary radius-50" src="https://pbs.twimg.com/profile_images/911031738108923904/KYc0w4Rf_400x400.jpg" width="100" alt=""> </a> 
+        <div class="d-flex flex-column align-items-start">
+         <a href="https://twitter.com/Raj_Samani" target="_blank" class="pe-2" datalink-type="external" datalink-id="newco:twitter.com:raj_samani"> <h4 class="text-body">Raj Samani</h4> </a>
+         <a href="https://twitter.com/Raj_Samani" target="_blank" class="text-decoration-none link-arrow text-black mb-3 mb-lg-0" datalink-type="external" datalink-id="newco:twitter.com:raj_samani">Twitter</a> 
+        </div> 
+       </div> 
+      </section> 
+      <hr class="blue-fade-rule"> 
+      <section> 
+       <h3 id="log4j">Log4j: 知りすぎたメモリ</h3> 
+       <p>脅威の伝統となりつつある Log4j において、広く使用されている Log4j ライブラリに影響を与える新しい脆弱性が、ホリデーシーズンに合わせて発表されました。この数十年で最も深刻なサイバーセキュリティの欠陥と評されたため、2021 年の第 4 四半期に、Trellix とサイバーセキュリティ業界を対策へと促しました。Log4j の脆弱性は、Apple iCloud、Steam、Samsung Cloud ストレージなどの製品やサービスを含む、アプリケーションや Web サイトに Log4j ライブラリを統合している製品に甚大な影響を及ぼす可能性があります。</p> 
+       <p>弊社チームは、Log4j の検出以来、その動向を詳しく追跡してきました。そして、Network Security Platform (NSP) をご利用のお客様向けに、ネットワーク シグネチャ KB95088 をリリースしました。この署名は、LDAP 上で CVE-2021-44228 を悪用しようとする試みを検出します。他のプロトコルやサービスを含むように拡張される場合があり、対象範囲を補うために追加の署名がリリースされる可能性もあります。</p> 
+       <h4>Log4j のタイムライン</h4> 
+       <p>Log4j と弊社の研究のタイムラインを簡潔に紹介します。</p> 
+       <ul> 
+        <li><b>12 月 9 日</b> – Log4j の脆弱性 (CVE-2021-44228) が、Apache Log4j のロギング ライブラリに関する Github 上の POC とともに Twitter で公開されました。このバグが最初に Apache に開示されたのは、11 月 24 日のことです。</li> 
+        <li><b>12 月 10 日 </b> – Steve Povolny と Douglas McKee が <a href="https://www.trellix.com/en-us/about/newsroom/stories/threat-labs/log4shell-vulnerability-is-the-coal-in-our-stocking-for-2021.html" datalink-id="newco:en-us:about:newsroom:stories:threat-labs:log4shell-vulnerability-is-the-coal-in-our-stocking-for-2021" datalink-type="internal">Log4j ブログ</a>に即時の調査結果の概要を投稿しました。当初の目的は、公開されている PoC を使って悪用されやすいかどうかを判断することでした。これは実際に再現して確認できました。これは、公開されている Docker コンテナーと、LDAP と RMI の両方を利用するクライアント サーバー アーキテクチャ、および Log4j バージョン 2.14.1 を悪用するための marshalsec を使用して行われました。</li> 
+        <li><b>12 月 14 日</b> – Log4j の脆弱性 (CVE-2021-44228) が、Apache Log4j のロギング ライブラリに関する Github 上の POC とともに Twitter で公開されました。このバグが最初に明らかになったのは、11 月 24 日のことです。</li> 
+        <li><b>12 月 18 日</b> – Log4j のバージョン 2.0-alpha1 から 2.16.0 に影響を与える新しいサービス拒否 (DoS) の脆弱性 CVE-2021-45105 が発見されました。</li> 
+       </ul> 
+       <p>Log4j に対する防御に関する最新の調査については、<a href="https://www.trellix.com/en-us/about/newsroom/stories/threat-labs.html" datalink-id="newco:en-us:about:newsroom:stories:threat-labs" datalink-type="internal">脅威ラボのブログ</a>および<a href="https://www.trellix.com/en-us/threat-center.html" datalink-id="newco:en-us:threat-center" datalink-type="internal">脅威ダッシュボード</a>を確認してください。弊社チームは、さまざまなオープン ソースとクローズド ソースから情報を収集および分析して、レポートを発信しています。</p> 
+       <h4>Log4j 攻撃</h4> 
+       <p>弊社チームは、一般的な Web ベースの Log4j 攻撃の実行時に発生する事柄を迅速に<a href="https://www.trellix.com/en-us/about/newsroom/stories/threat-labs/log4j-and-the-memory-that-knew-too-much.html" datalink-id="newco:en-us:about:newsroom:stories:threat-labs:log4j-and-the-memory-that-knew-too-much" datalink-type="internal">調査し、流れをまとめました</a>。</p> 
+       <h4>Log4j の実行の流れ</h4> 
+       <img src="https://www.trellix.com/en-us/img/tr/log4j-flow.png" alt="Flowchart showing Log4j Flow of execution." title="Log4j Flowchart" width="100%"> 
+       <ul> 
+        <li><b>ステップ 1</b> – 攻撃者は、脆弱なアプリケーションをホストしている Web サーバーに、特別に細工した文字列を送信します。この文字列は、これまで見てきたところ、ネットワークベースのシグネチャをバイパスするために難読化されている可能性があります。</li> 
+        <li><b>ステップ 2</b> – アプリケーションはこの文字列の難読化を進めて、メモリに読み込ませます。メモリに読み込まれると、アプリケーションは LDAP 接続を開始し、悪意のある Class ファイルの場所のアドレスを要求します。</li> 
+        <li><b>ステップ 3</b> – 攻撃者が制御する LDAP サーバーは、悪意のある Class ファイルの場所を、それがホストされている HTTP URL アドレスを示すことで応答します。</li> 
+        <li><b>ステップ 4</b> – 脆弱なアプリケーションは、悪意のある Class ファイルのダウンロードを開始します。</li> 
+        <li><b>ステップ 5</b> – 脆弱なアプリケーションは、手順 4 で作成された悪意のある Class ファイルを読み込み、実行します。</li> 
+       </ul> 
+       <h4>Trellix ATR Log4j の防御策</h4> 
+       <p>Log4j のような攻撃から環境を保護するには、ネットワーク セキュリティと標的型エンドポイント メモリ スキャンで構成される多層型の戦略を採用することが効果的です。この戦略では、ネットワーク ベクトル経由で公開された、脆弱なシステムに対する攻撃の実行フローを効率よく検出し、防止することができます。弊社の ENS エキスパート ルールとカスタム スキャンによる対応は、こうした新たな脅威に対して的確な対応策を講じることができるように、防御側の能力を向上させる目的で設計されています。</p> 
+       <p>また、CISA.gov は、Log4j の脆弱性の影響を受ける可能性のある Web サービスを組織が特定できるように、<a href="https://github.com/cisagov/log4j-scanner" datalink-type="external" datalink-id="newco:github.com:cisagov:log4j-scanner">Log4j スキャナー</a>を提供しています。</p> 
+      </section> 
+      <hr class="blue-fade-rule"> 
+      <section> 
+       <h3 id="ransomware">ランサムウェア</h3> 
+       <p>2021 年第 3 四半期に、知名度の高いランサムウェア グループは、姿を消しては再び現れ、改変を重ね、さらには名前まで変えながら、ますます多様化するセクターに対し、よく知られた破壊的な脅威として、影響力と蔓延性を保っています。</p> 
+       <p>2021 年第 2 四半期にランサムウェアのアクティビティが多くのサイバー犯罪者フォーラムから非難され、禁止されたにもかかわらず、弊社チームは、いくつかのフォーラムで同じ攻撃者が別のペルソナを使用して活動しているのを観察しています。</p> 
+       <h4>Trellix はランサムウェア犯罪集団の逮捕と身代金の押収に協力</h4> 
+       <p>2021 年 12 月に、<a href="https://www.europol.europa.eu/media-press/newsroom/news/five-affiliates-to-sodinokibi/revil-unplugged" datalink-type="external" datalink-id="newco:www.europol.europa.eu:media-press:newsroom:news:five-affiliates-to-sodinokibi:revil-unplugged">Trellix は、REvil の関連者を逮捕し、身代金 200 万ドルを押収するために FBI と欧州警察を支援する研究を提供しました。</a></p> 
+       <p>2021 年第 3 四半期の注目すべきランサムウェアのトレンドとキャンペーンは以下のとおりです。</p> 
+       <ul> 
+        <li>BlackMatter – 2021 年 7 月末頃に発見されたこのランサムウェアの脅威は、米国に拠点を置く農業サプライチェーン企業 New Cooperative への強力な攻撃から始まりました。この攻撃により、同社は機密ビジネス データが漏洩する脅威にさらされました。New Cooperative は、サプライチェーンの管理機能と動物の給餌スケジュールがロックされたと報告し、米国内の穀物生産の 40% に悪影響が及ぶと推定しています。BlackMatter は、GandCrab、LockBit、DarkSide などの他のマルウェアの一部を利用しているとしていますが、このキャンペーンが新しい開発者グループによって実行されている疑いが高まっています。BlackMatter は、Colonial Pipeline 攻撃に関連する DarkSide マルウェアと非常に多くの共通点があります。</li> 
+        <li>Groove ギャングと Babuk ギャングが元関係者またはサブグループとして関連しているとの考えを発表しました。</li> 
+        <li>REvil/Sodinokibi は、マネージド サービス ソフトウェア プロバイダーの Kaseya VSA に対するランサムウェア攻撃により、100 万人以上のユーザーを感染させることに成功したと主張しました。REvil が報告した身代金要求額 7,000 万ドルは、これまで公表された身代金の金額として最大です。攻撃の結果、数百店舗のスーパーマーケットが数日間、強制的に閉鎖に追い込まれる事態となりました。</li> 
+        <li>2021 年 7 月に表面化した LockBit 2.0 により 、最終的に 200 人以上の被害者がデータ流出サイトに掲載されました。</li> 
+       </ul> 
+       <h4>ランサムウェアの脅威に対する政府の対応</h4> 
+       <p>第 3 四半期に、米国政府はランサムウェアの蔓延を抑えるため、予防的キャンペーンを開始し、StopRansomware.gov ハブを立ち上げました。このキャンペーンは、米国の重要なインフラストラクチャに対するサイバー活動に関与する国家的な脅威を識別または特定する情報に対して、最高 1,000 万ドルの報奨金を提供するというものです。</p> 
+       <p>これらのランサムウェアや新たなキャンペーンが今後どのように企業を脅かすかについては、<a href="https://www.trellix.com/en-us/about/newsroom/stories/threat-labs/2022-threat-predictions.html" datalink-id="newco:en-us:about:newsroom:stories:threat-labs:2022-threat-predictions" datalink-type="internal">Trellix による 2022 年の脅威予測</a> をご覧ください。</p> 
+       <h4>Trellix ランサムウェア調査</h4> 
+       <p>企業が脅威状況におけるランサムウェア攻撃の理解を深め、それを防御できるように、弊社チームは、ファミリー、手法、国、セクター、ベクトルなど、さまざまなランサムウェア脅威の流行に関する研究と調査結果を紹介しています。</p> 
+       <h4>各種ランサムウェアの検出状況</h4> 
+       <div class="tile-chart"> 
+        <style>
+                    #ransomware-families-grid {
+                        grid-template-rows: 41fr 14fr 13fr 8fr 7fr 6.7fr 4fr 3fr 2fr 1fr;
+                    }
+                </style> 
+        <div id="ransomware-families-grid" class="grid-chart stacked-grid"> 
+         <div class="chart-tile tile-col-1" data-propval="41%">
+          Sodinokibi
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="14%">
+          DarkSide
+         </div> 
+         <div class="chart-tile tile-col-3" data-propval="13%">
+          Egregor
+         </div> 
+         <div class="chart-tile tile-col-4" data-propval="8%">
+          Cuba
+         </div> 
+         <div class="chart-tile tile-col-5" data-propval="7%">
+          Ryuk
+         </div> 
+         <div class="chart-tile tile-col-6" data-propval="6.7%">
+          Conti
+         </div> 
+         <div class="chart-tile tile-col-7" data-propval="4%">
+          Lockbit
+         </div> 
+         <div class="chart-tile tile-col-8" data-propval="3%">
+          Maze
+         </div> 
+         <div class="chart-tile tile-col-9" data-propval="2%">
+          Phobos
+         </div> 
+         <div class="chart-tile tile-col-10" data-propval="1%">
+          RagnarLocker
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">2021 年第 3 四半期に検出された各種ランサムウェアは、Sodinokibi (41%) が最も多く、次いで DarkSide (14%) と Egregor (13%) となりました。</p> 
+       <p>ランサムウェア クライアントの国、顧客セクター、および MITRE ATT&amp;CK 手法に<a href="#ransomwareCountries" datalink-type="internal" datalink-id="newco:#ransomwarecountries">移動</a>してください。</p> 
+       <h4 id="apt">攻撃パターン手法</h4> 
+       <p>チームでは、APT キャンペーンとそれに関連する指標や手法を追跡および監視しています。弊社チームは、2021 年第 3 四半期から、APT 脅威の主体、ツール、クライアントの国、顧客セクター、および MITRE ATT&amp;CK 手法を反映しています。</p> 
+       <h4>APT の脅威の主体</h4> 
+       <div class="tile-chart"> 
+        <style>
+                    #apt-threat-grid {
+                        grid: 523fr 477fr / 551fr 449fr;
+                        grid-auto-flow: column;
+                    }
+
+                    #apt-threat-grid .subgrid-1 {
+                        grid-row: span 2;
+
+                        display: grid;
+                        grid: 404fr 596fr / 557fr 443fr;
+                    }
+
+                    #apt-threat-grid .subgrid-2 {
+                        grid-column: span 2;
+                        display: grid;
+                        grid: 540fr 460fr / 1fr 1fr;
+
+                        grid-auto-flow: column;
+                    }
+
+                    #apt-threat-grid .subgrid-3 {
+                        grid-row: span 2;
+
+                        display: grid;
+                        grid: 386fr 386fr 228fr / 413fr 587fr;
+                    }
+                </style> 
+        <div id="apt-threat-grid" class="grid-chart"> 
+         <div class="chart-tile tile-col-1" data-propval="24%">
+          APT41
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="22%">
+          APT29
+         </div> 
+         <div class="subgrid-1"> 
+          <div class="chart-tile tile-col-3" data-propval="10%">
+           TA505
+          </div> 
+          <div class="chart-tile tile-col-4" data-propval="8%">
+           UNC2452
+          </div> 
+          <div class="subgrid-2"> 
+           <div class="chart-tile tile-col-5" data-propval="7%">
+            MuddyWater
+           </div> 
+           <div class="chart-tile tile-col-10" data-propval="6%">
+            Garmaredon Group
+           </div> 
+           <div class="subgrid-3"> 
+            <div class="chart-tile tile-col-7 grid-rowspan-2" data-propval="4%">
+             APT34
+            </div> 
+            <div class="chart-tile tile-col-9" data-propval="3%">
+             Bronze Butler
+            </div> 
+            <div class="chart-tile tile-col-9" data-propval="3%">
+             Winnti Group
+            </div> 
+            <div class="chart-tile tile-col-4 grid-colspan-2" data-propval="2.9%">
+             Mustang Panda
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">2021 年第 3 四半期に検出された APT 脅威の主体は、APT41 (24%) と APT29 (22%) が最も多く、監視された APT アクティビティのほぼ半分を占めています。</p> 
+       <h4>APT ツール</h4> 
+       <p>チームは、追跡された APT キャンペーンに属する侵害の指標と、それに関連する以下のツールを特定しました。APT グループは、一般的なシステム ユーティリティを使用して、セキュリティ制御をバイパスし、操作を実行することが知られています。</p> 
+       <div class="tile-chart"> 
+        <style>
+                    #apt-tools-grid {
+                        grid: repeat(4, 1fr) / 362fr 638fr;
+                        grid-auto-flow: column;
+                    }
+
+                    #apt-tools-grid .subgrid-1 {
+                        grid-row: span 4;
+
+                        display: grid;
+                        grid: 567fr 433fr / 1fr 1fr 1fr;
+                    }
+
+                    #apt-tools-grid .subgrid-2 {
+                        grid-column: span 3;
+                        display: grid;
+                        grid: repeat(3, 1fr) / 246fr 754fr;
+
+                        grid-auto-flow: column;
+                    }
+                </style> 
+        <div id="apt-tools-grid" class="grid-chart"> 
+         <div class="chart-tile tile-col-1" data-propval="34%">
+          Cobalt Strike
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="27%">
+          Mimikatz
+         </div> 
+         <div class="chart-tile tile-col-3" data-propval="26%">
+          Net.exe
+         </div> 
+         <div class="chart-tile tile-col-4" data-propval="20%">
+          PsExec
+         </div> 
+         <div class="subgrid-1"> 
+          <div class="subgrid-2"> 
+           <div class="chart-tile tile-col-5 grid-rowspan-3" data-propval="18%">
+            ipconfig
+           </div> 
+           <div class="chart-tile tile-col-8" data-propval="17.9%">
+            Systeminfo
+           </div> 
+           <div class="chart-tile tile-col-8" data-propval="17.9%">
+            Tasklist
+           </div> 
+           <div class="chart-tile tile-col-6" data-propval="17.9%">
+            PlugX
+           </div> 
+          </div> 
+          <div class="chart-tile tile-col-7" data-propval="16%">
+           China Chopper
+          </div> 
+          <div class="chart-tile tile-col-7" data-propval="16%">
+           Living off the Land (環境寄生)
+          </div> 
+          <div class="chart-tile tile-col-7" data-propval="16%">
+           njRAT
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">2021 年第 3 四半期に検出された APT ツールは、Cobalt Strike (34%) が最も多く、次いで Mimikatz (27%)、Net.exe (26%)、PsExec (20%) の順でした。国家的な主体によって悪用された Cobalt Strike 攻撃スイートは、APT アクティビティの 3 分の 1 以上で検出されました。</p> 
+       <p>APT クライアントの国、顧客セクター、および MITRE ATT&amp;CK 手法に<a href="#aptCountries" datalink-type="internal" datalink-id="newco:#aptcountries">移動</a>してください。</p> 
+       <h4 id="atr">Advanced Threat Research</h4> 
+       <p>弊社チームは、2021 年第 3 四半期に脅威のカテゴリを追跡調査しました。この調査では、使用された ATR マルウェアのタイプ、クライアントの国、顧客セクター、攻撃に使用された MITRE ATT&amp;CK 手法、産業セクターでの検出率が反映されています。</p> 
+       <h4>ATR ツールの脅威</h4> 
+       <div class="tile-chart"> 
+        <style>
+                    #atr-malware-grid {
+                        grid-template-rows: 36fr 24fr 19fr 6fr 3.3fr 3fr 2fr 1.6fr 1.2fr 1fr;
+                    }
+                </style> 
+        <div id="atr-malware-grid" class="grid-chart stacked-grid"> 
+         <div class="chart-tile tile-col-1" data-propval="36%">
+          Sodinokibi
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="24%">
+          DarkSide
+         </div> 
+         <div class="chart-tile tile-col-3" data-propval="19%">
+          Egregor
+         </div> 
+         <div class="chart-tile tile-col-4" data-propval="6%">
+          Cuba
+         </div> 
+         <div class="chart-tile tile-col-5" data-propval="3.3%">
+          Ryuk
+         </div> 
+         <div class="chart-tile tile-col-6" data-propval="3%">
+          Conti
+         </div> 
+         <div class="chart-tile tile-col-7" data-propval="2%">
+          Lockbit
+         </div> 
+         <div class="chart-tile tile-col-8" data-propval="1.6%">
+          Maze
+         </div> 
+         <div class="chart-tile tile-col-9" data-propval="1.2%">
+          Phobos
+         </div> 
+         <div class="chart-tile tile-col-10" data-propval="1%">
+          RagnarLocker
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">2021 年第 3 四半期の ATR ツールの脅威の検出数は、Formbook (36%)、Remcos RAT (24%)、LokiBot (19%) で、ほぼ 80% に達しています。</p> 
+       <p>ATR クライアントの国、顧客セクター、および MITRE ATT&amp;CK 手法に<a href="#atrCountries" datalink-type="internal" datalink-id="newco:#atrcountries">移動</a>してください。</p> 
+      </section> 
+      <hr class="blue-fade-rule"> 
+      <section> 
+       <h3 id="threatstocountries">国、地域、セクター、ベクトルへの脅威</h3> 
+       <h4>国と地域: 2021 年第 3 四半期</h4> 
+       <p>2021 年第 3 四半期に公表されたインシデントのうち、注目すべき国および地域の増加傾向は以下のとおりです。</p> 
+       <ul> 
+        <li>北米は地域の中で最も多くのインシデントを記録しましたが、2021 年第 2 四半期から第 3 四半期にかけては 12% の減少が見られました。</li> 
+        <li>米国では 2021 年第 3 四半期に最も多くのインシデントが報告されましたが、インシデントは 2021 年第 2 四半期から 9% 減少しています。</li> 
+        <li>2021 年第 3 四半期に報告されたインシデントのうち、最も高い増加率 (400%) を記録したのはフランスです。</li> 
+        <li>2021 年第 3 四半期のインシデントを 2021 年第 2 四半期と比較すると、ロシアが最も大きく減少しています (-79%) 。</li> 
+       </ul> 
+       <h4>攻撃セクター: 2021 年第 3 四半期</h4> 
+       <p>2022 年第 3 四半期に公表されたインシデントのうち、注目すべきセクターの傾向は以下のとおりです。</p> 
+       <ul> 
+        <li>攻撃対象とされたのは、複数業種 (28%) が最も多く、次いで医療 (17%)、公共 (15%) となっています。 </li> 
+        <li>2021 年第 2 四半期から第 3 四半期にかけての注目すべきセクターの増加率は、金融/保険 (21%)、医療 (7%) などです。</li> 
+       </ul> 
+       <h4>攻撃ベクトル: 2021 年第 3 四半期</h4> 
+       <p>2021 年第 3 四半期に公表されたインシデントのうち、注目すべきベクトルの傾向は以下のとおりです。</p> 
+       <ul> 
+        <li>2021 年第 3 四半期に報告されたインシデントで最も多く使用された手法はマルウェアでした。しかし、報告されたマルウェア インシデントは、2021 年第 2 四半期と比較して 24% 減少しました。</li> 
+        <li>2021 年第 2 四半期から第 3 四半期にかけて増加したセクターは、分散型サービス拒否 (112%) および標的型攻撃 (55%) です。</li> 
+       </ul> 
+      </section> 
+      <hr class="blue-fade-rule"> 
+      <section> 
+       <h3 id="livingoffland">Living off the Land (環境寄生)</h3> 
+       <p>サイバー犯罪者は、システム内の正規のソフトウェアや機能を利用し、そのシステム上で悪意のある行為を行う Living off the Land (LotL: 環境寄生) という手法を使用します。第 3 四半期の事象に基づいて、Trellix は、検知されずにいようとする攻撃者が使用するツールの傾向を特定しました。国家に支援された脅威グループや大規模な犯罪グループには、自社でツールを開発するためのリソースがありますが、多くの場合、明確な攻撃の段階を実行するために、ターゲット システムの既存のバイナリや管理上インストールされているソフトウェアに注目します。</p> 
+       <p>主な標的に対する偵察段階でネイティブ バイナリや管理上使用されるソフトウェアを特定するために、攻撃者は求人サイト、ベンダーが公開するお客様の声、または内部の共犯者から、使用される技術に関する情報を収集することがあります。</p> 
+       <div class="table data-table table-4col"> 
+        <div class="gt-head"> 
+         <b>ネイティブ OS バイナリ</b> 
+         <b></b> 
+         <b class="cell-span-2">コメント</b> 
+        </div> 
+        <div class="gt-row"> 
+         <p>PowerShell (41.53%)</p> 
+         <p>T1059.001</p> 
+         <p class="cell-span-2">PowerShell は、スクリプトや PowerShell コマンドを実行するためによく使用されます。</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>Windows Command Shell (CMD) (40.40%)</p> 
+         <p>T1059.003</p> 
+         <p class="cell-span-2">Windows Command Shell は、Windows の主要な CLI ユーティリティであり、代替データ ストリームでファイルやコマンドを実行するためによく使用されます。</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>Rundll32 (16.96%)</p> 
+         <p>T1218.011, T1564.004</p> 
+         <p class="cell-span-2">Rundll32 は、ローカルの DLL ファイル、共有からの DLL ファイル、インターネットから取得した DLL ファイル、および代替データ ストリームを実行するために使用される可能性があります。</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>WMIC (12.87%)</p> 
+         <p>T1218, 1564.004</p> 
+         <p class="cell-span-2">WMIC は、WMI のコマンドライン インターフェースで、攻撃者がローカルに、代替データ ストリーム内で、またはリモート システムでコマンドや vpayload を実行するために使用される場合があります。</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>Excel (12.30%)</p> 
+         <p>T1105</p> 
+         <p class="cell-span-2">ネイティブにインストールされているわけではありませんが、多くのシステムには表計算ソフトが含まれています。攻撃者は悪意のあるコードやスクリプトを含む添付ファイルをユーザーに送信し、それが実行されると、遠隔地からペイロードを取得するために使用される可能性があります。</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>Schtasks (11.70%)</p> 
+         <p>T1053.005</p> 
+         <p class="cell-span-2">攻撃者は、持続性を維持したり、追加のマルウェアを実行したり、あるいは自動化されたタスクを実行したりするタスクをスケジュールする可能性があります。</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>Regsvr32 (10.53%)</p> 
+         <p>T1218.010</p> 
+         <p class="cell-span-2">Regsvr32 は、攻撃者によって DLL ファイルの登録、悪意のあるコードの実行、アプリケーションのホワイトリストのバイパスに使用される可能性があります。</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>MSHTA (8.78%)</p> 
+         <p>T1218.005</p> 
+         <p class="cell-span-2">MSHTA は、攻撃者が JavaScript、JScript、および VBScript ファイルを実行するために使用される可能性があり、ローカルに、および代替データ ストリーム内の HTA ファイルに隠されているか、リモートロケーションから取得される可能性があります。</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>Certutil (4.68%)</p> 
+         <p>T1105, 1564.004, T1027</p> 
+         <p class="cell-span-2">Windows コマンド ユーティリティは、証明機関情報の取得や証明書サービスの設定に使用されます。また、攻撃者は certutil を使用して、リモート ツールやコンテンツを収集し、ファイルをエンコードおよびデコードするだけでなく、代替データ ストリームにアクセスすることもできます。</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>Net.exe (4.68%)</p> 
+         <p>T1087 とサブ手法</p> 
+         <p class="cell-span-2">攻撃者が脆弱なマシンのユーザー、ネットワーク、サービス機能を特定するなどの偵察タスクを実行できるようにする Windows のコマンド ライン ユーティリティ。</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>Reg.exe (4.10%)</p> 
+         <p>1003.002, 1564.004</p> 
+         <p class="cell-span-2">Reg.exe は、攻撃者がレジストリ値の追加、変更、削除、および代替データ ストリームに保存される可能性のあるレジストリ値のエクスポートを行うために使用される可能性があります。さらに、reg.exe は SAM ファイルから認証情報をダンプするために使用される場合もあります。</p> 
+        </div> 
+       </div> 
+       <div class="data-table table-5col mt-72"> 
+        <div class="gt-head"> 
+         <b>管理ツール</b> 
+         <b></b> 
+         <b></b> 
+         <b class="cell-span-2">コメント</b> 
+        </div> 
+        <div class="gt-row"> 
+         <p>リモート サービス (15.21%)</p> 
+         <p>T1021.001, T1021.004, T1021.005</p> 
+         <p>AnyDesk<br>ConnectWise Control<br>RDP<br>UltraVNC<br>PuTTY<br>WinSCP</p> 
+         <p class="cell-span-2">Windows にネイティブのリモート サービス ツールとサードパーティ ソフトウェアのリモート サービス ツールは、攻撃者によって、マシンやインフラストラクチャへのリモート アクセス、ツールやマルウェアの入力転送、データの漏えいなどに、有効なアカウントとともに使用される可能性があります。</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>アーカイブ ユーティリティ (4.68%)</p> 
+         <p>T1560.001</p> 
+         <p>7-Zip<br>WinRAR<br>WinZip</p> 
+         <p class="cell-span-2">攻撃者は、アーカイブ ユーティリティを使用して、収集したデータを圧縮し、ファイルや実行可能ファイルを解凍して、漏えいさせる準備をする可能性があります。</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>PsExec (4.68%)</p> 
+         <p>T1569.002</p> 
+         <p></p> 
+         <p class="cell-span-2">PsExec は、リモート システム上でコマンドやプログラムを実行するために使用されるツールです。</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>BITSAdmin (2.93%)</p> 
+         <p>T1105, T1218, T1564.004</p> 
+         <p></p> 
+         <p class="cell-span-2">BiTSAdmin は、持続性の維持、成果物のクリーンアップ、設定された基準を満たした場合の追加アクションの起動によく使用されます。</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>fodhelper.exe (1.17%)</p> 
+         <p>T1548.002</p> 
+         <p></p> 
+         <p class="cell-span-2">Fodhelper.exe は、攻撃者が脆弱なマシン上で昇格された特権を使用して悪意のあるファイルを実行するために使用される可能性がある Windows ユーティリティです。</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>ADFind (.59%)</p> 
+         <p>T1016、T1018、T1069 とサブ手法、T1087 とサブ手法、T1482</p> 
+         <p></p> 
+         <p class="cell-span-2">攻撃者が信頼できるドメイン、権限グループ、リモート システム、設定などのアクティブ ディレクトリ情報を発見するために使用される可能性のあるコマンド ライン ユーティリティ。</p> 
+        </div> 
+       </div> 
+      </section> 
+      <hr class="blue-fade-rule"> 
+      <section> 
+       <h3 id="bugreport">バグ レポート</h3> 
+       <h4>フロントガラスに付いた「バグ」</h4> 
+       <i>(プリンシパル エンジニア兼シニア セキュリティ研究者である MDouglas McKee や他のブロガーが、毎月のバグ レポートで脆弱性を追跡および分析しています。)</i> 
+       <p>世界が 2021 年の終わりまで全速力で駆け抜けようとしているとき、多くの「バグ」がいわばフロントガラスに飛び散りました。簡単に解決できるバグもあれば、染みのように残ってしまうものもありました。チームは、毎月、新しい脆弱性 (バグ) が公表されると、それらを追跡および評価し、その中から最も重要だと「思われる」ものを報告しています。重要なのは、CVSS スコアや OWASP ランキングではなく、長年の経験に基づく昔ながらの状況分析です。</p> 
+       <h4>これまでの振り返り</h4> 
+       <p>過去数か月で報告された中で上位にいるバグを見ると、いくつか際立っているものがあります。Apache では、その Web サーバー (CVE-2021-41773) と Log4j コンポーネント (CVE-2021-44228) の両方が影響力の強いバグの被害に遭い、困難な年となりました。また、Palo Alto の GlobalProtect VPN に発見されたバグ (CVE-2021-3064) は、世界的なパンデミック時に深刻な影響を及ぼし、注目に値します。では、現実を見てみましょう。Apache Log4j の脆弱性は、間違いなく 2021 年最大のバグであり、今後何年にもわたってその地位を譲らない可能性があるため、「影響力が強い」以上の評価に値します。これらの情報をご存じないなら、弊社の<a href="https://www.trellix.com/en-us/about/newsroom/stories/threat-labs/the-bug-report-december-2021.html" datalink-id="newco:en-us:about:newsroom:stories:threat-labs:the-bug-report-december-2021" datalink-type="internal">12 月バグ レポート</a>をお読みください。毎月、脆弱性に関する最新のニュースをお届けしていますので、ぜひご覧ください。</p> 
+       <p>では、これらのバグが最悪と言えるのはなぜでしょうか。簡単に言えば、ネットワークの端にあるツールで認証を行うことなく、リモートで利用できるからです。これらのバグは、攻撃者がフィッシング詐欺を行うことなく、ネットワークへの最初の侵入口となり、それどころかより大規模な攻撃の玄関口ともなる可能性があります。</p> 
+       <p>もし貴社の CISO がロシアン ルーレットで 1 つの製品にしかパッチを適用できないと言うのであれば、Log4j の脆弱性に優先的に適用することをお勧めします。なぜなら、これは実行が容易であり、悪意ある者によって積極的に悪用されているからです。Palo Alto の VPN の脆弱性は深刻で、2020 年以降 VPN での攻撃が増加しているものの、古いバージョンの VPN ソフトウェアに影響を与え、まだ攻撃が活発化していないため、Log4j や他の Apache の脆弱性に比べて目立たない存在となっています。</p> 
+       <h4>ターマイト</h4> 
+       <p>ターマイトのように、目立たないながらも壊滅的な影響を与えるバグがあります。</p> 
+       <p>CVE-2021-41379 というラベルが付けられた Microsoft Windows インストーラー サービスのローカル特権昇格バグは、11 月のターマイトとしてよく知られていました。Microsoft は、このバグがローカル アクセスを必要とすることを明らかにし、公式パッチで修正したとしましたが、パッチが予想どおりに機能しなかったため、この戦略は期待外れに終わりました。</p> 
+       <p>Insights にあるように、失敗したパッチと公開された POC とともに、攻撃者は時を待たずにこれを彼らのプレイブックにまとめました。問題をさらに悪化させるものとして、このエクスプロイトの改造版がダーク ウェブで販売されています。</p> 
+      </section> 
+      <hr class="blue-fade-rule"> 
+      <section> 
+       <h3 id="addltq32021">2021 年第 3 四半期の付加的なデータと調査</h3> 
+       <h4 id="ransomwareCountries">ランサムウェアの標的となったクライアントの国</h4> 
+       <div class="tile-chart"> 
+        <style>
+                    #ransomware-countries-grid {
+                        grid-template-rows:
+                            34fr 12fr 11fr 8fr 7fr 6fr 4fr 3fr 2fr 1.5fr;
+                    }
+                </style> 
+        <div id="ransomware-countries-grid" class="grid-chart stacked-grid"> 
+         <div class="chart-tile tile-col-1" data-propval="34%">
+          米国 / United States
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="12%">
+          トルコ
+         </div> 
+         <div class="chart-tile tile-col-3" data-propval="11%">
+          ドイツ
+         </div> 
+         <div class="chart-tile tile-col-4" data-propval="8%">
+          イスラエル
+         </div> 
+         <div class="chart-tile tile-col-5" data-propval="7%">
+          スイス
+         </div> 
+         <div class="chart-tile tile-col-6" data-propval="6%">
+          メキシコ
+         </div> 
+         <div class="chart-tile tile-col-7" data-propval="4%">
+          英国
+         </div> 
+         <div class="chart-tile tile-col-8" data-propval="3%">
+          南アフリカ
+         </div> 
+         <div class="chart-tile tile-col-9" data-propval="2%">
+          ベルギー
+         </div> 
+         <div class="chart-tile tile-col-10" data-propval="1.5%">
+          インド
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">2021 年第 3 四半期に検出されたランサムウェア全体のうち、米国に拠点を置くクライアントが 3 分の 1 以上を占めています。</p> 
+       <h4>ランサムウェアのクライアントのセクター</h4> 
+       <div class="tile-chart"> 
+        <style>
+                    #ransomware-customers-grid {
+                        grid-template-rows:
+                            22fr 20fr 16fr 9fr 8fr 4.3fr 4fr 3.6fr 3fr 1fr;
+                    }
+                </style> 
+        <div id="ransomware-customers-grid" class="grid-chart stacked-grid"> 
+         <div class="chart-tile tile-col-1" data-propval="22%">
+          銀行/金融
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="20%">
+          公共事業
+         </div> 
+         <div class="chart-tile tile-col-3" data-propval="16%">
+          小売業界
+         </div> 
+         <div class="chart-tile tile-col-4" data-propval="9%">
+          教育
+         </div> 
+         <div class="chart-tile tile-col-5" data-propval="8%">
+          政府機関
+         </div> 
+         <div class="chart-tile tile-col-6" data-propval="4.3%">
+          工業
+         </div> 
+         <div class="chart-tile tile-col-7" data-propval="4%">
+          外部委託 &amp; ホスティング
+         </div> 
+         <div class="chart-tile tile-col-8" data-propval="3.6%">
+          建設
+         </div> 
+         <div class="chart-tile tile-col-9" data-propval="3%">
+          保険
+         </div> 
+         <div class="chart-tile tile-col-10" data-propval="1%">
+          卸売業
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">銀行/金融 (22%)、公共事業 (20%)、および小売業 (16%) が、2021 年第 3 四半期に検出されたランサムウェア全体の約 60% を占めています。</p> 
+       <h4>ランサムウェア MITRE ATT&amp;CK 手法</h4> 
+       <div class="tile-chart"> 
+        <style>
+                    #ransomware-mitre-grid {
+                        grid-template-rows:
+                            2.6fr 2.5fr 2.4fr 2.3fr 2.2fr 2fr 2fr 2fr 2fr 1.8fr;
+                    }
+                </style> 
+        <div id="ransomware-mitre-grid" class="grid-chart stacked-grid"> 
+         <div class="chart-tile tile-col-1" data-propval="2.6%">
+          Data Entry
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="2.5%">
+          File and Directory Discovery
+         </div> 
+         <div class="chart-tile tile-col-3" data-propval="2.4%">
+          Obfuscated Files or Information
+         </div> 
+         <div class="chart-tile tile-col-4" data-propval="2.3%">
+          Inhibit System Recovery
+         </div> 
+         <div class="chart-tile tile-col-5" data-propval="2.2%">
+          Process Injection
+         </div> 
+         <div class="chart-tile tile-col-6" data-propval="2%">
+          Service Stop
+         </div> 
+         <div class="chart-tile tile-col-7" data-propval="2%">
+          System Information Discovery
+         </div> 
+         <div class="chart-tile tile-col-8" data-propval="2%">
+          PowerShell
+         </div> 
+         <div class="chart-tile tile-col-9" data-propval="2%">
+          Modify Registry
+         </div> 
+         <div class="chart-tile tile-col-10" data-propval="1.8%">
+          Valid Accounts
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">データ エントリ (2.6%)、ファイル/ディレクトリの探索 (2.5%)、および難読化されたファイル/情報 (2.4%) が、2021 年第 3 四半期に検出されたランサムウェア MITRE ATT&amp;CK 手法の上位を占めています。</p> 
+       <h4 id="aptCountries">APT の標的となったクライアントの国</h4> 
+       <div class="tile-chart"> 
+        <style>
+                    #apt-countries-grid {
+                        grid-template-rows:
+                            17fr 15fr 12fr 8.3fr 8fr 6.4fr 6.3fr 6fr 4fr 3fr;
+                    }
+                </style> 
+        <div id="apt-countries-grid" class="grid-chart stacked-grid"> 
+         <div class="chart-tile tile-col-1" data-propval="17%">
+          トルコ
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="15%">
+          米国 / United States
+         </div> 
+         <div class="chart-tile tile-col-3" data-propval="12%">
+          イスラエル
+         </div> 
+         <div class="chart-tile tile-col-4" data-propval="8.3%">
+          ドイツ
+         </div> 
+         <div class="chart-tile tile-col-5" data-propval="8%">
+          メキシコ
+         </div> 
+         <div class="chart-tile tile-col-6" data-propval="6.4%">
+          スイス
+         </div> 
+         <div class="chart-tile tile-col-7" data-propval="6.3%">
+          英国
+         </div> 
+         <div class="chart-tile tile-col-8" data-propval="6%">
+          カナダ
+         </div> 
+         <div class="chart-tile tile-col-9" data-propval="4%">
+          ブラジル
+         </div> 
+         <div class="chart-tile tile-col-10" data-propval="3%">
+          インド
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">2021 年第 3 四半期に検出された攻撃パターン手法の件数では、トルコが全体の 17% を占め、次いで米国 (15%)、イスラエル (12%) となっています。</p> 
+       <h4>ATR 顧客セクター</h4> 
+       <div class="tile-chart"> 
+        <style>
+                    #apt-customers-grid {
+                        grid-template-rows:
+                            37fr 17fr 16fr 11fr 9fr 7fr 6fr 3.4fr 3fr 1fr;
+                    }
+                </style> 
+        <div id="apt-customers-grid" class="grid-chart stacked-grid"> 
+         <div class="chart-tile tile-col-1" data-propval="37%">
+          銀行/金融
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="17%">
+          公共事業
+         </div> 
+         <div class="chart-tile tile-col-3" data-propval="16%">
+          小売業界
+         </div> 
+         <div class="chart-tile tile-col-4" data-propval="11%">
+          政府機関
+         </div> 
+         <div class="chart-tile tile-col-5" data-propval="9%">
+          プロセス型製造業
+         </div> 
+         <div class="chart-tile tile-col-6" data-propval="7%">
+          外部委託
+         </div> 
+         <div class="chart-tile tile-col-7" data-propval="6%">
+          保険
+         </div> 
+         <div class="chart-tile tile-col-8" data-propval="3.4%">
+          輸送業
+         </div> 
+         <div class="chart-tile tile-col-9" data-propval="3%">
+          工業
+         </div> 
+         <div class="chart-tile tile-col-10" data-propval="1%">
+          技術
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">2021 年第 3 四半期に検出された APT の数が最も多かったのは、銀行/金融セクター (37%) で、次いで公益事業 (17%)、小売業 (16%)、政府 (11%) となっています。</p> 
+       <h4>APT MITRE ATT&amp;CK 手法</h4> 
+       <div class="tile-chart"> 
+        <style>
+                    #apt-mitre-grid {
+                        grid-template-rows:
+                            16.8fr 16.7fr 16fr 15.5fr 15fr 14.5fr 14.3fr 13.8fr 13.7fr 13.5fr;
+                    }
+                </style> 
+        <div id="apt-mitre-grid" class="grid-chart stacked-grid"> 
+         <div class="chart-tile tile-col-1" data-propval="16.8%">
+          Spearphishing Attachment
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="16.7%">
+          Obfuscated Files or Information
+         </div> 
+         <div class="chart-tile tile-col-3" data-propval="16%">
+          PowerShell
+         </div> 
+         <div class="chart-tile tile-col-4" data-propval="15.5%">
+          Rundll32
+         </div> 
+         <div class="chart-tile tile-col-5" data-propval="15%">
+          Scheduled Task
+         </div> 
+         <div class="chart-tile tile-col-6" data-propval="14.5%">
+          System Information Discovery
+         </div> 
+         <div class="chart-tile tile-col-7" data-propval="14.3%">
+          Spearphishing Link
+         </div> 
+         <div class="chart-tile tile-col-8" data-propval="13.8%">
+          Windows Management Instrumentation
+         </div> 
+         <div class="chart-tile tile-col-9" data-propval="13.7%">
+          Web Protocols
+         </div> 
+         <div class="chart-tile tile-col-10" data-propval="13.5%">
+          Registry Run Keys
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">2021 年第 3 四半期に検出された APT MITRE ATT&amp;CK 手法で最も多かったのは、スピアフィッシング用の添付ファイル (16.8%)、難読化されたファイル/情報 (16.7%)、PowerShell (16%) です。</p> 
+       <h4 id="atrCountries">ATR クライアントの国</h4> 
+       <div class="tile-chart"> 
+        <style>
+                    #atr-countries-grid {
+                        grid-template-rows:
+                            32fr 28fr 6fr 2.5fr 2.3fr 2.2fr 1.9fr 0.18fr 0.17fr 0.16fr;
+                    }
+                </style> 
+        <div id="atr-countries-grid" class="grid-chart stacked-grid"> 
+         <div class="chart-tile tile-col-1" data-propval="32%">
+          ドイツ
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="28%">
+          米国 / United States
+         </div> 
+         <div class="chart-tile tile-col-3" data-propval="6%">
+          中国
+         </div> 
+         <div class="chart-tile tile-col-4" data-propval="2.5%">
+          シンガポール
+         </div> 
+         <div class="chart-tile tile-col-5" data-propval="2.3%">
+          トルコ
+         </div> 
+         <div class="chart-tile tile-col-6" data-propval="2.2%">
+          インド
+         </div> 
+         <div class="chart-tile tile-col-7" data-propval="1.9%">
+          イタリア
+         </div> 
+         <div class="chart-tile tile-col-8" data-propval="0.18%">
+          英国
+         </div> 
+         <div class="chart-tile tile-col-9" data-propval="0.17%">
+          イスラエル
+         </div> 
+         <div class="chart-tile tile-col-10" data-propval="0.16%">
+          クロアチア
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">2021 年第 3 四半期に検出された ATR ツールの脅威全体の半数以上をドイツ (32%) と米国 (28%) が占めていました。</p> 
+       <h4>ATR 顧客セクター</h4> 
+       <div class="tile-chart"> 
+        <style>
+                    #atr-cutsomers-grid {
+                        grid-template-rows:
+                            45fr 12fr 11fr 8fr 7fr 4fr 3fr 3fr 2.7fr 2.5fr;
+                    }
+                </style> 
+        <div id="atr-cutsomers-grid" class="grid-chart stacked-grid"> 
+         <div class="chart-tile tile-col-1" data-propval="45%">
+          銀行/金融
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="12%">
+          技術
+         </div> 
+         <div class="chart-tile tile-col-3" data-propval="11%">
+          輸送業
+         </div> 
+         <div class="chart-tile tile-col-4" data-propval="8%">
+          政府機関
+         </div> 
+         <div class="chart-tile tile-col-5" data-propval="7%">
+          外部委託
+         </div> 
+         <div class="chart-tile tile-col-6" data-propval="4%">
+          卸売業
+         </div> 
+         <div class="chart-tile tile-col-7" data-propval="3%">
+          保険
+         </div> 
+         <div class="chart-tile tile-col-8" data-propval="3%">
+          その他
+         </div> 
+         <div class="chart-tile tile-col-9" data-propval="2.7%">
+          工業
+         </div> 
+         <div class="chart-tile tile-col-10" data-propval="2.5%">
+          公共事業
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">2021 年第 3 四半期は、銀行/金融の ATR 顧客セクターの検出数 (45%) が最多でした。</p> 
+       <h4>ATR MITRE ATT&amp;CK 手法</h4> 
+       <div class="tile-chart"> 
+        <style>
+                    #atr-mitre-grid {
+                        grid-template-rows:
+                            5fr 3.6fr 3.57fr 3.5fr 3fr 2.9fr 2.4fr 2.37fr 2.35fr 2fr;
+                    }
+                </style> 
+        <div id="atr-mitre-grid" class="grid-chart stacked-grid"> 
+         <div class="chart-tile tile-col-1" data-propval="5%">
+          Obfuscated Files or Information
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="3.6%">
+          Modify Registry
+         </div> 
+         <div class="chart-tile tile-col-3" data-propval="3.57%">
+          Process Hollowing
+         </div> 
+         <div class="chart-tile tile-col-4" data-propval="3.5%">
+          Screen Capture
+         </div> 
+         <div class="chart-tile tile-col-5" data-propval="3%">
+          Credentials from Web Browsers
+         </div> 
+         <div class="chart-tile tile-col-6" data-propval="2.9%">
+          Spearphishing Attachment
+         </div> 
+         <div class="chart-tile tile-col-7" data-propval="2.4%">
+          Keylogging
+         </div> 
+         <div class="chart-tile tile-col-8" data-propval="2.37%">
+          Man in the Browser
+         </div> 
+         <div class="chart-tile tile-col-9" data-propval="2.35%">
+          Query Registry
+         </div> 
+         <div class="chart-tile tile-col-10" data-propval="2%">
+          Input Capture
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">難読化されたファイル/情報が、2021 年第 3 四半期に検出された ATR MITRE ATT&amp;CK 手法全体の 5% に相当します。</p> 
+      </section> 
+      <hr class="blue-fade-rule"> 
+      <section> 
+       <h3 id="resources">リソース</h3> 
+       <p>最新の脅威や研究については、弊社チームのリソースをご覧下さい。</p> 
+       <p><a href="https://www.trellix.com/en-us/threat-center.html" datalink-id="newco:en-us:threat-center" datalink-type="internal">脅威センター</a>— 弊社チームが現在の影響力の強い脅威についてご説明します。</p> 
+       <h4>Twitter:</h4> 
+       <div class="row justify-content-center px-md-24 px-lg-0"> 
+        <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-5 d-flex flex-nowrap align-items-center"> 
+         <a href="https://twitter.com/TrellixLabs/status/507569387264819200" target="_blank" class="pe-2" datalink-type="external" datalink-id="newco:twitter.com:trellixlabs:status:507569387264819200"> <img class="border border-secondary radius-50" src="https://pbs.twimg.com/profile_images/1483875911032131584/hj9Eml2t_400x400.jpg" width="100" alt=""> </a> 
+         <div class="d-flex flex-column align-items-start"> 
+          <a href="https://twitter.com/TrellixLabs/status/507569387264819200" target="_blank" class="pe-2" datalink-type="external" datalink-id="newco:twitter.com:trellixlabs:status:507569387264819200">Trellix ATR</a> 
+          <a href="https://twitter.com/TrellixLabs/status/507569387264819200" target="_blank" class="text-decoration-none link-arrow text-black mb-3 mb-lg-0" datalink-type="external" datalink-id="newco:twitter.com:trellixlabs:status:507569387264819200">Twitter</a> 
+         </div> 
+        </div> 
+        <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-5 d-flex flex-nowrap align-items-center"> 
+         <a href="https://twitter.com/Raj_Samani" target="_blank" class="pe-2" datalink-type="external" datalink-id="newco:twitter.com:raj_samani"> <img class="border border-secondary radius-50" src="https://pbs.twimg.com/profile_images/911031738108923904/KYc0w4Rf_400x400.jpg" width="100" alt=""> </a> 
+         <div class="d-flex flex-column align-items-start">
+          <a href="https://twitter.com/Raj_Samani" target="_blank" class="pe-2" datalink-type="external" datalink-id="newco:twitter.com:raj_samani">Raj Samani </a>
+          <a href="https://twitter.com/Raj_Samani" target="_blank" class="text-decoration-none link-arrow text-black mb-3 mb-lg-0" datalink-type="external" datalink-id="newco:twitter.com:raj_samani">Twitter</a> 
+         </div> 
+        </div> 
+        <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-5 d-flex flex-nowrap align-items-center"> 
+         <a href="https://twitter.com/ChristiaanBeek" target="_blank" class="pe-2" datalink-type="external" datalink-id="newco:twitter.com:christiaanbeek"> <img class="border border-secondary radius-50" src="https://pbs.twimg.com/profile_images/1422983669623541762/2zRepoO3_400x400.jpg" width="100" alt=""> </a> 
+         <div class="d-flex flex-column align-items-start">
+          <a href="https://twitter.com/ChristiaanBeek" target="_blank" class="pe-2" datalink-type="external" datalink-id="newco:twitter.com:christiaanbeek">Christiaan Beek </a>
+          <a href="https://twitter.com/ChristiaanBeek" target="_blank" class="text-decoration-none link-arrow text-black mb-3" datalink-type="external" datalink-id="newco:twitter.com:christiaanbeek">Twitter</a> 
+         </div> 
+        </div> 
+        <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-5 d-flex flex-nowrap align-items-center"> 
+         <a href="https://twitter.com/John_Fokker" target="_blank" class="pe-2" datalink-type="external" datalink-id="newco:twitter.com:john_fokker"> <img class="border border-secondary radius-50" src="https://pbs.twimg.com/profile_images/1448625380156391429/RCgMFSlX_400x400.jpg" width="100" alt=""> </a> 
+         <div class="d-flex flex-column align-items-start">
+          <a href="https://twitter.com/John_Fokker" target="_blank" class="pe-2" datalink-type="external" datalink-id="newco:twitter.com:john_fokker">John Fokker </a>
+          <a href="https://twitter.com/John_Fokker" target="_blank" class="text-decoration-none link-arrow text-black mb-3" datalink-type="external" datalink-id="newco:twitter.com:john_fokker">Twitter</a> 
+         </div> 
+        </div> 
+        <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-5 d-flex flex-nowrap align-items-center"> 
+         <a href="https://twitter.com/fulmetalpackets" target="_blank" class="pe-2" datalink-type="external" datalink-id="newco:twitter.com:fulmetalpackets"> <img class="border border-secondary radius-50" src="https://pbs.twimg.com/profile_images/998587107961593856/9Fq7Q8ps_400x400.jpg" width="100" style="border-radius:50%; border:2px solid #00a5ff;" alt=""> </a> 
+         <div class="d-flex flex-column align-items-start">
+          <a href="https://twitter.com/fulmetalpackets" target="_blank" class="pe-2" datalink-type="external" datalink-id="newco:twitter.com:fulmetalpackets">Douglas McKee </a>
+          <a href="https://twitter.com/fulmetalpackets" target="_blank" class="text-decoration-none link-arrow text-black mb-3" datalink-type="external" datalink-id="newco:twitter.com:fulmetalpackets">Twitter</a> 
+         </div> 
+        </div> 
+        <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-5 d-flex flex-nowrap align-items-center"> 
+         <a href="https://twitter.com/spovolny" target="_blank" class="pe-2" datalink-type="external" datalink-id="newco:twitter.com:spovolny"> <img class="border border-secondary radius-50" src="https://pbs.twimg.com/profile_images/1485723087249182722/rhkNMUCo_400x400.jpg" width="100" alt=""> </a> 
+         <div class="d-flex flex-column align-items-start">
+          <a href="https://twitter.com/spovolny" target="_blank" class="pe-2" datalink-type="external" datalink-id="newco:twitter.com:spovolny">Steve Povolny </a>
+          <a href="https://twitter.com/spovolny" target="_blank" class="text-decoration-none link-arrow text-black mb-3" datalink-type="external" datalink-id="newco:twitter.com:spovolny">Twitter</a> 
+         </div> 
+        </div> 
+        <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-5 d-flex flex-nowrap align-items-center"> 
+         <div class="d-flex flex-column align-items-start"> 
+          <h4 class="text-body"></h4> 
+         </div> 
+        </div> 
+       </div> 
+      </section> 
+      <section> 
+       <a href="https://www.trellix.com/ja-jp/assets/docs/threat-reports/trellix-atr-ja-jp-jan-2022.pdf" target="_blank" class="btn btn-primary me-4 mb-4" datalink-id="newco:ja-jp:assets:docs:threat-reports:trellix-atr-ja-jp-jan-2022.pdf" datalink-type="internal">PDF をダウンロード</a> 
+       <a href="https://www.trellix.com/en-us/threat-center/threat-reports.html" class="btn btn-outline-primary mb-4" datalink-id="newco:en-us:threat-center:threat-reports" datalink-type="internal">アーカイブを見る</a> 
+      </section> 
+     </div> 
+     <div class="toc d-none d-md-block"> 
+      <div class="toc-link-cont d-flex flex-column sticky-top"> 
+       <a class="toc-link" href="#letter" datalink-type="internal" datalink-id="newco:#letter">弊社チーフ サイエンティストからのご挨拶</a> 
+       <a class="toc-link" href="#log4j" datalink-type="internal" datalink-id="newco:#log4j">Log4j: 知りすぎたメモリ</a> 
+       <a class="toc-link" href="#ransomware" datalink-type="internal" datalink-id="newco:#ransomware">ランサムウェア</a> 
+       <a class="toc-link sub-toc-link" href="#apt" datalink-type="internal" datalink-id="newco:#apt">攻撃パターン手法</a> 
+       <a class="toc-link sub-toc-link" href="#atr" datalink-type="internal" datalink-id="newco:#atr">Advanced Threat Research</a> 
+       <a class="toc-link" href="#threatstocountries" datalink-type="internal" datalink-id="newco:#threatstocountries">国、地域、セクター、ベクトルへの脅威</a> 
+       <a class="toc-link" href="#livingoffland" datalink-type="internal" datalink-id="newco:#livingoffland">Living off the Land (環境寄生) 2021 年第 3 四半期</a> 
+       <a class="toc-link" href="#bugreport" datalink-type="internal" datalink-id="newco:#bugreport">バグ レポート</a> 
+       <a class="toc-link" href="#addltq32021" datalink-type="internal" datalink-id="newco:#addltq32021">2021 年第 3 四半期の付加的なデータと調査</a> 
+       <a class="toc-link" href="#resources" datalink-type="internal" datalink-id="newco:#resources">リソース</a> 
+       <hr class="gradient-rule mx-0 w-100"> 
+      </div> 
+     </div> 
+    </div> 
+    <script>
+    let chapLinks = document.querySelectorAll('.toc-link'),
+        h = document.querySelector('html');
+
+    function chapterIndicator(element) {
+
+        let elY = element.offsetTop - h.scrollTop,
+            elemId = element.id;
+
+        let chapLink = document.querySelector(`a[href="#${elemId}"]`);
+
+        // If element is on screen
+        // ie if element is below top of browser window & element is above bottom of browser window
+        if ((elY > 0) && (elY < window.innerHeight)) {
+
+            if (elY > (window.innerHeight / 4)) {
+                chapLink = chapLink.previousElementSibling;
+            }
+
+            if (h.offsetHeight <= (h.scrollTop + (5 * window.innerHeight / 4))) {
+                chapLink = chapLinks[chapLinks.length - 1];
+            }
+
+            // If chapter link is not already active
+            if (chapLink && !chapLink.classList.contains('active')) {
+
+                chapLinks.forEach(e => e.classList.remove('active'));
+                chapLink.classList.add('active');
+            }
+        }
+    };
+
+    let elements = document.querySelectorAll(`h3[id],h4[id]`);
+
+    elements.forEach(element => {
+        window.addEventListener(
+            "scroll",
+            () => chapterIndicator(element)
+        );
+    });
+</script> 
+    <div id="screenSpacer"></div> 
+    <footer> 
+     <hr class="gradient-rule m-0 w-100"> 
+     <div class="container-xl px-md-6"> 
+      <div class="links cols"> 
+       <div class="link-group"> 
+        <b class="mb-1">概要</b> 
+        <a href="https://www.trellix.com/ja-jp/about/why-trellix.html" datalink-id="newco:ja-jp:about:why-trellix" datalink-type="internal">Trellix を選ぶ理由</a> 
+        <a href="https://www.trellix.com/ja-jp/about.html" datalink-id="newco:ja-jp:about" datalink-type="internal">会社概要</a> 
+        <a href="https://www.trellix.com/ja-jp/products.html" datalink-id="newco:ja-jp:products" datalink-type="internal">製品を調べる</a> 
+        <a href="https://www.trellix.com/ja-jp/about/leadership.html" datalink-id="newco:ja-jp:about:leadership" datalink-type="internal">リーダーシップ</a> 
+        <a href="https://careers.trellix.com/" target="_blank" class="link-external" datalink-type="external" datalink-id="newco:careers.trellix.com:">キャリア</a> 
+       </div> 
+       <div class="link-group"> 
+        <b class="mb-1">ニュースとイベント</b> 
+        <a href="https://www.trellix.com/ja-jp/about/newsroom.html" datalink-id="newco:ja-jp:about:newsroom" datalink-type="internal">ニュースルーム</a> 
+        <a href="https://www.trellix.com/en-us/about/newsroom/press-releases.html" datalink-id="newco:en-us:about:newsroom:press-releases" datalink-type="internal">プレス リリース</a> 
+        <a href="https://www.trellix.com/ja-jp/about/newsroom/stories.html" datalink-id="newco:ja-jp:about:newsroom:stories" datalink-type="internal">ブログ</a> 
+        <a href="https://www.trellix.com/en-us/about/webinars.html" datalink-id="newco:en-us:about:webinars" datalink-type="internal">ウェビナー</a> 
+        <a href="https://www.trellix.com/ja-jp/about/events.html" datalink-id="newco:ja-jp:about:events" datalink-type="internal">イベント</a> 
+       </div> 
+       <div class="link-group"> 
+        <b class="mb-1">リソース</b> 
+        <a href="https://www.trellix.com/en-us/security-awareness.html" datalink-id="newco:en-us:security-awareness" datalink-type="internal">セキュリティ意識向上</a> 
+        <a href="https://www.trellix.com/en-us/resource-library.html" datalink-id="newco:en-us:resource-library" datalink-type="internal">リソース ライブラリ</a> 
+        <a href="https://www.trellix.com/en-us/services/education-services.html" datalink-id="newco:en-us:services:education-services" datalink-type="internal">トレーニングおよび教育</a> 
+        <a href="https://www.trellix.com/ja-jp/contact-us/communication-preferences.html" datalink-id="newco:ja-jp:contact-us:communication-preferences" datalink-type="internal">配信設定</a> 
+        <a href="https://teamtrellixstore.com/pages/store" class="link-external" target="_blank" datalink-type="external" datalink-id="newco:teamtrellixstore.com:pages:store">Trellix ストア</a> 
+       </div> 
+       <div class="link-group"> 
+        <b class="mb-1">サポート</b> 
+        <a href="https://supportm.trellix.com/webcenter/portal/supportportal/pages_home" target="_blank" class="link-external" datalink-type="external" datalink-id="newco:supportm.trellix.com:webcenter:portal:supportportal:pages_home">サポート</a> 
+        <a href="https://www.trellix.com/en-us/support/customer-success-plans.html" datalink-id="newco:en-us:support:customer-success-plans" datalink-type="internal">カスタマー成功プラン</a> 
+        <a href="https://www.trellix.com/ja-jp/downloads.html" datalink-id="newco:ja-jp:downloads" datalink-type="internal">ダウンロード</a> 
+        <a href="https://docs.trellix.com/" target="_blank" class="link-external" datalink-type="external" datalink-id="newco:docs.trellix.com:">製品ドキュメント</a> 
+       </div> 
+       <div class="link-group"> 
+        <b class="mb-1">Trellix</b> 
+        <a href="https://www.trellix.com/ja-jp/contact-us.html" datalink-id="newco:ja-jp:contact-us" datalink-type="internal">お問い合わせ</a> 
+       </div> 
+      </div> 
+      <div class="more-info d-flex flex-column flex-xmd-row gap-y-4 align-items-center"> 
+       <div class="d-flex col-auto col-xmd-2"> 
+        <a href="https://www.trellix.com/" style="margin-top: -8px;" title="Trellix" datalink-id="newco:" datalink-type="internal"> <img src="https://www.trellix.com/en-us/assets/logos/Trellix-x-white.svg" alt="Trellix" height="32" width="auto"> </a> 
+       </div> 
+       <div class="more-links d-flex flex-wrap col-auto col-xmd-8 gap-x-2 align-items-center justify-content-center"> 
+        <span class="col-12 col-lg-auto text-center">Copyright ©<span id="cYear"></span> Musarubra US LLC</span> 
+        <script async>
+                    document.getElementById('cYear').textContent += `${/\d{4}/.exec(Date())[0]} `;
+                </script> 
+        <span class="d-none d-lg-inline">|</span> 
+        <a href="https://www.trellix.com/ja-jp/about/legal/privacy.html" datalink-id="newco:ja-jp:about:legal:privacy" datalink-type="internal">プライバシー</a> 
+        <span>|</span> 
+        <a href="https://www.trellix.com/ja-jp/about/legal.html" datalink-id="newco:ja-jp:about:legal" datalink-type="internal">法的通知</a> 
+        <span>|</span> 
+        <a href="https://www.trellix.com/ja-jp/about/legal/website-terms-of-service.html" datalink-id="newco:ja-jp:about:legal:website-terms-of-service" datalink-type="internal">サービス利用規約</a> 
+        <span>|</span> 
+        <a href="https://shop.trellix.com/1320/purl-cataloghome" target="_blank" class="link-external" datalink-type="external" datalink-id="newco:shop.trellix.com:1320:purl-cataloghome">オンライン購入</a> 
+       </div> 
+       <div class="social-links pb-4 pb-xmd-0 d-flex col-auto col-xmd-2 gap-2 justify-content-end align-items-center"> 
+        <a href="https://www.linkedin.com/company/trellixsecurity" id="linkedIn" target="_blank" class="social-link" datalink-type="external" datalink-id="newco:www.linkedin.com:company:trellixsecurity"> 
+         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-linkedin" viewbox="0 0 16 16"> 
+          <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" /> 
+         </svg> </a> 
+        <a href="https://twitter.com/Trellix" id="twitter" target="_blank" class="social-link" datalink-type="external" datalink-id="newco:twitter.com:trellix"> 
+         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24"> 
+          <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" /> 
+         </svg> </a> 
+       </div> 
+      </div> 
+     </div> 
+    </footer> 
+    <div class="modal fade" id="searchTipModal" style="z-index: 99999"> 
+     <div class="modal-dialog gradient-rule-bottom modal-lg"> 
+      <div class="modal-content"> 
+       <div class="modal-header" style="border-bottom:0px;"> 
+        <h2 class="modal-title"></h2> 
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button> 
+       </div> 
+       <div class="modal-body p-5 pt-0"> 
+        <h4 class="modal-title">検索のヒント</h4>
+        <br> 
+        <div class="container small"> 
+         <p><b>簡潔で具体的に:</b></p> 
+         <p>誤:&nbsp;<i>Trellix Endpoint Security に移行する方法を学習したい</i></p> 
+         <p>正:&nbsp;<i>Trellix Endpoint Security への移行</i></p> 
+         <p><b>特定の語句を検索する場合は、その語句を引用符で囲む:</b></p> 
+         <p><i>“Trellix Endpoint Security への移行”</i></p> 
+         <p><b>複数の語句を検索する場合は、それぞれを引用符で囲む:</b></p> 
+         <p><i>“endpoint security” “Windows”</i></p> 
+         <p><b>句読記号と特殊文字は無視される:</b></p> 
+         <p>`、~、:、@、#、$、%、^、&amp;、=、+、&lt;、&gt;、(、) は使用しないでください。</p> 
+         <p><b>検索エンジンでは大文字と小文字が区別されない:</b></p> 
+         <p><i>Endpoint security</i>、&nbsp;<i>endpoint security</i>、&nbsp;<i>ENDPOINT SECURITY</i>&nbsp; は同じ結果になります。</p> 
+        </div> 
+       </div> 
+       <div class="modal-footer"> 
+        <button type="button" class="btn btn-outline-primaryy" data-bs-dismiss="modal">閉じる</button> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- site container --> 
+  <link rel="stylesheet" href="https://www.trellix.com/etc.clientlibs/corpcom/clientlibs/clientlib-jquery.min.css" type="text/css"> 
+  <link rel="stylesheet" href="https://www.trellix.com/etc.clientlibs/corpcom/clientlibs/clientlib-base.min.css" type="text/css"> 
+  <script src="https://www.trellix.com/etc.clientlibs/corpcom/clientlibs/clientlib-jquery.min.js"></script> 
+  <script src="https://www.trellix.com/etc.clientlibs/corpcom/clientlibs/clientlib-base.min.js"></script> 
+  <script src="https://www.trellix.com/etc.clientlibs/corpcom/clientlibs/csrf.min.js"></script> 
+  <script defer>
+    Fancybox.defaults.infinite = 0;
+</script>   
+ </body>
+
+<!-- Mirrored from www.trellix.com/ja-jp/advanced-research-center/threat-reports/jan-2022.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Mar 2023 06:11:10 GMT -->
+</html>

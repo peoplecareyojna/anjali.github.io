@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<!-- Mirrored from www.trellix.com/en-us/advanced-research-center/threat-reports/jan-2022.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Mar 2023 05:15:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+  <title>Trellix ATR Threats Report | January 2022</title> 
+  <link rel="shortcut icon" href="../../../favicon5e1f.ico?v=2"> 
+  <link rel="canonical" href="jan-2022.html"> 
+  <meta name="keywords"> 
+  <meta name="description" content="Trellix's advanced threat research report for January 2022 providing insignt into Log4j, ransomeware and other top threats."> 
+  <meta property="og:title" content="Trellix ATR Threats Report | January 2022"> 
+  <meta property="og:description" content="Trellix's advanced threat research report for January 2022 providing insignt into Log4j, ransomeware and other top threats."> 
+  <meta name="twitter:title" content="Trellix ATR Threats Report | January 2022"> 
+  <meta name="twitter:description" content="Trellix's advanced threat research report for January 2022 providing insignt into Log4j, ransomeware and other top threats."> 
+  <meta name="robots"> 
+  <meta name="content-type"> 
+  <meta name="page-name" content="jan-2022"> 
+  <meta name="p:domain_verify" content="b7e159231749a2568a55ea5222f94627"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="lastmodified" content="2022-06-13T17:14:35.578Z"> 
+  <script type="text/javascript">
+	var digitalData = {
+		"page":{ 
+			"pageInfo": {
+				"pageName" :  "en-us:advanced-research-center:threat-reports:jan-2022",
+				"pageNameGlobal" : "advanced-research-center:threat-reports:jan-2022",
+				"pageLanguage" : "English",
+				"pageType" : "",
+				"country" : "us",
+				"geo" : "NA",
+				"onsiteSearchTerm" : "",
+		        "onsiteSearchType" : "",
+			    "searchSubType" : "", 
+				"metaData" : {
+					"contentType": "",
+					"englishName": "",
+					"onDate":  "",
+					"siteSection": "",
+					"productCategory": "",
+					"product": "",
+					"customerNarrative": "",
+					"campaignTheme": "",
+					"solution": "",
+					"industry": "",
+					"contentTopics": "",
+					"audienceSegments": "",
+					"buyingStages": "",
+					"personas": ""
+				},
+				"category": {
+					"category": "advanced-research-center",
+					"subCategory1":"threat-reports"
+				}
+			}
+		},
+		"user": { 
+			"userInfo": {
+				"ip":"182.69.177.65"
+			}
+		}
+	}	
+</script> 
+  <!--<link data-sly-test="" rel="icon" href=""/>--> 
+  <!-- Meta Tags --> 
+  <meta name="google-site-verification" content="Tu8iwfQYjzlJ-y71GRhVppj7r-3T519yGdLFKFgauL0"> 
+  <meta name="msvalidate.01" content="560987DD190D7F9CFDA6E1181FA10A4A"> 
+  <meta name="ahrefs-site-verification" content="25c26e6513f7902c846e2fbcf5e75e88a3235e87a02aba987602ec71ccb9a356"> 
+  <meta name="theme-color" content="#FDFDFD" media="(prefers-color-scheme: light)"> 
+  <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)"> 
+  <!-- Preloads --> 
+  <link rel="preload" as="font" href="../../../www/fonts/AventaVF.woff2" type="font/woff2" crossorigin="anonymous"> 
+  <!-- Stylesheets --> 
+  <link rel="stylesheet" href="../../../www/css/fancybox.min.css" type="text/css"> 
+  <link rel="stylesheet" href="../../../www/css/newco.min3661.css?v=2.0" type="text/css"> 
+  <link rel="stylesheet" href="../../../www/css/common.min3661.css?v=2.0" type="text/css"> 
+  <link rel="stylesheet" href="../../../www/css/icons.min.css" type="text/css"> 
+  <link rel="stylesheet" href="../../../www/css/tables-charts.min.css" type="text/css"> 
+  <!-- 3rd Party JS Libraries --> 
+  <script type="text/javascript" src="../../../www/js/newco.min.js" async></script> 
+  <script type="text/javascript" src="../../../../assets.adobedtm.com/f0febc6281f5/daaefd9d8423/launch-675ffef2af24.min.js" async></script> 
+  <script type="text/javascript" src="../../../www/js/fancybox.js" defer></script> 
+  <script type="text/javascript" src="../../../www/js/popper-v2.11.5.js" defer></script> 
+  <script type="text/javascript" src="../../../../platform-api.sharethis.com/js/sharethis.js#property=62d02fdf987470001990b50c&amp;product=inline-share-buttons" async></script> 
+  <!-- JS Functionality --> 
+  <script type="text/javascript" src="../../../www/js/header-footer-control.min.js" defer></script> 
+  <script type="text/javascript" src="../../../www/js/form-control.min.js" defer></script> 
+  <script type="module" src="../../../www/js/fancyapps-control.min.js" defer></script> 
+  <!-- Global Schema Tag --> 
+  <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Corporation",
+        "name": "Trellix",
+        "url": "https://www.trellix.com",
+        "logo": "https://www.trellix.com/en-us/assets/logos/trellix-logo-black.svg",
+        "sameAs": [
+            "https://twitter.com/Trellix",
+            "https://www.linkedin.com/company/trellixsecurity",
+            "https://www.youtube.com/trellixsecurity"
+        ]
+    }
+</script> 
+  <link rel="stylesheet" href="../../../www/css/threat-reports.css" type="text/css"> 
+  <meta property="og:image" content="https://www.trellix.com/en-us/img/open-graphs/defaults/og-thumbnail-default.jpg">
+  <meta name="twitter:image" content="https://www.trellix.com/en-us/img/open-graphs/defaults/og-thumbnail-default.jpg">
+ </head> 
+ <body> 
+  <!-- site container --> 
+  <div id="__next"> 
+   <div class="custom-content-wrap"> 
+    <header class="custom-header bg-white custom-thin-shadow"> 
+     <!-- Blue Nav Bar --> 
+     <div class="d-none d-lg-block" id="topNav"> 
+      <nav class="container-xl px-md-6"> 
+       <a class="btn btn-primary bi bi-newspaper d-flex gap-2 align-items-center px-3" href="../../about/newsroom.html" datalink-id="newco:en-us:about:newsroom" datalink-type="internal">News</a> 
+       <a class="btn btn-primary bi bi-envelope d-flex gap-2 align-items-center px-3" href="../../contact-us.html" datalink-id="newco:en-us:contact-us" datalink-type="internal">Contact</a> 
+       <button class="btn btn-primary btn-mobile-search bi bi-search d-flex align-items-center px-3" type="button" id="desktopSearchButton" aria-controls="mobileSearchMenu"><span class="hide-text" style="width:0">Search</span></button> 
+       <div class="bi bi-globe2 d-flex gap-2 align-items-center" id="langCont"> 
+        <select id="lang-sel" class="btn btn-primary text-white"> <option value="de-de">Deutsch (Deutschland)</option> <option value="en-au">English (Australia)</option> <option value="en-ca">English (Canada)</option> <option value="en-gb">English (United Kingdom)</option> <option value="en-hk">English (Hong Kong SAR China)</option> <option value="en-in">English (India)</option> <option value="en-sg">English (Singapore)</option> <option value="en-us">English (United States)</option> <option value="es-es">español (España)</option> <option value="es-mx">español (México)</option> <option value="fr-ca">français (Canada)</option> <option value="fr-fr">français (France)</option> <option value="it-it">italiano (Italia)</option> <option value="ja-jp">日本語 (日本)</option> <option value="ko-kr">한국어(대한민국)</option> <option value="pt-br">português (Brasil)</option> <option value="ru-ru">русский (Россия)</option> <option value="zh-cn">中文 (简体，中国)</option> <option value="zh-tw">中文 (繁體，台灣)</option> </select> 
+       </div> 
+      </nav> 
+     </div> 
+     <!-- Search Bar --> 
+     <div class="custom-search-bar bg-gray-light custom-thin-shadow" style="display: none"> 
+      <form class="container-xl px-md-6 d-flex py-2 gap-3" id="searchForm"> 
+       <input class="flex-grow-1 form-control custom-mobile-search-field p-2 border-1 rounded-0" placeholder="Search" aria-label="Search" id="msearch" data-result-path="../../search.html"> 
+       <button class="btn btn-primary" type="submit">Submit</button> 
+       <div class="d-none d-lg-flex gap-2 align-items-center"> 
+        <a href="#" onclick="document.getElementById('msearch').value = ''" datalink-type="internal" datalink-id="newco:#">Clear</a> 
+        <span>|</span> 
+        <a id="searchTip" class="no-break" href="#" data-bs-toggle="modal" data-bs-target="#searchTipModal" datalink-type="internal" datalink-id="newco:#">Search Tips</a> 
+       </div> 
+      </form> 
+     </div> 
+     <!-- Main Nav Bar --> 
+     <div class="bg-white container-xl px-md-6 custom-header-nav-container d-flex justify-content-between align-items-center"> 
+      <!-- Trellix Logo --> 
+      <a href="../../index.html" datalink-id="newco:en-us:index" datalink-type="internal"> <img id="trellix-logo-desktop" src="../../assets/logos/Trellix-Logo-Black.svg" title="Trellix Logo" alt="Trellix Logo"> </a> 
+      <!-- Desktop Items --> 
+      <div class="d-none d-lg-flex flex-wrap align-items-center justify-content-end flex-wrap-reverse links gap-2"> 
+       <span data-container-name="content-1" aria-controls="desktopMenu" class="navigation-link">Why Trellix?</span> 
+       <span data-container-name="content-2" aria-controls="desktopMenu" class="navigation-link">Products</span> 
+       <span data-container-name="content-3" aria-controls="desktopMenu" class="navigation-link">Research</span> 
+       <span data-container-name="content-4" aria-controls="desktopMenu" class="navigation-link">Support</span> 
+       <span data-container-name="content-5" aria-controls="desktopMenu" class="navigation-link">Partners</span> 
+       <span data-container-name="content-6" aria-controls="desktopMenu" class="navigation-link">Resources</span> 
+      </div> 
+      <!-- Mobile Items --> 
+      <div class="d-flex d-lg-none justify-content-end flex-wrap gap-x-3 gap-y-1"> 
+       <button class="btn btn-mobile-search custom-search-icon hide-text p-0 shadow-none" type="button" id="mobileSearchButton" aria-controls="mobileSearchMenu">Search</button> 
+       <button class="btn btn-mobile-hamburger custom-hamburger-icon hide-text p-0 shadow-none" type="button" data-bs-target="#mobileMenu" aria-controls="mobileMenu">Menu</button> 
+      </div> 
+     </div> 
+     <!-- Mobile Navigation Dropdown Menu --> 
+     <div class="custom-mobile-menu-wrapper"> 
+      <div class="custom-mobile-menu offcanvas offcanvas-end d-lg-none bg-gray-light position-relative" tabindex="-1" id="mobileMenu" aria-label="Navigation Menu" data-bs-scroll="true" data-bs-backdrop="false"> 
+       <div id="mobile-main-menu" class="offcanvas-body px-6 pb-6"> 
+        <div class="custom-mobile-subnav-link d-flex justify-content-between custom-border-bottom custom-right-arrow" data-target="#mobile-content-1"> 
+         <div class="align-self-center">
+          Why Trellix?
+         </div> 
+        </div> 
+        <div class="custom-mobile-subnav-link d-flex justify-content-between custom-border-bottom custom-right-arrow" data-target="#mobile-content-2"> 
+         <div class="align-self-center">
+          Products
+         </div> 
+        </div> 
+        <div class="custom-mobile-subnav-link d-flex justify-content-between custom-border-bottom custom-right-arrow" data-target="#mobile-content-3"> 
+         <div class="align-self-center">
+          Research
+         </div> 
+        </div> 
+        <div class="custom-mobile-subnav-link d-flex justify-content-between custom-border-bottom custom-right-arrow" data-target="#mobile-content-4"> 
+         <div class="align-self-center">
+          Support
+         </div> 
+        </div> 
+        <div class="custom-mobile-subnav-link d-flex justify-content-between custom-border-bottom custom-right-arrow" data-target="#mobile-content-5"> 
+         <div class="align-self-center">
+          Partners
+         </div> 
+        </div> 
+        <div class="custom-mobile-subnav-link d-flex justify-content-between custom-border-bottom custom-right-arrow" data-target="#mobile-content-6"> 
+         <div class="align-self-center">
+          Resources
+         </div> 
+        </div> 
+        <div class="d-flex justify-content-between custom-border-bottom custom-right-arrow"> 
+         <div class="align-self-center"> 
+          <a href="../../about/newsroom/stories.html" datalink-id="newco:en-us:about:newsroom:stories" datalink-type="internal">Stories</a> 
+         </div> 
+        </div> 
+        <div class="d-flex justify-content-between custom-right-arrow"> 
+         <div class="align-self-center"> 
+          <a href="../../contact-us.html" datalink-id="newco:en-us:contact-us" datalink-type="internal">Contact Us</a> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="mobileSubMenu" id="mobile-content-1"> 
+        <div class="offcanvas-header p-0"> 
+         <div class="custom-mobile-subnav-link mobile-subnav-back-button d-flex justify-content-between custom-left-arrow w-100 bg-gray-light"> 
+          <div class="offcanvas-title align-self-center custom-weight">
+           Main menu
+          </div> 
+         </div> 
+        </div> 
+        <div class="offcanvas-body pb-6 pt-0 px-6"> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title"> 
+          <div>
+           COMPANY
+          </div> 
+         </div> 
+         <a href="../../about/why-trellix.html" class="d-block mt-3" datalink-id="newco:en-us:about:why-trellix" datalink-type="internal">Why Trellix?</a> 
+         <a href="../../about.html" class="d-block mt-3" datalink-id="newco:en-us:about" datalink-type="internal">About Us</a> 
+         <a href="../../about/why-trellix/industry-recognitions.html" class="d-block mt-3" datalink-id="newco:en-us:about:why-trellix:industry-recognitions" datalink-type="internal">Industry Recognitions</a> 
+         <a href="../../about/leadership.html" class="d-block mt-3" datalink-id="newco:en-us:about:leadership" datalink-type="internal">Leadership</a> 
+         <a href="../../about/csr-sustainability.html" class="d-block mt-3" datalink-id="newco:en-us:about:csr-sustainability" datalink-type="internal">Corporate Social Responsibility</a> 
+         <a href="https://careers.trellix.com/" target="_blank" class="d-block mt-3" datalink-type="external" datalink-id="newco:careers.trellix.com:">Careers</a> 
+         <a href="../../contact-us.html" class="d-block mt-3" datalink-id="newco:en-us:contact-us" datalink-type="internal">Contact Us</a> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title mt-4"> 
+          <div class="links-header d-block">
+           COMPETITION
+          </div> 
+         </div> 
+         <a href="../../about/why-trellix/vscrowdstrike.html" class="d-block mt-3" datalink-id="newco:en-us:about:why-trellix:vscrowdstrike" datalink-type="internal">vs Crowdstrike</a> 
+         <a href="../../about/why-trellix/vssentinelone.html" class="d-block mt-3" datalink-id="newco:en-us:about:why-trellix:vssentinelone" datalink-type="internal">vs SentinelOne</a> 
+        </div> 
+       </div> 
+       <div class="mobileSubMenu" id="mobile-content-2"> 
+        <div class="offcanvas-header p-0"> 
+         <div class="custom-mobile-subnav-link mobile-subnav-back-button d-flex justify-content-between custom-left-arrow w-100 bg-gray-light"> 
+          <div class="offcanvas-title align-self-center custom-weight">
+           Main menu
+          </div> 
+         </div> 
+        </div> 
+        <div class="offcanvas-body pb-6 pt-0 px-6"> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title"> 
+          <div class="d-block">
+           PRODUCTS
+          </div> 
+         </div> 
+         <a href="../../platform/xdr.html" class="d-block mt-3" datalink-id="newco:en-us:platform:xdr" datalink-type="internal">Trellix XDR</a> 
+         <a href="../../platform/endpoint-security.html" class="d-block mt-3" datalink-id="newco:en-us:platform:endpoint-security" datalink-type="internal">Endpoint Security</a> 
+         <a href="../../platform/secops-analytics.html" class="d-block mt-3" datalink-id="newco:en-us:platform:secops-analytics" datalink-type="internal">SecOps and Analytics</a> 
+         <a href="../../platform/data-security.html" class="d-block mt-3" datalink-id="newco:en-us:platform:data-security" datalink-type="internal">Data Security</a> 
+         <a href="../../platform/network-detection-and-response.html" class="d-block mt-3" datalink-id="newco:en-us:platform:network-detection-and-response" datalink-type="internal">Network Detection and Response</a> 
+         <a href="../../platform/threat-intelligence.html" class="d-block mt-3" datalink-id="newco:en-us:platform:threat-intelligence" datalink-type="internal">Threat Intelligence</a> 
+         <a href="../../platform/email-security.html" class="d-block mt-3" datalink-id="newco:en-us:platform:email-security" datalink-type="internal">Email Security</a> 
+         <a href="../../platform/cloud-security.html" class="d-block mt-3" datalink-id="newco:en-us:platform:cloud-security" datalink-type="internal">Cloud Security</a> 
+         <a href="../../products.html" class="d-block mt-3" datalink-id="newco:en-us:products" datalink-type="internal"><b>View All Products</b></a> 
+        </div> 
+       </div> 
+       <div class="mobileSubMenu" id="mobile-content-3"> 
+        <div class="offcanvas-header p-0"> 
+         <div class="custom-mobile-subnav-link mobile-subnav-back-button d-flex justify-content-between custom-left-arrow w-100 bg-gray-light"> 
+          <div class="offcanvas-title align-self-center custom-weight">
+           Main menu
+          </div> 
+         </div> 
+        </div> 
+        <div class="offcanvas-body pb-6 pt-0 px-6"> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title"> 
+          <div>
+           RESEARCH
+          </div> 
+         </div> 
+         <a href="../../advanced-research-center.html" class="d-block mt-3" datalink-id="newco:en-us:advanced-research-center" datalink-type="internal">Advanced Research Center</a> 
+         <a href="../adversarial-vulnerability-research.html" class="d-block mt-3" datalink-id="newco:en-us:advanced-research-center:adversarial-vulnerability-research" datalink-type="internal">Adversarial &amp; Vulnerability Research</a> 
+         <a href="../threat-reports.html" class="d-block mt-3" datalink-id="newco:en-us:advanced-research-center:threat-reports" datalink-type="internal">Reports</a> 
+        </div> 
+       </div> 
+       <div class="mobileSubMenu" id="mobile-content-4"> 
+        <div class="offcanvas-header p-0"> 
+         <div class="custom-mobile-subnav-link mobile-subnav-back-button d-flex justify-content-between custom-left-arrow w-100 bg-gray-light"> 
+          <div class="offcanvas-title align-self-center custom-weight">
+           Main menu
+          </div> 
+         </div> 
+        </div> 
+        <div class="offcanvas-body pb-6 pt-0 px-6"> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title"> 
+          <div>
+           SUPPORT
+          </div> 
+         </div> 
+         <a href="../../support.html" class="d-block mt-3" datalink-id="newco:en-us:support" datalink-type="internal">Product Support</a> 
+         <a href="../../downloads.html" class="d-block mt-3" datalink-id="newco:en-us:downloads" datalink-type="internal">Downloads</a> 
+         <a href="https://docs.trellix.com/" target="_blank" class="d-block mt-3" datalink-type="external" datalink-id="newco:docs.trellix.com:">Product Documentation</a> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title mt-4"> 
+          <div>
+           CONTACT US
+          </div> 
+         </div> 
+         <a href="https://www.mcafee.com/en-us/consumer-support/dispute-detection-allowlisting.html" class="d-block mt-3" target="_blank" datalink-type="external" datalink-id="newco:www.mcafee.com:en-us:consumer-support:dispute-detection-allowlisting">Detection Dispute Form</a> 
+         <a href="https://supportm.trellix.com/webcenter/portal/supportportal/pages_serviceRequests/submitSample" class="d-block mt-3" target="_blank" datalink-type="external" datalink-id="newco:supportm.trellix.com:webcenter:portal:supportportal:pages_servicerequests:submitsample">Submit a Sample</a> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title mt-4"> 
+          <div>
+           MCAFEE ENTERPRISE
+          </div> 
+         </div> 
+         <a href="https://supportm.trellix.com/webcenter/portal/supportportal/pages_home" class="d-block mt-3 no-modal" target="_blank" datalink-type="external" datalink-id="newco:supportm.trellix.com:webcenter:portal:supportportal:pages_home">Support Portal</a> 
+         <a href="../../support/customer-success-plans.html" class="d-block mt-3" datalink-id="newco:en-us:support:customer-success-plans" datalink-type="internal">Customer Success Plans</a> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title mt-4"> 
+          <div>
+           FIREEYE
+          </div> 
+         </div> 
+         <a href="../../support/fe-support.html" class="d-block mt-3 no-modal" datalink-id="newco:en-us:support:fe-support" datalink-type="internal">Get Support</a> 
+        </div> 
+       </div> 
+       <div class="mobileSubMenu" id="mobile-content-5"> 
+        <div class="offcanvas-header p-0"> 
+         <div class="custom-mobile-subnav-link mobile-subnav-back-button d-flex justify-content-between custom-left-arrow w-100 bg-gray-light"> 
+          <div class="offcanvas-title align-self-center custom-weight">
+           Main menu
+          </div> 
+         </div> 
+        </div> 
+        <div class="offcanvas-body pb-6 pt-0 px-6"> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title"> 
+          <div>
+           PARTNERS
+          </div> 
+         </div> 
+         <a href="../../partners.html" class="d-block mt-3" datalink-id="newco:en-us:partners" datalink-type="internal">Partners Overview</a> 
+         <a href="../../partners/solution-providers.html" class="d-block mt-3" datalink-id="newco:en-us:partners:solution-providers" datalink-type="internal">Solution Providers</a> 
+         <a href="../../partners/security-innovation-alliance.html" class="d-block mt-3" datalink-id="newco:en-us:partners:security-innovation-alliance" datalink-type="internal">Security Innovation Alliance</a> 
+         <a href="../../partners/oem-alliances.html" class="d-block mt-3" datalink-id="newco:en-us:partners:oem-alliances" datalink-type="internal">OEM &amp; Embedded Alliances</a> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title mt-4"> 
+          <div>
+           PARTNER PORTAL
+          </div> 
+         </div> 
+         <a href="https://partners.trellix.com/" target="_blank" class="d-block mt-3" datalink-type="external" datalink-id="newco:partners.trellix.com:">Trellix Partner Portal Login</a> 
+        </div> 
+       </div> 
+       <div class="mobileSubMenu" id="mobile-content-6"> 
+        <div class="offcanvas-header p-0"> 
+         <div class="custom-mobile-subnav-link mobile-subnav-back-button d-flex justify-content-between custom-left-arrow w-100 bg-gray-light"> 
+          <div class="offcanvas-title align-self-center custom-weight">
+           Main menu
+          </div> 
+         </div> 
+        </div> 
+        <div class="offcanvas-body pb-6 pt-0 px-6"> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title"> 
+          <div>
+           RESOURCES
+          </div> 
+         </div> 
+         <a href="../../services/education-services.html" class="d-block mt-3" datalink-id="newco:en-us:services:education-services" datalink-type="internal">Training and Education</a> 
+         <a href="../../services.html" class="d-block mt-3" datalink-id="newco:en-us:services" datalink-type="internal">Consulting Services</a> 
+         <a href="../../about/webinars.html" class="d-block mt-3" datalink-id="newco:en-us:about:webinars" datalink-type="internal">Webinars</a> 
+         <a href="../../about/events.html" class="d-block mt-3" datalink-id="newco:en-us:about:events" datalink-type="internal">Events</a> 
+         <a href="../../resource-library/case-studies.html" class="d-block mt-3" datalink-id="newco:en-us:resource-library:case-studies" datalink-type="internal">Case Studies</a> 
+         <a href="../../resource-library.html" class="d-block mt-3" datalink-id="newco:en-us:resource-library" datalink-type="internal">Resource Library</a> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title mt-4"> 
+          <div>
+           MEDIA
+          </div> 
+         </div> 
+         <a href="../../about/newsroom/press-releases.html" class="d-block mt-3" datalink-id="newco:en-us:about:newsroom:press-releases" datalink-type="internal">Press Releases</a> 
+         <!--a href="/en-us/about/newsroom/news.html" class="d-block mt-3">News</a--> 
+         <a href="../../about/newsroom/stories.html" class="d-block mt-3" datalink-id="newco:en-us:about:newsroom:stories" datalink-type="internal">Stories</a> 
+         <a href="../../about/newsroom.html" class="d-block mt-3" datalink-id="newco:en-us:about:newsroom" datalink-type="internal"><b>View Newsroom</b></a> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title mt-4"> 
+          <div>
+           INTEGRATIONS
+          </div> 
+         </div> 
+         <a href="https://marketplace.manage.trellix.com/" class="d-block mt-3" target="_blank" datalink-type="external" datalink-id="newco:marketplace.manage.trellix.com:">Marketplace</a> 
+         <a href="https://developer.manage.trellix.com/" class="d-block mt-3" target="_blank" datalink-type="external" datalink-id="newco:developer.manage.trellix.com:">Developer Portal</a> 
+         <a href="https://auth.ui.trellix.com/" class="d-block mt-3" target="_blank" datalink-type="external" datalink-id="newco:auth.ui.trellix.com:">Trellix Login</a> 
+         <a href="https://login.manage.trellix.com/v1/SignUp/en-us/MVISION/MVISIONEPO" class="d-block mt-3" target="_blank" datalink-type="external" datalink-id="newco:login.manage.trellix.com:v1:signup:en-us:mvision:mvisionepo">Trellix Free Trial</a> 
+         <div class="d-flex justify-content-between custom-border-bottom align-items-center custom-body-title mt-4"> 
+          <div>
+           SECURITY AWARENESS
+          </div> 
+         </div> 
+         <a href="../../security-awareness/endpoint/what-is-xdr.html" class="d-block mt-3" datalink-id="newco:en-us:security-awareness:endpoint:what-is-xdr" datalink-type="internal">What is XDR?</a> 
+         <a href="../../security-awareness/endpoint/what-is-endpoint-security.html" class="d-block mt-3" datalink-id="newco:en-us:security-awareness:endpoint:what-is-endpoint-security" datalink-type="internal">What is Endpoint Security?</a> 
+         <a href="../../security-awareness/endpoint/what-is-endpoint-detection-and-response.html" class="d-block mt-3" datalink-id="newco:en-us:security-awareness:endpoint:what-is-endpoint-detection-and-response" datalink-type="internal">What is EDR?</a> 
+         <a href="../../security-awareness/cybersecurity/what-is-mitre-attack-framework.html" class="d-block mt-3" datalink-id="newco:en-us:security-awareness:cybersecurity:what-is-mitre-attack-framework" datalink-type="internal">What is MITRE?</a> 
+         <a href="../../security-awareness/ransomware/what-is-ransomware.html" class="d-block mt-3" datalink-id="newco:en-us:security-awareness:ransomware:what-is-ransomware" datalink-type="internal">What is Ransomware?</a> 
+         <a href="../../security-awareness.html" class="d-block mt-3" datalink-id="newco:en-us:security-awareness" datalink-type="internal"><b>View All Topics</b></a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <!-- Desktop Navigation Dropdown Menu --> 
+     <div class="custom-desktop-menu offcanvas offcanvas-top d-none d-lg-block bg-transparent position-absolute" tabindex="-1" id="desktopMenu" aria-label="Navigation Menu" data-bs-scroll="true" data-bs-backdrop="false"> 
+      <div class="content-1 position-relative p-0 mega-menu container-xl px-md-4"> 
+       <div class="p-6 bg-gray-light d-flex gap-6 m-0 position-relative"> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          COMPANY
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="../../about/why-trellix.html" class="megamenu-link" datalink-id="newco:en-us:about:why-trellix" datalink-type="internal">Why Trellix?</a> 
+          <a href="../../about.html" class="megamenu-link" datalink-id="newco:en-us:about" datalink-type="internal">About Us</a> 
+          <a href="../../about/why-trellix/industry-recognitions.html" class="megamenu-link" datalink-id="newco:en-us:about:why-trellix:industry-recognitions" datalink-type="internal">Industry Recognitions</a> 
+          <a href="../../about/leadership.html" class="megamenu-link" datalink-id="newco:en-us:about:leadership" datalink-type="internal">Leadership</a> 
+          <a href="../../about/csr-sustainability.html" class="megamenu-link" datalink-id="newco:en-us:about:csr-sustainability" datalink-type="internal">Corporate Social Responsibility</a> 
+          <a href="https://careers.trellix.com/" target="_blank" class="megamenu-link" datalink-type="external" datalink-id="newco:careers.trellix.com:">Careers</a> 
+          <a href="../../contact-us.html" class="megamenu-link" datalink-id="newco:en-us:contact-us" datalink-type="internal">Contact Us</a> 
+         </div> 
+        </div> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          COMPETITION
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="../../about/why-trellix/vscrowdstrike.html" class="megamenu-link" datalink-id="newco:en-us:about:why-trellix:vscrowdstrike" datalink-type="internal">vs Crowdstrike</a> 
+          <a href="../../about/why-trellix/vssentinelone.html" class="megamenu-link" datalink-id="newco:en-us:about:why-trellix:vssentinelone" datalink-type="internal">vs SentinelOne</a> 
+         </div> 
+        </div> 
+        <div class="custom-card border-0"> 
+         <a href="../../about/events/2022/trellix-xpand-recap.html" class="" datalink-id="newco:en-us:about:events:2022:trellix-xpand-recap" datalink-type="internal"> <img src="../../img/cards/xpand-recap-menu-card.jpg" alt="Trellix Xpand Recap" title="Trellix Xpand Recap"> </a> 
+         <div class="card-body"> 
+          <a href="../../about/events/2022/trellix-xpand-recap.html" class="h6 card-title megamenu-link link-internal" datalink-id="newco:en-us:about:events:2022:trellix-xpand-recap" datalink-type="internal">Trellix Xpand Recap</a> 
+          <p class="card-text"> 
+           <!--Coming Soon.--> </p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="content-2 position-relative p-0 mega-menu container-xl px-md-4"> 
+       <div class="p-6 bg-gray-light d-flex gap-6 m-0 position-relative"> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          PRODUCTS
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="../../platform/xdr.html" class="megamenu-link" datalink-id="newco:en-us:platform:xdr" datalink-type="internal">Trellix XDR</a> 
+          <a href="../../platform/endpoint-security.html" class="megamenu-link" datalink-id="newco:en-us:platform:endpoint-security" datalink-type="internal">Endpoint Security</a> 
+          <a href="../../platform/secops-analytics.html" class="megamenu-link" datalink-id="newco:en-us:platform:secops-analytics" datalink-type="internal">SecOps and Analytics</a> 
+          <a href="../../platform/data-security.html" class="megamenu-link" datalink-id="newco:en-us:platform:data-security" datalink-type="internal">Data Security</a> 
+          <a href="../../platform/network-detection-and-response.html" class="megamenu-link" datalink-id="newco:en-us:platform:network-detection-and-response" datalink-type="internal">Network Detection and Response</a> 
+          <a href="../../platform/threat-intelligence.html" class="megamenu-link" datalink-id="newco:en-us:platform:threat-intelligence" datalink-type="internal">Threat Intelligence</a> 
+          <a href="../../platform/email-security.html" class="megamenu-link" datalink-id="newco:en-us:platform:email-security" datalink-type="internal">Email Security</a> 
+          <a href="../../platform/cloud-security.html" class="megamenu-link" datalink-id="newco:en-us:platform:cloud-security" datalink-type="internal">Cloud Security</a> 
+          <a href="../../products.html" class="megamenu-overview-link megamenu-link" datalink-id="newco:en-us:products" datalink-type="internal">View All Products</a> 
+         </div> 
+        </div> 
+        <div class="custom-card border-0"> 
+         <a href="../../about/newsroom/stories/perspectives/our-ceo-on-living-security.html" datalink-id="newco:en-us:about:newsroom:stories:perspectives:our-ceo-on-living-security" datalink-type="internal"> <img src="../../img/v1/trellix-ceo-threat-center.jpg" alt="Trellix CEO" title="Trellix CEO"> </a> 
+         <div class="card-body"> 
+          <a class="h6 card-title" href="../../about/newsroom/stories/perspectives/our-ceo-on-living-security.html" datalink-id="newco:en-us:about:newsroom:stories:perspectives:our-ceo-on-living-security" datalink-type="internal">Our CEO on Living Security</a> 
+          <p class="card-text">Trellix CEO, Bryan Palma, explains the critical need for security that’s always learning.</p> 
+         </div> 
+        </div> 
+        <div class="custom-card border-0"> 
+         <a href="../../solutions/gartner-report-market-guide-xdr.html" datalink-id="newco:en-us:solutions:gartner-report-market-guide-xdr" datalink-type="internal"> <img src="../../img/v1/gartner-xdr-mm.png" alt="Gartner Marketplace Guide (XDR)" title="Gartner Marketplace Guide (XDR)"> </a> 
+         <div class="card-body"> 
+          <a class="h6 card-title" href="../../solutions/gartner-report-market-guide-xdr.html" datalink-id="newco:en-us:solutions:gartner-report-market-guide-xdr" datalink-type="internal">Gartner® Report: Market Guide for XDR</a> 
+          <p class="card-text">As per Gartner, "XDR is an emerging technology that can offer improved threat prevention, detection and response."</p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="content-3 position-relative p-0 mega-menu container-xl px-md-4"> 
+       <div class="p-6 bg-gray-light d-flex gap-6 m-0 position-relative"> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          RESEARCH
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="../../advanced-research-center.html" class="megamenu-link" datalink-id="newco:en-us:advanced-research-center" datalink-type="internal">Advanced Research Center</a> 
+          <a href="../adversarial-vulnerability-research.html" class="megamenu-link" datalink-id="newco:en-us:advanced-research-center:adversarial-vulnerability-research" datalink-type="internal">Adversarial &amp; Vulnerability Research</a> 
+          <a href="../threat-reports.html" class="megamenu-link" datalink-id="newco:en-us:advanced-research-center:threat-reports" datalink-type="internal">Reports</a> 
+         </div> 
+        </div> 
+        <div class="custom-card border-0"> 
+         <a href="https://www.businesswire.com/news/home/52921713/en" target="_blank" datalink-type="external" datalink-id="newco:www.businesswire.com:news:home:52921713:en"> <img src="../../img/cards/trellix-arc-card.jpg" alt="Trellix Launches Advanced Threat Research Center" title="Trellix Launches Advanced Threat Research Center"> </a> 
+         <div class="card-body"> 
+          <a href="../../about/newsroom/press-releases/press-detail16cc.html?pr_id=10cb07fa-6837-48b8-8e99-d58a7526eff3" class="card-title h6 condensed-text" target="_blank" datalink-id="newco:en-us:about:newsroom:press-releases:press-detail?pr_id=10cb07fa-6837-48b8-8e99-d58a7526eff3" datalink-type="internal">Trellix Launches <span class="no-break">Advanced Research Center</span></a> 
+          <p class="card-text">Trellix announced the establishment of the Trellix Advanced Research Center to advance global threat intelligence.</p> 
+         </div> 
+        </div> 
+        <div class="custom-card border-0"> 
+         <a href="feb-2023.html" datalink-id="newco:en-us:advanced-research-center:threat-reports:feb-2023" datalink-type="internal"> <img src="../../img/cards/threat-report-feb-2023-card.jpg" alt="The Threat Report - February 2023" title="The Threat Report - February 2023"> </a> 
+         <div class="card-body"> 
+          <a href="feb-2023.html" class="card-title h6 condensed-text" datalink-id="newco:en-us:advanced-research-center:threat-reports:feb-2023" datalink-type="internal">Latest Report</a> 
+          <p class="card-text">Trellix Advanced Research Center analyzes Q4 2022 threat data on ransomware, nation-states, sectors, vectors, LotL, MITRE ATT&amp;CK techniques, and emails.</p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="content-4 position-relative p-0 mega-menu container-xl px-md-4"> 
+       <div class="p-6 bg-gray-light d-flex gap-6 m-0 position-relative"> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          SUPPORT
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="../../support.html" class="megamenu-link" datalink-id="newco:en-us:support" datalink-type="internal">Product Support</a> 
+          <a href="../../downloads.html" class="megamenu-link" datalink-id="newco:en-us:downloads" datalink-type="internal">Downloads</a> 
+          <a href="https://docs.trellix.com/" target="_blank" class="megamenu-link" datalink-type="external" datalink-id="newco:docs.trellix.com:">Product Documentation</a> 
+         </div> 
+        </div> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          CONTACT US
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="https://www.mcafee.com/en-us/consumer-support/dispute-detection-allowlisting.html" class="megamenu-link" target="_blank" datalink-type="external" datalink-id="newco:www.mcafee.com:en-us:consumer-support:dispute-detection-allowlisting">Detection Dispute Form</a> 
+          <a href="https://supportm.trellix.com/webcenter/portal/supportportal/pages_serviceRequests/submitSample" class="megamenu-link" target="_blank" datalink-type="external" datalink-id="newco:supportm.trellix.com:webcenter:portal:supportportal:pages_servicerequests:submitsample">Submit a Sample</a> 
+         </div> 
+        </div> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          MCAFEE ENTERPRISE
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="https://supportm.trellix.com/webcenter/portal/supportportal/pages_home" class="megamenu-link no-modal" target="_blank" datalink-type="external" datalink-id="newco:supportm.trellix.com:webcenter:portal:supportportal:pages_home">Support Portal</a> 
+          <a href="../../support/customer-success-plans.html" class="megamenu-link" datalink-id="newco:en-us:support:customer-success-plans" datalink-type="internal">Customer Success Plans</a> 
+         </div> 
+        </div> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          FIREEYE
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="../../support/fe-support.html" class="megamenu-link" datalink-id="newco:en-us:support:fe-support" datalink-type="internal">Get Support</a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="content-5 position-relative p-0 mega-menu container-xl px-md-4"> 
+       <div class="p-6 bg-gray-light d-flex gap-6 m-0 position-relative"> 
+        <div class="links-wrapper"> 
+         <a class="links-header d-block">PARTNERS</a> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="../../partners.html" class="megamenu-link" datalink-id="newco:en-us:partners" datalink-type="internal">Partners Overview</a> 
+          <a href="../../partners/solution-providers.html" class="megamenu-link" datalink-id="newco:en-us:partners:solution-providers" datalink-type="internal">Solution Providers</a> 
+          <a href="../../partners/security-innovation-alliance.html" class="megamenu-link" datalink-id="newco:en-us:partners:security-innovation-alliance" datalink-type="internal">Security Innovation Alliance</a> 
+          <a href="../../partners/oem-alliances.html" class="megamenu-link" datalink-id="newco:en-us:partners:oem-alliances" datalink-type="internal">OEM &amp; Embedded Alliances</a> 
+         </div> 
+        </div> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          PARTNER PORTAL
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="https://partners.trellix.com/" target="_blank" class="megamenu-link no-modal" datalink-type="external" datalink-id="newco:partners.trellix.com:"> Trellix Hive Login</a> 
+          <a href="https://trellixpartners.trellix.com/english/register_email.aspx" target="_blank" class="megamenu-link no-modal" datalink-type="external" datalink-id="newco:trellixpartners.trellix.com:english:register_email.aspx"> Become a Partner </a> 
+         </div> 
+        </div> 
+        <div class="custom-card border-0"> 
+         <a href="https://players.brightcove.net/21712694001/OsCjrUQjY_default/index.html?videoId=6319886576112" class="" target="_blank" data-fancybox="" data-type="iframe" datalink-type="external" datalink-id="newco:players.brightcove.net:21712694001:oscjruqjy_default:index?videoid=6319886576112"> <img src="../../img/cards/trellix-hive-menu-card.png" alt="Trellix HIVE" title="Trellix HIVE"> </a> 
+         <div class="card-body"> 
+          <a href="https://players.brightcove.net/21712694001/OsCjrUQjY_default/index.html?videoId=6319886576112" class="h6 card-title megamenu-link link-internal" target="_blank" data-fancybox="" data-type="iframe" datalink-type="external" datalink-id="newco:players.brightcove.net:21712694001:oscjruqjy_default:index?videoid=6319886576112">Welcome Trellix Partners</a> 
+          <p class="card-text"> 
+           <!--Coming Soon.--> </p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="content-6 position-relative p-0 mega-menu container-xl px-md-4"> 
+       <div class="p-6 bg-gray-light d-flex gap-6 m-0 position-relative"> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          RESOURCES
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="../../services/education-services.html" class="megamenu-link" datalink-id="newco:en-us:services:education-services" datalink-type="internal">Training and Education</a> 
+          <a href="../../services.html" class="megamenu-link" datalink-id="newco:en-us:services" datalink-type="internal">Consulting Services</a> 
+          <a href="../../about/webinars.html" class="megamenu-link" datalink-id="newco:en-us:about:webinars" datalink-type="internal">Webinars</a> 
+          <a href="../../about/events.html" class="megamenu-link" datalink-id="newco:en-us:about:events" datalink-type="internal">Events</a> 
+          <a href="../../resource-library/case-studies.html" class="megamenu-link" datalink-id="newco:en-us:resource-library:case-studies" datalink-type="internal">Case Studies</a> 
+          <a href="../../resource-library.html" class="megamenu-link" datalink-id="newco:en-us:resource-library" datalink-type="internal">Resource Library</a> 
+         </div> 
+        </div> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          MEDIA
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="../../about/newsroom/press-releases.html" class="megamenu-link" datalink-id="newco:en-us:about:newsroom:press-releases" datalink-type="internal">Press Releases</a> 
+          <!--a href="/en-us/about/newsroom/news.html" class="megamenu-link">News</a--> 
+          <a href="../../about/newsroom/stories.html" class="megamenu-link" datalink-id="newco:en-us:about:newsroom:stories" datalink-type="internal">Stories</a> 
+          <a href="../../about/newsroom.html" class="megamenu-overview-link megamenu-link" datalink-id="newco:en-us:about:newsroom" datalink-type="internal">View Newsroom</a> 
+         </div> 
+        </div> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          INTEGRATIONS
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="https://marketplace.manage.trellix.com/" class="megamenu-link" target="_blank" datalink-type="external" datalink-id="newco:marketplace.manage.trellix.com:">Marketplace</a> 
+          <a href="https://developer.manage.trellix.com/" class="megamenu-link" target="_blank" datalink-type="external" datalink-id="newco:developer.manage.trellix.com:">Developer Portal</a> 
+          <a href="https://auth.ui.trellix.com/" class="megamenu-link" target="_blank" datalink-type="internal" datalink-id="newco: https:::auth.ui.trellix.com:">Trellix Login</a> 
+          <a href="https://login.manage.trellix.com/v1/SignUp/en-us/MVISION/MVISIONEPO" class="megamenu-link" target="_blank" datalink-type="external" datalink-id="newco:login.manage.trellix.com:v1:signup:en-us:mvision:mvisionepo">Trellix Free Trial</a> 
+         </div> 
+        </div> 
+        <div class="links-wrapper"> 
+         <div class="links-header d-block">
+          SECURITY AWARENESS
+         </div> 
+         <hr class="w-100 m-0"> 
+         <div class="w-100 d-flex flex-column justify-content-start"> 
+          <a href="../../security-awareness/endpoint/what-is-xdr.html" class="megamenu-link" datalink-id="newco:en-us:security-awareness:endpoint:what-is-xdr" datalink-type="internal">What is XDR?</a> 
+          <a href="../../security-awareness/endpoint/what-is-endpoint-security.html" class="megamenu-link" datalink-id="newco:en-us:security-awareness:endpoint:what-is-endpoint-security" datalink-type="internal">What is Endpoint Security?</a> 
+          <a href="../../security-awareness/endpoint/what-is-endpoint-detection-and-response.html" class="megamenu-link" datalink-id="newco:en-us:security-awareness:endpoint:what-is-endpoint-detection-and-response" datalink-type="internal">What is EDR?</a> 
+          <a href="../../security-awareness/cybersecurity/what-is-mitre-attack-framework.html" class="megamenu-link" datalink-id="newco:en-us:security-awareness:cybersecurity:what-is-mitre-attack-framework" datalink-type="internal">What is MITRE?</a> 
+          <a href="../../security-awareness/ransomware/what-is-ransomware.html" class="megamenu-link" datalink-id="newco:en-us:security-awareness:ransomware:what-is-ransomware" datalink-type="internal">What is Ransomware?</a> 
+          <a href="../../security-awareness.html" class="megamenu-overview-link megamenu-link" datalink-id="newco:en-us:security-awareness" datalink-type="internal">View All Topics</a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </header> 
+    <!-- Nav JS loads here to avoid waiting on newco,js for nav items to work --> 
+    <script type="text/javascript" src="../../../www/js/nav-control.min.js"></script> 
+    <div class="cta" style="background: left bottom / cover url('../../img/tr/jan-threat-report-BG.jpg') no-repeat;"> 
+     <div class="bg-transparent"> 
+      <div class="container-xl px-md-6 py-48 py-md-104 py-lg-128 bg-transparent"> 
+       <div class="row"> 
+        <div class="col col-sm-8 col-xmd-8 me-auto text-start text-white"> 
+         <h1 class="mb-lg-5 mb-3">Trellix Advanced Threat Research Report: <span class="no-break">January 2022</span></h1> 
+         <p class="body-intro text-white">Insight into Log4j, Q3 2021 ransomware, APT, and top sector targets</p> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- Threat Report Styling found in /www/css/threat-reports.css --> 
+    <div class="threat-report container-xl container-xl pe-lg-0 py-48 py-md-96"> 
+     <div class="report-content"> 
+      <section> 
+       <h4>In our new company’s first threat report, we acknowledge the Log4j issue that dominated not only headlines, but the focus of defenders and enterprise security teams.</h4> 
+      </section> 
+      <hr class="blue-fade-rule"> 
+      <section> 
+       <h3 id="letter">Letter from Our Chief Scientist</h3> 
+       <p>Welcome to our new threat report and our new company.</p> 
+       <p>As we look ahead in this new year, we must acknowledge a threatscape that left us all exhausted from a particularly challenging end to 2021. In our new company’s first threat report, we acknowledge the issue that dominated not only headlines, but the focus of defenders and enterprise security teams. We also look back at the third and fourth quarters of 2021, but let’s first detail our wealth of resources available to help you combat Log4j.</p> 
+       <p>Fundamentally, as more details of the Log4j threat emerge, it’s imperative to connect to our research and updated resources for help. Beyond the product status, we continuously monitor for any active campaigns leveraging this vulnerability and detailing the coverage status for the new payloads.</p> 
+       <p>When details of the Log4j vulnerability appeared we very quickly responded with the availability of network-based signatures and a write-up of the vulnerability. We quickly followed up with additional assets detailed in this report.</p> 
+       <p>To understand more about current Log4j threat activity, as well as, other prevalent threats, please see our valuable <a href="../../advanced-research-center.html" datalink-id="newco:en-us:threat-center" datalink-type="internal">threat dashboard.</a></p> 
+       <p>In addition, please check out our <a href="../../about/newsroom/stories/research.html" datalink-id="newco:en-us:about:newsroom:stories:threat-labs" datalink-type="internal">Trellix Threat Labs blog</a> featuring our latest threat content, videos and links to the security bulletin.</p> 
+       <p>Of course, Log4j isn’t the only threat to your enterprise’s security. This report also spotlights the looming shadow and disruption of ransomware, and other prevalent threats and attacks observed in the wild.</p> 
+       <p>Happy 2022 and welcome to a new company.</p> 
+       <h4 class="text-body">—Raj Samani</h4> 
+      </section> 
+      <hr class="blue-fade-rule"> 
+      <section> 
+       <h3 id="log4j">Log4 J: The Memory That Knew Too Much</h3> 
+       <p>In what is becoming a threatening tradition, Log4j, a new vulnerability affecting a widely used Log4j library was released just in time for the holidays. What has been described as the most serious cybersecurity flaw in decades called Trellix and the cybersecurity industry to action in the fourth quarter of 2021. The Log4j vulnerability threatened a potentially massive impact on any product which has integrated the Log4j library into its applications and websites including products and services from Apple iCloud, Steam, Samsung Cloud storage and many others.</p> 
+       <p>Our team has been closely tracking Log4j since its discovery. We released a network signature KB95088 for customers leveraging Network Security Platform (NSP). The signature detects attempts to exploit CVE-2021-44228 over LDAP. This signature may be expanded to include other protocols or services, and additional signatures may be released to complement coverage.</p> 
+       <h4>Log4j Timeline</h4> 
+       <p>Here’s a quick timeline of Log4j and our research:</p> 
+       <ul> 
+        <li><b>December 9</b> – The Log4j vulnerability (CVE-2021-44228) was released on Twitter along with a POC on Github for the Apache Log4j logging library. The bug was originally disclosed to Apache on November 24.</li> 
+        <li><b>December 10</b> – Steve Povolny and Douglas McKee posted a <a href="../../about/newsroom/stories/research/log4shell-vulnerability-is-the-coal-in-our-stocking-for-2021.html" datalink-id="newco:en-us:about:newsroom:stories:threat-labs:log4shell-vulnerability-is-the-coal-in-our-stocking-for-2021" datalink-type="internal">Log4j blog</a> with an overview of our immediate findings. Our initial goal was to determine the ease of exploitation using the public PoC, which we have reproduced and confirmed. This was done using the public Docker container, and a client-server architecture leveraging both LDAP and RMI, along with marshalsec to exploit Log4j version 2.14.1.</li> 
+        <li><b>December 14</b> – The Log4j vulnerability (CVE-2021-44228) was released on Twitter along with a POC on Github for the Apache Log4j logging library. The bug was originally disclosed to Apache on November 24.</li> 
+        <li><b>December 18</b> – A new denial of service (DOS) vulnerability CVE-2021-45105 was discovered affecting versions 2.0-alpha1 through 2.16.0 of Log4j.</li> 
+       </ul> 
+       <p>Consult our <a href="../../about/newsroom/stories/research.html" datalink-id="newco:en-us:about:newsroom:stories:threat-labs" datalink-type="internal">Threat Labs blog</a> and <a href="../../advanced-research-center.html" datalink-id="newco:en-us:threat-center" datalink-type="internal">threats dashboard</a> for our latest research on defending against Log4j. Our team gathers and analyzes information from multiple open and closed sources before disseminating reports.</p> 
+       <h4>Log4j Attack</h4> 
+       <p>Our team quicky <a href="../../about/newsroom/stories/research/log4j-and-the-memory-that-knew-too-much.html" datalink-id="newco:en-us:about:newsroom:stories:threat-labs:log4j-and-the-memory-that-knew-too-much" datalink-type="internal">researched and outlined</a> what happens in the execution of a common web-based Log4j attack:</p> 
+       <h4>Log4j Flow of Execution</h4> 
+       <img src="../../img/tr/log4j-flow.png" alt="Flowchart showing Log4j Flow of execution." title="Log4j Flowchart" width="100%"> 
+       <ul> 
+        <li><b>Step 1</b> – An attacker sends a specially crafted string to the web server hosting the vulnerable application. This string, as we have seen, can be obfuscated to bypass network-based signatures.</li> 
+        <li><b>Step 2</b> – The application proceeds to deobfuscate this string to load it in memory. Once loaded into memory, the application initiates a LDAP connection to request the malicious class location’s address.</li> 
+        <li><b>Step 3</b> – The attacker-controlled LDAP server responds with the location of the malicious Class file by indicating the HTTP URL address of where it’s hosted.</li> 
+        <li><b>Step 4</b> – The vulnerable application initiates a download for the malicious class file.</li> 
+        <li><b>Step 5</b> – The vulnerable application will load and run the malicious class file from Step 4.</li> 
+       </ul> 
+       <h4>Trellix ATR Log4j Defenses</h4> 
+       <p>To protect an environment against attacks like Log4j, a layered strategy comprised of network security coupled by targeted endpoint memory scans allows defenders to effectively detect and prevent the attack execution flow against vulnerable systems exposed via network vectors. Our ENS Expert Rules and Custom Scan reactions are designed to enable defenders with such capabilities so they can apply precise countermeasure against these emerging threats.</p> 
+       <p>CISA.gov also provides <a href="https://github.com/cisagov/log4j-scanner" datalink-type="external" datalink-id="newco:github.com:cisagov:log4j-scanner">a Log4j scanner</a> to help organizations identify potentially vulnerable web services affected by the Log4j vulnerabilities.</p> 
+      </section> 
+      <hr class="blue-fade-rule"> 
+      <section> 
+       <h3 id="ransomware">Ransomware</h3> 
+       <p>In the third quarter of 2021, high-profile ransomware groups disappeared, reappeared, reinvented, and even attempted to rebrand, while remaining relevant and prevalent as a popular and potentially devastating threat against an increasing spectrum of sectors.</p> 
+       <p>Even though ransomware activity was denounced and banned from numerous cybercriminal forums in Q2 2021, our team has observed activity among the same threat actors on several forums using alternate personas.</p> 
+       <h4>Trellix Aids In Ransomware Arrests and Ransom Seisures</h4> 
+       <p>In December 2021, <a href="https://www.europol.europa.eu/media-press/newsroom/news/five-affiliates-to-sodinokibi/revil-unplugged" datalink-type="external" datalink-id="newco:www.europol.europa.eu:media-press:newsroom:news:five-affiliates-to-sodinokibi:revil-unplugged">Trellix provided research that assisted FBI and Europol in the arrest</a> of REvil affiliates and the seizure of $2 million in ransom.</p> 
+       <p>Notable Q3 2021 ransomware trends and campaigns included:</p> 
+       <ul> 
+        <li>BlackMatter – This ransomware threat, discovered near the end of July 2021, started with a strong group of attacks that threatened to reveal proprietary business data of U.S. based agricultural supply-chain company New Cooperative. New Cooperative reported supply chain management capabilities and animal feeding schedules were locked and estimated that 40 percent of grain production in the U.S. could be negatively affected. While BlackMatter claimed to utilize the best parts of other malware, such as GandCrab, LockBit and DarkSide, we seriously doubt the campaign is being run by a new group of developers. BlackMatter malware has too much in common with the DarkSide malware associated with the Colonial Pipeline attack.</li> 
+        <li>We released our belief that the Groove Gang is associated with the Babuk gang, either as a former affiliate or subgroup.</li> 
+        <li>REvil/Sodinokibi claimed responsibility for successfully infecting more than 1 million users through a ransomware attack on managed service software provider Kaseya VSA. REvil’s reported ransom demand of $70 million was the largest publicly known ransom amount to date. The results of the attack included the forced closing of hundreds of supermarket stores for several days.</li> 
+        <li>LockBit 2.0 surfaced in July 2021 and eventually listed more than 200 victims on its data-leak site.</li> 
+       </ul> 
+       <h4>Government Response to Ransomware Threats</h4> 
+       <p>In Q3, the U.S. government initiated a proactive campaign to reduce ransomware’s prevalence with the launch of StopRansomware.gov hub offering rewards up to $10 million for information identifying or locating state-sponsored threat actors involved in cyber activities against critical U.S. infrastructure.</p> 
+       <p>For more on how these ransomware and new campaigns could threaten enterprise in the coming months, see our <a href="../../about/newsroom/stories/research/2022-threat-predictions.html" datalink-id="newco:en-us:about:newsroom:stories:threat-labs:2022-threat-predictions" datalink-type="internal">Trellix 2022 Threat Predictions.</a></p> 
+       <h4>Trellix Ransomware Research</h4> 
+       <p>To help enterprises better understand and defend against ransomware attacks in the threatscape, our team presents research and findings into the prevalence of a wide variety of ransomware threats including families, techniques, countries, sectors, and vectors.</p> 
+       <h4>Ransomware Family Detections</h4> 
+       <div class="tile-chart"> 
+        <style>
+                    #ransomware-families-grid {
+                        grid-template-rows: 41fr 14fr 13fr 8fr 7fr 6.7fr 4fr 3fr 2fr 1fr;
+                    }
+                </style> 
+        <div id="ransomware-families-grid" class="grid-chart stacked-grid"> 
+         <div class="chart-tile tile-col-1" data-propval="41%">
+          Sodinokibi
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="14%">
+          DarkSide
+         </div> 
+         <div class="chart-tile tile-col-3" data-propval="13%">
+          Egregor
+         </div> 
+         <div class="chart-tile tile-col-4" data-propval="8%">
+          Cuba
+         </div> 
+         <div class="chart-tile tile-col-5" data-propval="7%">
+          Ryuk
+         </div> 
+         <div class="chart-tile tile-col-6" data-propval="6.7%">
+          Conti
+         </div> 
+         <div class="chart-tile tile-col-7" data-propval="4%">
+          Lockbit
+         </div> 
+         <div class="chart-tile tile-col-8" data-propval="3%">
+          Maze
+         </div> 
+         <div class="chart-tile tile-col-9" data-propval="2%">
+          Phobos
+         </div> 
+         <div class="chart-tile tile-col-10" data-propval="1%">
+          RagnarLocker
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">Sodinokibi (41%) was the most prevalent Ransomware Family detected in Q3 2021, followed by DarkSide (14%) and Egregor (13%).</p> 
+       <p><a href="#ransomwareCountries" datalink-type="internal" datalink-id="newco:#ransomwarecountries">Jump to</a> Ransomware Client Countries, Customer Sectors, and MITRE ATT&amp;CK Techniques.</p> 
+       <h4 id="apt">Attack Pattern Techniques</h4> 
+       <p>The team tracks and monitors APT campaigns and its associated indicators and techniques. Our team research reflects APT Threat Actors, Tools, Client Countries, Customer Sectors and MITRE ATT&amp;CK Techniques from Q3 of 2021.</p> 
+       <h4>APT Threat Actors</h4> 
+       <div class="tile-chart"> 
+        <style>
+                    #apt-threat-grid {
+                        grid: 523fr 477fr / 551fr 449fr;
+                        grid-auto-flow: column;
+                    }
+
+                    #apt-threat-grid .subgrid-1 {
+                        grid-row: span 2;
+
+                        display: grid;
+                        grid: 404fr 596fr / 557fr 443fr;
+                    }
+
+                    #apt-threat-grid .subgrid-2 {
+                        grid-column: span 2;
+                        display: grid;
+                        grid: 540fr 460fr / 1fr 1fr;
+
+                        grid-auto-flow: column;
+                    }
+
+                    #apt-threat-grid .subgrid-3 {
+                        grid-row: span 2;
+
+                        display: grid;
+                        grid: 386fr 386fr 228fr / 413fr 587fr;
+                    }
+                </style> 
+        <div id="apt-threat-grid" class="grid-chart"> 
+         <div class="chart-tile tile-col-1" data-propval="24%">
+          APT41
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="22%">
+          APT29
+         </div> 
+         <div class="subgrid-1"> 
+          <div class="chart-tile tile-col-3" data-propval="10%">
+           TA505
+          </div> 
+          <div class="chart-tile tile-col-4" data-propval="8%">
+           UNC2452
+          </div> 
+          <div class="subgrid-2"> 
+           <div class="chart-tile tile-col-5" data-propval="7%">
+            MuddyWater
+           </div> 
+           <div class="chart-tile tile-col-10" data-propval="6%">
+            Garmaredon Group
+           </div> 
+           <div class="subgrid-3"> 
+            <div class="chart-tile tile-col-7 grid-rowspan-2" data-propval="4%">
+             APT34
+            </div> 
+            <div class="chart-tile tile-col-9" data-propval="3%">
+             Bronze Butler
+            </div> 
+            <div class="chart-tile tile-col-9" data-propval="3%">
+             Winnti Group
+            </div> 
+            <div class="chart-tile tile-col-4 grid-colspan-2" data-propval="2.9%">
+             Mustang Panda
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">APT41 (24%) and APT29 (22%) were the most prevalent APT Threat Actors in Q3 2021 and responsible for nearly half of APT activity monitored.</p> 
+       <h4>APT Tools</h4> 
+       <p>The team has identified indicators of compromise that belong to tracked APT campaigns with the following tools associated with them. APT groups are known for using common system utilities to bypass security controls and perform their operations:</p> 
+       <div class="tile-chart"> 
+        <style>
+                    #apt-tools-grid {
+                        grid: repeat(4, 1fr) / 362fr 638fr;
+                        grid-auto-flow: column;
+                    }
+
+                    #apt-tools-grid .subgrid-1 {
+                        grid-row: span 4;
+
+                        display: grid;
+                        grid: 567fr 433fr / 1fr 1fr 1fr;
+                    }
+
+                    #apt-tools-grid .subgrid-2 {
+                        grid-column: span 3;
+                        display: grid;
+                        grid: repeat(3, 1fr) / 246fr 754fr;
+
+                        grid-auto-flow: column;
+                    }
+                </style> 
+        <div id="apt-tools-grid" class="grid-chart"> 
+         <div class="chart-tile tile-col-1" data-propval="34%">
+          Cobalt Strike
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="27%">
+          Mimikatz
+         </div> 
+         <div class="chart-tile tile-col-3" data-propval="26%">
+          Net.exe
+         </div> 
+         <div class="chart-tile tile-col-4" data-propval="20%">
+          PsExec
+         </div> 
+         <div class="subgrid-1"> 
+          <div class="subgrid-2"> 
+           <div class="chart-tile tile-col-5 grid-rowspan-3" data-propval="18%">
+            ipconfig
+           </div> 
+           <div class="chart-tile tile-col-8" data-propval="17.9%">
+            Systeminfo
+           </div> 
+           <div class="chart-tile tile-col-8" data-propval="17.9%">
+            Tasklist
+           </div> 
+           <div class="chart-tile tile-col-6" data-propval="17.9%">
+            PlugX
+           </div> 
+          </div> 
+          <div class="chart-tile tile-col-7" data-propval="16%">
+           China Chopper
+          </div> 
+          <div class="chart-tile tile-col-7" data-propval="16%">
+           Living off the Land
+          </div> 
+          <div class="chart-tile tile-col-7" data-propval="16%">
+           njRAT
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">Cobalt Strike (34%) was the most prevalent APT tool detected in Q3 of 2021 followed by Mimikatz (27%), Net.exe (26%), and PsExec (20%). Cobalt Strike attack suite abused by nation state actors was detected in over a third of APT activity.</p> 
+       <p><a href="#aptCountries" datalink-type="internal" datalink-id="newco:#aptcountries">Jump to</a> APT Client Countries, Customer Sectors, and MITRE ATT&amp;CK Techniques.</p> 
+       <h4 id="atr">Advanced Threat Research</h4> 
+       <p>Our team tracked threat categories in the third quarter of 2021. The research reflect reflect percentages of detections in the type of ATR Malware used, Client Countries, Customer Sectors, MITRE ATT&amp;CK techniques used in attacks and industry sectors.</p> 
+       <h4>ATR Tool Threats</h4> 
+       <div class="tile-chart"> 
+        <style>
+                    #atr-malware-grid {
+                        grid-template-rows: 36fr 24fr 19fr 6fr 3.3fr 3fr 2fr 1.6fr 1.2fr 1fr;
+                    }
+                </style> 
+        <div id="atr-malware-grid" class="grid-chart stacked-grid"> 
+         <div class="chart-tile tile-col-1" data-propval="36%">
+          Sodinokibi
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="24%">
+          DarkSide
+         </div> 
+         <div class="chart-tile tile-col-3" data-propval="19%">
+          Egregor
+         </div> 
+         <div class="chart-tile tile-col-4" data-propval="6%">
+          Cuba
+         </div> 
+         <div class="chart-tile tile-col-5" data-propval="3.3%">
+          Ryuk
+         </div> 
+         <div class="chart-tile tile-col-6" data-propval="3%">
+          Conti
+         </div> 
+         <div class="chart-tile tile-col-7" data-propval="2%">
+          Lockbit
+         </div> 
+         <div class="chart-tile tile-col-8" data-propval="1.6%">
+          Maze
+         </div> 
+         <div class="chart-tile tile-col-9" data-propval="1.2%">
+          Phobos
+         </div> 
+         <div class="chart-tile tile-col-10" data-propval="1%">
+          RagnarLocker
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">Formbook (36%), Remcos RAT (24%), and LokiBot (19%) amounted to almost 80% of ATR Tool Threats detections in Q3 2021.</p> 
+       <p><a href="#atrCountries" datalink-type="internal" datalink-id="newco:#atrcountries">Jump to</a> ATR Client Countries, Customer Sectors, and MITRE ATT&amp;CK Techniques.</p> 
+      </section> 
+      <hr class="blue-fade-rule"> 
+      <section> 
+       <h3 id="threatstocountries">Threats to Countries, Continents, Sectors And Vectors</h3> 
+       <h4>Countries and Continents: Q3 2021</h4> 
+       <p>Notable country and continent increases of publicly reported incidents in the third quarter of 2021 include:</p> 
+       <ul> 
+        <li>North America recorded the most incidents among continents but saw a 12% decrease from Q2 to Q3 2021.</li> 
+        <li>The United States experienced the most reported incidents in Q3 2021, but incidents decreased 9% from Q2 2021.</li> 
+        <li>France recorded the highest increase (400%) of incidents reported in Q3 2021.</li> 
+        <li>Russia experienced the largest decrease (-79%) of Q3 2021 incidents compared to Q2 2021.</li> 
+       </ul> 
+       <h4>Attack Sectors: Q3 2021</h4> 
+       <p>Notable publicly reported incidents against sectors in the third quarter of 2022 include:</p> 
+       <ul> 
+        <li>Multiple Industries (28%) were targeted most often, followed by Healthcare (17%), and Public (15%). </li> 
+        <li>Notable sector increases from Q2 to Q3 2021 include Finance/Insurance (21%) and Healthcare (7%).</li> 
+       </ul> 
+       <h4>Attack Vectors: Q3 2021</h4> 
+       <p>Notable publicly reported incidents against vectors in the third quarter of 2021 include:</p> 
+       <ul> 
+        <li>Malware was the technique used most often in reported incidents in Q3 2021 but reported malware incidents decreased 24% compared to Q2 2021.</li> 
+        <li>Sector increases from Q2 to Q3 2021 include Distributed Denial of Service (112%) and Targeted Attack (55%).</li> 
+       </ul> 
+      </section> 
+      <hr class="blue-fade-rule"> 
+      <section> 
+       <h3 id="livingoffland">Living off The Land</h3> 
+       <p>Cybercriminals use Living off the Land (LotL) techniques that use legitimate software and functions in a system to perform malicious actions on that system. Based on third quarter events, Trellix has identified a trend in tools used by adversaries who are attempting to remain undetected. While state-sponsored threat groups and larger criminal threat groups have resources to develop tools in house, many turn to binaries and administratively installed software that may already be present on a target system to carry out distinct phases of an attack.</p> 
+       <p>To identify native binaries or administratively used software during a reconnaissance phase for a high-profile target, adversaries may gather information on technologies used from job postings, customer testimonials advertised by vendors, or from an inside accomplice.</p> 
+       <div class="data-table table-4col"> 
+        <div class="gt-head"> 
+         <b>Native OS Binaries</b> 
+         <b></b> 
+         <b class="cell-span-2">Comments</b> 
+        </div> 
+        <div class="gt-row"> 
+         <p>Powershell (41.53%)</p> 
+         <p>T1059.001</p> 
+         <p class="cell-span-2">Powershell is often used to execute scripts and Powershell commands.</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>Windows Command Shell (CMD) (40.40%)</p> 
+         <p>T1059.003</p> 
+         <p class="cell-span-2">Windows Command Shell is the primary CLI utility for Windows and is often used to execute files and commands in an alternate data stream.</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>Rundll32 (16.96%)</p> 
+         <p>T1218.011, T1564.004</p> 
+         <p class="cell-span-2">Rundll32 can be used to execute local DLL files, DLL files from a share, DLL files obtained from the internet and alternate data streams.</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>WMIC (12.87%)</p> 
+         <p>T1218, 1564.004</p> 
+         <p class="cell-span-2">WMIC is a command line interface for WMI and may be used by adversaries to execute commands or vpayloads locally, in alternate data streams or on a remote system.</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>Excel (12.30%)</p> 
+         <p>T1105</p> 
+         <p class="cell-span-2">While not natively installed, many systems contain spread sheet software, adversaries may send attachments to user that contain malicious code or scripts that, when executed, may be used to retrieve payloads from a remote location.</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>Schtasks (11.70%)</p> 
+         <p>T1053.005</p> 
+         <p class="cell-span-2">An adversary may schedule tasks that maintain persistence, execute additional malware, or perform automated tasks.</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>Regsvr32 (10.53%)</p> 
+         <p>T1218.010</p> 
+         <p class="cell-span-2">Regsvr32 may be used by adversaries to register dll files, execute malicious code and bypass application whitelisting.</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>MSHTA (8.78%)</p> 
+         <p>T1218.005</p> 
+         <p class="cell-span-2">MSHTA may be used by adversaries to execute JavaScript, JScript and VBScript files that may be hidden in HTA files locally and in alternate data streams or retrieved from a remote location.</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>Certutil (4.68%)</p> 
+         <p>T1105, 1564.004, T1027</p> 
+         <p class="cell-span-2">Windows command utility is used to obtain certificate authority information and configure certificate services. Alternatively, adversaries may use certutil to gather remote tools and content, encode and decode files as well as access alternate data streams.</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>Net.exe (4.68%)</p> 
+         <p>T1087 &amp; Sub-techniques</p> 
+         <p class="cell-span-2">Windows command line utility that allows an adversary to perform reconnaissance tasks such as identifying users, network, and services functionality of a victim machine.</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>Reg.exe (4.10%)</p> 
+         <p>1003.002, 1564.004</p> 
+         <p class="cell-span-2">Reg.exe may be used by adversaries to add, modify, delete, and export registry values which may be saved to alternative data streams. Additionally, reg.exe may be used to dump credentials from a SAM file.</p> 
+        </div> 
+       </div> 
+       <div class="data-table table-5col mt-72"> 
+        <div class="gt-head"> 
+         <b>Administrative Tools</b> 
+         <b></b> 
+         <b></b> 
+         <b class="cell-span-2">Comments</b> 
+        </div> 
+        <div class="gt-row"> 
+         <p>Remote Services (15.21%)</p> 
+         <p>T1021.001, T1021.004, T1021.005</p> 
+         <p>AnyDesk<br>ConnectWise Control<br>RDP<br>UltraVNC<br>PuTTY<br>WinSCP</p> 
+         <p class="cell-span-2">Remote services tools, both native to Windows and third-party software may be used by adversaries along with valid accounts to gain access to a machine or infrastructure remotely, perform ingress transfer of tools and malware as well as exfiltrate data.</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>Archive Utilities (4.68%)</p> 
+         <p>T1560.001</p> 
+         <p>7-Zip<br>WinRAR<br>WinZip</p> 
+         <p class="cell-span-2">Adversaries may use archive utilities to compress collected data in preparation to be exfiltrated as well as to decompress files and executables.</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>PsExec (4.68%)</p> 
+         <p>T1569.002</p> 
+         <p></p> 
+         <p class="cell-span-2">PsExec is a tool used to execute commands and programs on a remote system.</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>BITSAdmin (2.93%)</p> 
+         <p>T1105, T1218, T1564.004</p> 
+         <p></p> 
+         <p class="cell-span-2">BiTSAdmin is often used to maintain persistence, clean up artifacts and for invoking additional actions once a set criterion is met.</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>fodhelper.exe (1.17%)</p> 
+         <p>T1548.002</p> 
+         <p></p> 
+         <p class="cell-span-2">Fodhelper.exe is a Windows utility that may be used by adversaries to run malicious files with elevated privileges on a victim machine.</p> 
+        </div> 
+        <div class="gt-row"> 
+         <p>ADFind (.59%)</p> 
+         <p>T1016, T1018, T1069 &amp; Sub-Techniques, T1087 &amp; Sub-techniques, T1482</p> 
+         <p></p> 
+         <p class="cell-span-2">Command line utility that may be used by adversaries to discover active directory information such as Domain Trusts, Permission Groups, Remote Systems and Configurations.</p> 
+        </div> 
+       </div> 
+      </section> 
+      <hr class="blue-fade-rule"> 
+      <section> 
+       <h3 id="bugreport">Bug Report</h3> 
+       <h4>Bugs on the Windshield</h4> 
+       <i>(Douglas McKee, Principal Engineer and Senior Security Researcher, and other bloggers track and analyze vulnerabilities in the monthly Bug Report.)</i> 
+       <p>As the world attempted to drive 100 mph through the end of 2021, many “bugs” were splattered on our proverbial windshield. Some cleaned off easily, while some left a lasting stain. The team tracks and evaluates new vulnerabilities, aka bugs, each month upon their release and reports what we “feel” are going to be the most important. That’s right, not CVSS score or OWASP ranking, but an old-fashioned gut check based on years of experience.</p> 
+       <h4>A Moment of Reflection</h4> 
+       <p>Looking at our top reported bugs from the last several months, a few stand out from the rest. Apache had a rough year with both its webserver (CVE-2021-41773) and Log4j component (CVE-2021-44228) hit hard with impactful bugs. Palo Alto also deserves an honorable mention with a bug found in their Global Protect VPN (CVE-2021-3064), having a unique impact during a global pandemic. Hold up, let’s be real for a minute. The Apache Log4j vulnerability deserves more than an “impactful” rating as it is by far the biggest bug of 2021 and has potential to defend its title, for years to come. If you live under a rock and haven’t heard of these I highly suggest reading our <a href="../../about/newsroom/stories/research/the-bug-report-december-2021.html" datalink-id="newco:en-us:about:newsroom:stories:threat-labs:the-bug-report-december-2021" datalink-type="internal">December Bug Report</a>. Don’t forget to check back every month for the latest and greatest vulnerability news.</p> 
+       <p>So, what makes these bugs the worst of the bunch? Simply put, they can be leveraged remotely, without authentication on tools that sit on the edge of your network. These bugs can be the initial entry point to a network without requiring an attacker to “phish their wish,” but instead be a gateway to a larger scale attack.</p> 
+       <p>If your CISO likes playing Russian roulette and says you can only patch one product, we recommend prioritizing the Log4j vulnerability hands down as it is easy to execute and has seen active exploitation across malicious actors. Although the Palo Alto VPN flaw is serious, and VPNs have seen an increase in exploitation since 2020, it takes a back seat to Log4J and the other Apache vulnerabilities since it affects an older version of the VPN software and has yet to see active exploitation in the wild.</p> 
+       <h4>Termites</h4> 
+       <p>Some bugs, like termites, can slip through the cracks, but have a devastating effect.</p> 
+       <p>A Microsoft Windows Installer Service local privilege escalation bug labeled as CVE-2021-41379, was the proverbial termite of November. Microsoft disclosed the bug as requiring local access and allegedly fixed it with an official patch, but the strategy backfired when the patch didn’t work as expected.</p> 
+       <p>With a failed patch and a publicly available POC, bad actors did not wait to compile this into their playbooks, as seen in Insights. Compounding the issue, our team has seen weaponized versions of this exploit being sold on the dark web.</p> 
+      </section> 
+      <hr class="blue-fade-rule"> 
+      <section> 
+       <h3 id="addltq32021">Additional Q3 2021 Data And Research</h3> 
+       <h4 id="ransomwareCountries">Ransomware Client Countries</h4> 
+       <div class="tile-chart"> 
+        <style>
+                    #ransomware-countries-grid {
+                        grid-template-rows:
+                            34fr 12fr 11fr 8fr 7fr 6fr 4fr 3fr 2fr 1.5fr;
+                    }
+                </style> 
+        <div id="ransomware-countries-grid" class="grid-chart stacked-grid"> 
+         <div class="chart-tile tile-col-1" data-propval="34%">
+          United States
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="12%">
+          Turkey
+         </div> 
+         <div class="chart-tile tile-col-3" data-propval="11%">
+          Germany
+         </div> 
+         <div class="chart-tile tile-col-4" data-propval="8%">
+          Israel
+         </div> 
+         <div class="chart-tile tile-col-5" data-propval="7%">
+          Switzerland
+         </div> 
+         <div class="chart-tile tile-col-6" data-propval="6%">
+          Mexico
+         </div> 
+         <div class="chart-tile tile-col-7" data-propval="4%">
+          United Kingdom
+         </div> 
+         <div class="chart-tile tile-col-8" data-propval="3%">
+          South Africa
+         </div> 
+         <div class="chart-tile tile-col-9" data-propval="2%">
+          Belgium
+         </div> 
+         <div class="chart-tile tile-col-10" data-propval="1.5%">
+          India
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">Clients based in the United States accounted for more than one third of the total Ransomware detections in Q3 2021.</p> 
+       <h4>Ransomware Client Sectors</h4> 
+       <div class="tile-chart"> 
+        <style>
+                    #ransomware-customers-grid {
+                        grid-template-rows:
+                            22fr 20fr 16fr 9fr 8fr 4.3fr 4fr 3.6fr 3fr 1fr;
+                    }
+                </style> 
+        <div id="ransomware-customers-grid" class="grid-chart stacked-grid"> 
+         <div class="chart-tile tile-col-1" data-propval="22%">
+          Banking/Financial
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="20%">
+          Utilities
+         </div> 
+         <div class="chart-tile tile-col-3" data-propval="16%">
+          Retail
+         </div> 
+         <div class="chart-tile tile-col-4" data-propval="9%">
+          Education
+         </div> 
+         <div class="chart-tile tile-col-5" data-propval="8%">
+          Government
+         </div> 
+         <div class="chart-tile tile-col-6" data-propval="4.3%">
+          Industrial
+         </div> 
+         <div class="chart-tile tile-col-7" data-propval="4%">
+          Outsourcing &amp; Hosting
+         </div> 
+         <div class="chart-tile tile-col-8" data-propval="3.6%">
+          Construction
+         </div> 
+         <div class="chart-tile tile-col-9" data-propval="3%">
+          Insurance
+         </div> 
+         <div class="chart-tile tile-col-10" data-propval="1%">
+          Wholesale
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">Banking/Financial (22%), Utilities (20%), and Retail (16%) accounted for almost 60% of total Ransomware Customer detections in Q3 2021.</p> 
+       <h4>Ransomware MITRE ATT&amp;CK Techniques</h4> 
+       <div class="tile-chart"> 
+        <style>
+                    #ransomware-mitre-grid {
+                        grid-template-rows:
+                            2.6fr 2.5fr 2.4fr 2.3fr 2.2fr 2fr 2fr 2fr 2fr 1.8fr;
+                    }
+                </style> 
+        <div id="ransomware-mitre-grid" class="grid-chart stacked-grid"> 
+         <div class="chart-tile tile-col-1" data-propval="2.6%">
+          Data Entry
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="2.5%">
+          File and Directory Discovery
+         </div> 
+         <div class="chart-tile tile-col-3" data-propval="2.4%">
+          Obfuscated Files or Information
+         </div> 
+         <div class="chart-tile tile-col-4" data-propval="2.3%">
+          Inhibit System Recovery
+         </div> 
+         <div class="chart-tile tile-col-5" data-propval="2.2%">
+          Process Injection
+         </div> 
+         <div class="chart-tile tile-col-6" data-propval="2%">
+          Service Stop
+         </div> 
+         <div class="chart-tile tile-col-7" data-propval="2%">
+          System Information Discovery
+         </div> 
+         <div class="chart-tile tile-col-8" data-propval="2%">
+          PowerShell
+         </div> 
+         <div class="chart-tile tile-col-9" data-propval="2%">
+          Modify Registry
+         </div> 
+         <div class="chart-tile tile-col-10" data-propval="1.8%">
+          Valid Accounts
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">Data Entry (2.6%), File and Directory Discovery (2.5%), and Obfuscated Files or Information (2.4%) topped the Ransomware MITRE ATT&amp;CK Techniques detected in Q3 2021.</p> 
+       <h4 id="aptCountries">APT Client Countries</h4> 
+       <div class="tile-chart"> 
+        <style>
+                    #apt-countries-grid {
+                        grid-template-rows:
+                            17fr 15fr 12fr 8.3fr 8fr 6.4fr 6.3fr 6fr 4fr 3fr;
+                    }
+                </style> 
+        <div id="apt-countries-grid" class="grid-chart stacked-grid"> 
+         <div class="chart-tile tile-col-1" data-propval="17%">
+          Turkey
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="15%">
+          United States
+         </div> 
+         <div class="chart-tile tile-col-3" data-propval="12%">
+          Israel
+         </div> 
+         <div class="chart-tile tile-col-4" data-propval="8.3%">
+          Germany
+         </div> 
+         <div class="chart-tile tile-col-5" data-propval="8%">
+          Mexico
+         </div> 
+         <div class="chart-tile tile-col-6" data-propval="6.4%">
+          Switzerland
+         </div> 
+         <div class="chart-tile tile-col-7" data-propval="6.3%">
+          United Kingdom
+         </div> 
+         <div class="chart-tile tile-col-8" data-propval="6%">
+          Canada
+         </div> 
+         <div class="chart-tile tile-col-9" data-propval="4%">
+          Brazil
+         </div> 
+         <div class="chart-tile tile-col-10" data-propval="3%">
+          India
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">Client detections of Attack Pattern Techniques in Turkey accounted for 17% of total detections in Q3 of 2021, followed by the United States (15%) and Israel (12%).</p> 
+       <h4>APT Customer Sectors</h4> 
+       <div class="tile-chart"> 
+        <style>
+                    #apt-customers-grid {
+                        grid-template-rows:
+                            37fr 17fr 16fr 11fr 9fr 7fr 6fr 3.4fr 3fr 1fr;
+                    }
+                </style> 
+        <div id="apt-customers-grid" class="grid-chart stacked-grid"> 
+         <div class="chart-tile tile-col-1" data-propval="37%">
+          Banking/Finance
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="17%">
+          Utilities
+         </div> 
+         <div class="chart-tile tile-col-3" data-propval="16%">
+          Retail
+         </div> 
+         <div class="chart-tile tile-col-4" data-propval="11%">
+          Government
+         </div> 
+         <div class="chart-tile tile-col-5" data-propval="9%">
+          Process Manufacturing
+         </div> 
+         <div class="chart-tile tile-col-6" data-propval="7%">
+          Outsourcing
+         </div> 
+         <div class="chart-tile tile-col-7" data-propval="6%">
+          Insurance
+         </div> 
+         <div class="chart-tile tile-col-8" data-propval="3.4%">
+          Transportation
+         </div> 
+         <div class="chart-tile tile-col-9" data-propval="3%">
+          Industrial
+         </div> 
+         <div class="chart-tile tile-col-10" data-propval="1%">
+          Technology
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">The most APT detections in Q3 2021 occurred in the Banking/Financial sector (37%) followed by Utilities (17%), Retail (16%), and Government (11%).</p> 
+       <h4>APT MITRE ATT&amp;CK Techniques</h4> 
+       <div class="tile-chart"> 
+        <style>
+                    #apt-mitre-grid {
+                        grid-template-rows:
+                            16.8fr 16.7fr 16fr 15.5fr 15fr 14.5fr 14.3fr 13.8fr 13.7fr 13.5fr;
+                    }
+                </style> 
+        <div id="apt-mitre-grid" class="grid-chart stacked-grid"> 
+         <div class="chart-tile tile-col-1" data-propval="16.8%">
+          Spearphishing Attachment
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="16.7%">
+          Obfuscated Files or Information
+         </div> 
+         <div class="chart-tile tile-col-3" data-propval="16%">
+          PowerShell
+         </div> 
+         <div class="chart-tile tile-col-4" data-propval="15.5%">
+          Rundll32
+         </div> 
+         <div class="chart-tile tile-col-5" data-propval="15%">
+          Scheduled Task
+         </div> 
+         <div class="chart-tile tile-col-6" data-propval="14.5%">
+          System Information Discovery
+         </div> 
+         <div class="chart-tile tile-col-7" data-propval="14.3%">
+          Spearphishing Link
+         </div> 
+         <div class="chart-tile tile-col-8" data-propval="13.8%">
+          Windows Management Instrumentation
+         </div> 
+         <div class="chart-tile tile-col-9" data-propval="13.7%">
+          Web Protocols
+         </div> 
+         <div class="chart-tile tile-col-10" data-propval="13.5%">
+          Registry Run Keys
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">Spearphishing Attachment (16.8%), Obfuscated Files or Information (16.7%), and PowerShell (16%) were the most prevalent APT MITRE ATT&amp;CK Techniques detected in Q3 of 2021.</p> 
+       <h4 id="atrCountries">ATR Client Countries</h4> 
+       <div class="tile-chart"> 
+        <style>
+                    #atr-countries-grid {
+                        grid-template-rows:
+                            32fr 28fr 6fr 2.5fr 2.3fr 2.2fr 1.9fr 0.18fr 0.17fr 0.16fr;
+                    }
+                </style> 
+        <div id="atr-countries-grid" class="grid-chart stacked-grid"> 
+         <div class="chart-tile tile-col-1" data-propval="32%">
+          Germany
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="28%">
+          United States
+         </div> 
+         <div class="chart-tile tile-col-3" data-propval="6%">
+          China
+         </div> 
+         <div class="chart-tile tile-col-4" data-propval="2.5%">
+          Singapore
+         </div> 
+         <div class="chart-tile tile-col-5" data-propval="2.3%">
+          Turkey
+         </div> 
+         <div class="chart-tile tile-col-6" data-propval="2.2%">
+          India
+         </div> 
+         <div class="chart-tile tile-col-7" data-propval="1.9%">
+          Italy
+         </div> 
+         <div class="chart-tile tile-col-8" data-propval="0.18%">
+          United Kingdom
+         </div> 
+         <div class="chart-tile tile-col-9" data-propval="0.17%">
+          Israel
+         </div> 
+         <div class="chart-tile tile-col-10" data-propval="0.16%">
+          Croatia
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">More than half of total ATR tool threats detected in Q3 2021 were in Germany (32%) and the United States (28%).</p> 
+       <h4>ATR Customer Sectors</h4> 
+       <div class="tile-chart"> 
+        <style>
+                    #atr-cutsomers-grid {
+                        grid-template-rows:
+                            45fr 12fr 11fr 8fr 7fr 4fr 3fr 3fr 2.7fr 2.5fr;
+                    }
+                </style> 
+        <div id="atr-cutsomers-grid" class="grid-chart stacked-grid"> 
+         <div class="chart-tile tile-col-1" data-propval="45%">
+          Banking/Financial
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="12%">
+          Technology
+         </div> 
+         <div class="chart-tile tile-col-3" data-propval="11%">
+          Transportation
+         </div> 
+         <div class="chart-tile tile-col-4" data-propval="8%">
+          Government
+         </div> 
+         <div class="chart-tile tile-col-5" data-propval="7%">
+          Outsourcing
+         </div> 
+         <div class="chart-tile tile-col-6" data-propval="4%">
+          Wholesale
+         </div> 
+         <div class="chart-tile tile-col-7" data-propval="3%">
+          Insurance
+         </div> 
+         <div class="chart-tile tile-col-8" data-propval="3%">
+          Other
+         </div> 
+         <div class="chart-tile tile-col-9" data-propval="2.7%">
+          Industrial
+         </div> 
+         <div class="chart-tile tile-col-10" data-propval="2.5%">
+          Utilities
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">Banking/Financial ATR customer sector detections (45%) were most prevalent by far in Q3 2021.</p> 
+       <h4>ATR MITRE ATT&amp;CK Techniques</h4> 
+       <div class="tile-chart"> 
+        <style>
+                    #atr-mitre-grid {
+                        grid-template-rows:
+                            5fr 3.6fr 3.57fr 3.5fr 3fr 2.9fr 2.4fr 2.37fr 2.35fr 2fr;
+                    }
+                </style> 
+        <div id="atr-mitre-grid" class="grid-chart stacked-grid"> 
+         <div class="chart-tile tile-col-1" data-propval="5%">
+          Obfuscated Files or Information
+         </div> 
+         <div class="chart-tile tile-col-2" data-propval="3.6%">
+          Modify Registry
+         </div> 
+         <div class="chart-tile tile-col-3" data-propval="3.57%">
+          Process Hollowing
+         </div> 
+         <div class="chart-tile tile-col-4" data-propval="3.5%">
+          Screen Capture
+         </div> 
+         <div class="chart-tile tile-col-5" data-propval="3%">
+          Credentials from Web Browsers
+         </div> 
+         <div class="chart-tile tile-col-6" data-propval="2.9%">
+          Spearphishing Attachment
+         </div> 
+         <div class="chart-tile tile-col-7" data-propval="2.4%">
+          Keylogging
+         </div> 
+         <div class="chart-tile tile-col-8" data-propval="2.37%">
+          Man in the Browser
+         </div> 
+         <div class="chart-tile tile-col-9" data-propval="2.35%">
+          Query Registry
+         </div> 
+         <div class="chart-tile tile-col-10" data-propval="2%">
+          Input Capture
+         </div> 
+        </div> 
+       </div> 
+       <p class="chart-caption">Obfuscated Files or Information amounted to 5% of all ATR MITRE ATT&amp;CK Technique detections in Q3 2021.</p> 
+      </section> 
+      <hr class="blue-fade-rule"> 
+      <section> 
+       <h3 id="resources">Resources</h3> 
+       <p>To keep track of the latest threats and research, see our team’s resources:</p> 
+       <p><a href="../../advanced-research-center.html" datalink-id="newco:en-us:threat-center" datalink-type="internal">Threat Center</a> — Today’s most impactful threats have been identified by our team.</p> 
+       <h4>Twitter:</h4> 
+       <div class="row justify-content-center px-md-24 px-lg-0"> 
+        <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-5 d-flex flex-nowrap align-items-center"> 
+         <a href="https://twitter.com/TrellixLabs/status/507569387264819200" target="_blank" class="pe-2" datalink-type="external" datalink-id="newco:twitter.com:trellixlabs:status:507569387264819200"> <img class="border border-secondary radius-50" src="../../../../pbs.twimg.com/profile_images/1483875911032131584/hj9Eml2t_400x400.jpg" width="100" alt=""> </a> 
+         <div class="d-flex flex-column align-items-start"> 
+          <a href="https://twitter.com/TrellixLabs/status/507569387264819200" target="_blank" class="pe-2" datalink-type="external" datalink-id="newco:twitter.com:trellixlabs:status:507569387264819200">Trellix ATR</a> 
+          <a href="https://twitter.com/TrellixLabs/status/507569387264819200" target="_blank" class="text-decoration-none link-arrow text-black mb-3 mb-lg-0" datalink-type="external" datalink-id="newco:twitter.com:trellixlabs:status:507569387264819200">Twitter</a> 
+         </div> 
+        </div> 
+        <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-5 d-flex flex-nowrap align-items-center"> 
+         <a href="https://twitter.com/ChristiaanBeek" target="_blank" class="pe-2" datalink-type="external" datalink-id="newco:twitter.com:christiaanbeek"> <img class="border border-secondary radius-50" src="../../../../pbs.twimg.com/profile_images/1518189383689674754/YXnGMBZ3_400x400.jpg" width="100" alt=""> </a> 
+         <div class="d-flex flex-column align-items-start">
+          <a href="https://twitter.com/ChristiaanBeek" target="_blank" class="pe-2" datalink-type="external" datalink-id="newco:twitter.com:christiaanbeek">Christiaan Beek </a>
+          <a href="https://twitter.com/ChristiaanBeek" target="_blank" class="text-decoration-none link-arrow text-black mb-3" datalink-type="external" datalink-id="newco:twitter.com:christiaanbeek">Twitter</a> 
+         </div> 
+        </div> 
+        <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-5 d-flex flex-nowrap align-items-center"> 
+         <a href="https://twitter.com/John_Fokker" target="_blank" class="pe-2" datalink-type="external" datalink-id="newco:twitter.com:john_fokker"> <img class="border border-secondary radius-50" src="../../../../pbs.twimg.com/profile_images/1448625380156391429/RCgMFSlX_400x400.jpg" width="100" alt=""> </a> 
+         <div class="d-flex flex-column align-items-start">
+          <a href="https://twitter.com/John_Fokker" target="_blank" class="pe-2" datalink-type="external" datalink-id="newco:twitter.com:john_fokker">John Fokker </a>
+          <a href="https://twitter.com/John_Fokker" target="_blank" class="text-decoration-none link-arrow text-black mb-3" datalink-type="external" datalink-id="newco:twitter.com:john_fokker">Twitter</a> 
+         </div> 
+        </div> 
+        <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-5 d-flex flex-nowrap align-items-center"> 
+         <a href="https://twitter.com/fulmetalpackets" target="_blank" class="pe-2" datalink-type="external" datalink-id="newco:twitter.com:fulmetalpackets"> <img class="border border-secondary radius-50" src="../../../../pbs.twimg.com/profile_images/998587107961593856/9Fq7Q8ps_400x400.jpg" width="100" style="border-radius:50%; border:2px solid #00a5ff;" alt=""> </a> 
+         <div class="d-flex flex-column align-items-start">
+          <a href="https://twitter.com/fulmetalpackets" target="_blank" class="pe-2" datalink-type="external" datalink-id="newco:twitter.com:fulmetalpackets">Douglas McKee </a>
+          <a href="https://twitter.com/fulmetalpackets" target="_blank" class="text-decoration-none link-arrow text-black mb-3" datalink-type="external" datalink-id="newco:twitter.com:fulmetalpackets">Twitter</a> 
+         </div> 
+        </div> 
+        <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-5 d-flex flex-nowrap align-items-center"> 
+         <a href="https://twitter.com/spovolny" target="_blank" class="pe-2" datalink-type="external" datalink-id="newco:twitter.com:spovolny"> <img class="border border-secondary radius-50" src="../../../../pbs.twimg.com/profile_images/1485723087249182722/rhkNMUCo_400x400.jpg" width="100" alt=""> </a> 
+         <div class="d-flex flex-column align-items-start">
+          <a href="https://twitter.com/spovolny" target="_blank" class="pe-2" datalink-type="external" datalink-id="newco:twitter.com:spovolny">Steve Povolny </a>
+          <a href="https://twitter.com/spovolny" target="_blank" class="text-decoration-none link-arrow text-black mb-3" datalink-type="external" datalink-id="newco:twitter.com:spovolny">Twitter</a> 
+         </div> 
+        </div> 
+        <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-5 d-flex flex-nowrap align-items-center"> 
+         <div class="d-flex flex-column align-items-start"> 
+          <h4 class="text-body"></h4> 
+         </div> 
+        </div> 
+       </div> 
+      </section> 
+      <section> 
+       <a href="../../assets/docs/threat-reports/trelllix-atr-report-jan-2022.pdf" target="_blank" class="btn btn-primary me-4 mb-4" datalink-id="newco:en-us:assets:docs:threat-reports:trelllix-atr-report-jan-2022.pdf" datalink-type="internal">Download PDF</a> 
+       <a href="../threat-reports.html" class="btn btn-outline-primary mb-4" datalink-id="newco:en-us:threat-center:threat-reports" datalink-type="internal">View Archives</a> 
+      </section> 
+     </div> 
+     <div class="toc d-none d-md-block"> 
+      <div class="toc-link-cont d-flex flex-column sticky-top"> 
+       <a class="toc-link" href="#letter" datalink-type="internal" datalink-id="newco:#letter">Letter from Our Chief Scientist</a> 
+       <a class="toc-link" href="#log4j" datalink-type="internal" datalink-id="newco:#log4j">Log4j: The Memory That Knew Too Much</a> 
+       <a class="toc-link" href="#ransomware" datalink-type="internal" datalink-id="newco:#ransomware">Ransomware</a> 
+       <a class="toc-link sub-toc-link" href="#apt" datalink-type="internal" datalink-id="newco:#apt">Attack Pattern Techniques</a> 
+       <a class="toc-link sub-toc-link" href="#atr" datalink-type="internal" datalink-id="newco:#atr">Advanced Threat Research</a> 
+       <a class="toc-link" href="#threatstocountries" datalink-type="internal" datalink-id="newco:#threatstocountries">Threats to Countries Continents Sectors And Vectors</a> 
+       <a class="toc-link" href="#livingoffland" datalink-type="internal" datalink-id="newco:#livingoffland">Living Off The Land Q3 2021</a> 
+       <a class="toc-link" href="#bugreport" datalink-type="internal" datalink-id="newco:#bugreport">Bug Report</a> 
+       <a class="toc-link" href="#addltq32021" datalink-type="internal" datalink-id="newco:#addltq32021">Additional Q3 2021 Data And Research</a> 
+       <a class="toc-link" href="#resources" datalink-type="internal" datalink-id="newco:#resources">Resources</a> 
+       <hr class="gradient-rule mx-0 w-100"> 
+      </div> 
+     </div> 
+    </div> 
+    <script>
+    let chapLinks = document.querySelectorAll('.toc-link'),
+        h = document.querySelector('html');
+
+    function chapterIndicator(element) {
+
+        let elY = element.offsetTop - h.scrollTop,
+            elemId = element.id;
+
+        let chapLink = document.querySelector(`a[href="#${elemId}"]`);
+
+        // If element is on screen
+        // ie if element is below top of browser window & element is above bottom of browser window
+        if ((elY > 0) && (elY < window.innerHeight)) {
+
+            if (elY > (window.innerHeight / 4)) {
+                chapLink = chapLink.previousElementSibling;
+            }
+
+            if (h.offsetHeight <= (h.scrollTop + (5 * window.innerHeight / 4))) {
+                chapLink = chapLinks[chapLinks.length - 1];
+            }
+
+            // If chapter link is not already active
+            if (chapLink && !chapLink.classList.contains('active')) {
+
+                chapLinks.forEach(e => e.classList.remove('active'));
+                chapLink.classList.add('active');
+            }
+        }
+    };
+
+    let elements = document.querySelectorAll(`h3[id],h4[id]`);
+
+    elements.forEach(element => {
+        window.addEventListener(
+            "scroll",
+            () => chapterIndicator(element)
+        );
+    });
+</script> 
+    <div id="screenSpacer"></div> 
+    <footer> 
+     <hr class="gradient-rule m-0 w-100"> 
+     <div class="container-xl px-md-6"> 
+      <div class="links cols"> 
+       <div class="link-group"> 
+        <b class="mb-1">About</b> 
+        <a href="../../about/why-trellix.html" datalink-id="newco:en-us:about:why-trellix" datalink-type="internal">Why Trellix?</a> 
+        <a href="../../about.html" datalink-id="newco:en-us:about" datalink-type="internal">About Us</a> 
+        <a href="../../products.html" datalink-id="newco:en-us:products" datalink-type="internal">Explore Products</a> 
+        <a href="../../about/leadership.html" datalink-id="newco:en-us:about:leadership" datalink-type="internal">Leadership</a> 
+        <a href="https://careers.trellix.com/" target="_blank" class="link-external" datalink-type="external" datalink-id="newco:careers.trellix.com:">Careers</a> 
+       </div> 
+       <div class="link-group"> 
+        <b class="mb-1">News and Events</b> 
+        <a href="../../about/newsroom.html" datalink-id="newco:en-us:about:newsroom" datalink-type="internal">Newsroom</a> 
+        <a href="../../about/newsroom/press-releases.html" datalink-id="newco:en-us:about:newsroom:press-releases" datalink-type="internal">Press Releases</a> 
+        <a href="../../about/newsroom/stories.html" datalink-id="newco:en-us:about:newsroom:stories" datalink-type="internal">Blogs</a> 
+        <a href="../../about/webinars.html" datalink-id="newco:en-us:about:webinars" datalink-type="internal">Webinars</a> 
+        <a href="../../about/events.html" datalink-id="newco:en-us:about:events" datalink-type="internal">Events</a> 
+       </div> 
+       <div class="link-group"> 
+        <b class="mb-1">Resources</b> 
+        <a href="../../security-awareness.html" datalink-id="newco:en-us:security-awareness" datalink-type="internal">Security Awareness</a> 
+        <a href="../../resource-library.html" datalink-id="newco:en-us:resource-library" datalink-type="internal">Resource Library</a> 
+        <a href="../../services/education-services.html" datalink-id="newco:en-us:services:education-services" datalink-type="internal">Training and Education</a> 
+        <a href="../../contact-us/communication-preferences.html" datalink-id="newco:en-us:contact-us:communication-preferences" datalink-type="internal">Communication Preferences</a> 
+        <a href="https://shop.trellix.com/1320/purl-cataloghome" target="_blank" class="link-external" datalink-type="external" datalink-id="newco:shop.trellix.com:1320:purl-cataloghome">Shop Online</a> 
+        <!-- <a href="https://teamtrellixstore.com/pages/store" class="link-external" target="_blank">Trellix Store</a> --> 
+       </div> 
+       <div class="link-group"> 
+        <b class="mb-1">Support</b> 
+        <a href="https://supportm.trellix.com/webcenter/portal/supportportal/pages_home" target="_blank" class="link-external" datalink-type="external" datalink-id="newco:supportm.trellix.com:webcenter:portal:supportportal:pages_home">Support</a> 
+        <a href="../../support/customer-success-plans.html" datalink-id="newco:en-us:support:customer-success-plans" datalink-type="internal">Customer Success Plans</a> 
+        <a href="../../downloads.html" datalink-id="newco:en-us:downloads" datalink-type="internal">Downloads</a> 
+        <a href="https://docs.trellix.com/" target="_blank" class="link-external" datalink-type="external" datalink-id="newco:docs.trellix.com:">Product Documentation</a> 
+       </div> 
+       <div class="link-group"> 
+        <b class="mb-1">Trellix</b> 
+        <a href="../../contact-us.html" datalink-id="newco:en-us:contact-us" datalink-type="internal">Contact Us</a> 
+       </div> 
+      </div> 
+      <div class="more-info d-flex flex-column flex-xmd-row gap-y-4 align-items-center"> 
+       <div class="d-flex col-auto col-xmd-2"> 
+        <a href="../../../index.html" style="margin-top: -8px;" title="Trellix" datalink-id="newco:" datalink-type="internal"> <img src="../../assets/logos/Trellix-x-white.svg" alt="Trellix" height="32" width="auto"> </a> 
+       </div> 
+       <div class="more-links d-flex flex-wrap col-auto col-xmd-8 gap-x-2 align-items-center justify-content-center"> 
+        <span class="col-12 col-lg-auto text-center">Copyright © <span id="cYear"></span> Musarubra US LLC</span> 
+        <script async>
+                    document.getElementById('cYear').textContent += `${/\d{4}/.exec(Date())[0]} `;
+                </script> 
+        <span class="d-none d-lg-inline">|</span> 
+        <a href="../../about/legal/privacy.html" datalink-id="newco:en-us:about:legal:privacy" datalink-type="internal">Privacy</a> 
+        <span>|</span> 
+        <a href="../../about/legal.html" datalink-id="newco:en-us:about:legal" datalink-type="internal">Legal</a> 
+        <span>|</span> 
+        <a href="../../about/legal/website-terms-of-service.html" datalink-id="newco:en-us:about:legal:website-terms-of-service" datalink-type="internal">Terms of Service</a> 
+       </div> 
+       <div class="social-links pb-4 pb-xmd-0 d-flex col-auto col-xmd-2 gap-2 justify-content-end align-items-center"> 
+        <a href="https://www.linkedin.com/company/trellixsecurity" id="linkedIn" target="_blank" class="social-link" title="Trellix LinkedIn" datalink-type="external" datalink-id="newco:www.linkedin.com:company:trellixsecurity"> 
+         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 16 16"> 
+          <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" /> 
+         </svg> </a> 
+        <a href="https://twitter.com/Trellix" id="twitter" target="_blank" class="social-link" title="Trellix Twitter" datalink-type="external" datalink-id="newco:twitter.com:trellix"> 
+         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24"> 
+          <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" /> 
+         </svg> </a> 
+        <a href="https://www.youtube.com/trellixsecurity" id="youtube" target="_blank" class="social-link" title="Trellix YouTube" datalink-type="external" datalink-id="newco:www.youtube.com:trellixsecurity"> 
+         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 16 16"> 
+          <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" /> 
+         </svg> </a> 
+       </div> 
+      </div> 
+     </div> 
+    </footer> 
+    <div class="modal fade" id="searchTipModal" style="z-index: 99999"> 
+     <div class="modal-dialog gradient-rule-bottom modal-lg"> 
+      <div class="modal-content"> 
+       <div class="modal-header" style="border-bottom:0px;"> 
+        <h2 class="modal-title"></h2> 
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button> 
+       </div> 
+       <div class="modal-body p-5 pt-0"> 
+        <h4 class="modal-title">Search Tips</h4>
+        <br> 
+        <div class="container small"> 
+         <p><b>Be concise and specific:</b></p> 
+         <p>Wrong:&nbsp;<i>I want to learn how to migrate to Trellix Endpoint Security</i></p> 
+         <p>Right:&nbsp;<i>Trellix Endpoint Security migration</i></p> 
+         <p><b>Use quotation marks to find a specific phrase:</b></p> 
+         <p><i>“migrate to Trellix Endpoint security”</i></p> 
+         <p><b>Use sets of quotation marks to search for multiple queries:</b></p> 
+         <p><i>“endpoint security” “Windows”</i></p> 
+         <p><b>Punctuation and special characters are ignored:</b></p> 
+         <p>Avoid these characters: `, ~, :, @, #, $, %, ^, &amp;, =, +, &lt;, &gt;, (, )</p> 
+         <p><b>The search engine is not case sensitive:</b></p> 
+         <p><i>Endpoint security</i>,&nbsp;<i>endpoint security</i>, and&nbsp;<i>ENDPOINT SECURITY</i>&nbsp;will all yield the same results.</p> 
+        </div> 
+       </div> 
+       <div class="modal-footer"> 
+        <button type="button" class="btn btn-outline-primaryy" data-bs-dismiss="modal">Close</button> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- site container --> 
+  <link rel="stylesheet" href="../../../etc.clientlibs/corpcom/clientlibs/clientlib-jquery.min.css" type="text/css"> 
+  <link rel="stylesheet" href="../../../etc.clientlibs/corpcom/clientlibs/clientlib-base.min.css" type="text/css"> 
+  <script src="../../../etc.clientlibs/corpcom/clientlibs/clientlib-jquery.min.js"></script> 
+  <script src="../../../etc.clientlibs/corpcom/clientlibs/clientlib-base.min.js"></script> 
+  <script src="../../../etc.clientlibs/corpcom/clientlibs/csrf.min.js"></script>   
+ </body>
+
+<!-- Mirrored from www.trellix.com/en-us/advanced-research-center/threat-reports/jan-2022.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Mar 2023 05:15:52 GMT -->
+</html>
